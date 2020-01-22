@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zn-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+File与io
+</title>
+
+    
+
+
+  
+  <meta name="author" content="spc" />
+  <meta name="description" content="Cut out summary from your post content here.
+" />
+
+
+
+<meta name="generator" content="Hugo 0.62.2" />
+
+<link rel="canonical" href="http://example.org/posts/file%E4%B8%8Eio/" />
+
+
+<meta property="og:title" content="File与io" />
+<meta property="og:description" content="Cut out summary from your post content here." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/file%E4%B8%8Eio/" />
+<meta property="article:published_time" content="2020-01-22T11:14:25+08:00" />
+<meta property="article:modified_time" content="2020-01-22T11:14:25+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="File与io"/>
+<meta name="twitter:description" content="Cut out summary from your post content here."/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+
+
+
+  </head>
+
+  
+  <body>
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'http:\/\/example.org\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          File与io
+          <div class="sub header">@ spc · Wednesday, Jan 22, 2020 · 1 minute read · Update at Jan 22, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>Cut out summary from your post content here.</p>
+<h1 id="io体系">io体系</h1>
+<ol>
+<li>inputStream 字节输入流</li>
+<li>outputStream 字节输出流</li>
+<li>Reader 字符输入流 解码</li>
+<li>Writer 字符输出流 编码</li>
+<li>Buffer 缓冲区</li>
+</ol>
+<p>⼀切⽂件的本质</p>
+<ul>
+<li>⼀段字节流：
+<ul>
+<li>⽂本⽂件（txt/代码/HTML等）</li>
+<li>⼆进制⽂件</li>
+</ul>
+</li>
+<li>每个程序负责解释⽂件中的字节流
+mp4，html，class，avi 都是一段字节流，每个程序都有不同解析。</li>
+</ul>
+<ol>
+<li>⽂件写⼊字节流</li>
+<li>从⽹络读取字节流</li>
+<li>从其他什么破烂玩意读取字节流
+如果你不是对⽂件系统⼗分熟悉的话，请永远使⽤绝对路
+径！！！</li>
+</ol>
+<h1 id="file">File</h1>
+<p>不要误会！不要误会！不要误会！
+• File并不代表⼀个“⽂件”，它只代表⼀个“路径”
+• 抽象的“⽂件”路径：⽂件或者⽂件夹
+• File的常⻅⽅法
+• 绝对路径与相对路径
+• 读/写⽂件
+• NIO （Java 7+）
+• Non-blocking I/O，在Java领域，也称为New I/O（与多线程有关）
+• NIO的Path - 就是旧版本的File （有互相转换的方法）</p>
+<p>经典的IO模型基于流的（就意味着一个一个字节的传）
+优点：容易理解，方便抽象（方便抽象：能处理文件、网络和其他）
+缺点：慢！！！</p>
+<p>NIO
+基本数据模型：块
+NIO处理：1. 缓冲buffer 或 cache  2. 并发</p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/file" title="file">file</a>
+        
+          <a class="ui label" href="/tags/io%E4%BD%93%E7%B3%BB" title="io体系">io体系</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+    </div>
+
+    <h3 class="ui header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h3>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/collection" title="collection">collection</a>
+    
+      <a class="ui label" href="/tags/exception" title="exception">exception</a>
+    
+      <a class="ui label" href="/tags/file" title="file">file</a>
+    
+      <a class="ui label" href="/tags/handle-exception" title="handle-exception">handle-exception</a>
+    
+      <a class="ui label" href="/tags/io%E4%BD%93%E7%B3%BB" title="io体系">io体系</a>
+    
+      <a class="ui label" href="/tags/maven" title="maven">maven</a>
+    
+      <a class="ui label" href="/tags/osi" title="osi">osi</a>
+    
+      <a class="ui label" href="/tags/tcp/ip" title="tcp/ip">tcp/ip</a>
+    
+      <a class="ui label" href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86" title="包管理">包管理</a>
+    
+      <a class="ui label" href="/tags/%E7%88%AC%E8%99%AB" title="爬虫">爬虫</a>
+    
+      <a class="ui label" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" title="计算机网络">计算机网络</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/java" class="item">java</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" class="item">异常体系</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/file%E4%B8%8Eio/" class="item">File与io</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/javaweb/" class="item">JavaWeb</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/" class="item">Collection体系知识点</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" class="item">Maven包管理</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/lazywhitebear/" class="item">Lazywhitebear</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" class="item">计算机网络</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" class="item">OSI模型与TCPIP模型简介</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui bottom attached center aligned segment">
+      
+      <p>© 2020 Lazybear</p>
+      
+      <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'http:\/\/example.org\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu">
+          
+
+          
+
+          
+
+          
+
+          
+        </nav>
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>

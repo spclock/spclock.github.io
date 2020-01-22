@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Lazybear</title>
+    <link>http://example.org/categories/</link>
+    <description>Recent content in Categories on Lazybear</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-cn</language>
+    <lastBuildDate>Wed, 22 Jan 2020 16:41:02 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>java</title>
+      <link>http://example.org/categories/java/</link>
+      <pubDate>Wed, 22 Jan 2020 16:41:02 +0800</pubDate>
+      
+      <guid>http://example.org/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>计算机网络</title>
+      <link>http://example.org/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Sun, 19 Jan 2020 16:35:45 +0800</pubDate>
+      
+      <guid>http://example.org/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

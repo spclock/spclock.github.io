@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zn-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+异常体系
+</title>
+
+    
+
+
+  
+  <meta name="author" content="Author Name" />
+  <meta name="description" content="Cut out summary from your post content here.
+" />
+
+
+
+<meta name="generator" content="Hugo 0.62.2" />
+
+<link rel="canonical" href="http://example.org/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" />
+
+
+<meta property="og:title" content="异常体系" />
+<meta property="og:description" content="Cut out summary from your post content here." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" />
+<meta property="article:published_time" content="2020-01-22T16:41:02+08:00" />
+<meta property="article:modified_time" content="2020-01-22T16:41:02+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="异常体系"/>
+<meta name="twitter:description" content="Cut out summary from your post content here."/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+
+
+
+  </head>
+
+  
+  <body>
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'http:\/\/example.org\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          异常体系
+          <div class="sub header">@ Author Name · Wednesday, Jan 22, 2020 · 1 minute read · Update at Jan 22, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>Cut out summary from your post content here.</p>
+<h1 id="异常体系图">异常体系图</h1>
+<p><img src="/content/posts/img/Exception.png" alt="Exception"></p>
+<p>异常就是继承了Throwable</p>
+<ul>
+<li>checked Exception <strong>受检异常</strong>
+<ul>
+<li>throwable</li>
+<li>Exception （代表⼀种预料之中的异常）</li>
+</ul>
+</li>
+<li>unchecked Exception <strong>不受检异常</strong>
+<ul>
+<li>runtimeException （代表⼀种预料之外的异常）</li>
+<li>error</li>
+</ul>
+</li>
+<li>catch的级联与合并</li>
+<li>throw抛出⼀个异常（一定有错）</li>
+<li>throws只是⼀个声明（可能有错）</li>
+</ul>
+<h1 id="异常的处理">异常的处理</h1>
+<h2 id="1抛出异常-throws">1.抛出异常 throws</h2>
+<h3 id="异常的抛出原则">异常的抛出原则</h3>
+<ul>
+<li>能⽤if/else处理的，不要使⽤异常</li>
+<li>尽早抛出异常</li>
+<li>异常要准确、带有详细信息</li>
+<li>抛出异常也⽐悄悄地执⾏错误的逻辑强的多</li>
+</ul>
+<h2 id="2trycatchfinally">2.try/catch/finally</h2>
+<h3 id="异常的处理原则">异常的处理原则</h3>
+<ul>
+<li>本⽅法是否有责任处理这个异常？<br>
+不要处理不归⾃⼰管的异常</li>
+<li>本⽅法是否有能⼒处理这个异常？<br>
+如果⾃⼰⽆法处理，就抛出</li>
+<li>如⾮万分必要，不要忽略异常</li>
+</ul>
+<h3 id="用途功能">用途功能</h3>
+<ul>
+<li>如果没有try，异常将击穿所有的栈帧（异常会被一直往外抛）</li>
+<li>catch可以将⼀个异常抓住</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//处理例子
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">catch</span><span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+    <span style="color:#75715e">//处理异常
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//在日志里打印异常
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//返回对应的对异常的处理
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>finally执⾏清理⼯作 （finally再return）</li>
+<li>JDK7+：try-with-resources
+<ul>
+<li>语法糖 实现AutoCloseable</li>
+<li>限制只能在同一个方法中被调用（例子：业务要在某一地方打开，另一个地方关闭）用<a href="https://file-leak-detector.kohsuke.org/">file leak detector</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="异常的排查-throwable">异常的排查 Throwable</h2>
+<ul>
+<li>栈轨迹 Stacktrace （排查问题最重要的信息，没有之⼀）</li>
+<li>异常链（Caused by）就是嵌套了try</li>
+</ul></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/exception" title="Exception">Exception</a>
+        
+          <a class="ui label" href="/tags/handle-exception" title="handle Exception">handle Exception</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+    </div>
+
+    <h3 class="ui header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h3>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/collection" title="collection">collection</a>
+    
+      <a class="ui label" href="/tags/exception" title="exception">exception</a>
+    
+      <a class="ui label" href="/tags/file" title="file">file</a>
+    
+      <a class="ui label" href="/tags/handle-exception" title="handle-exception">handle-exception</a>
+    
+      <a class="ui label" href="/tags/io%E4%BD%93%E7%B3%BB" title="io体系">io体系</a>
+    
+      <a class="ui label" href="/tags/maven" title="maven">maven</a>
+    
+      <a class="ui label" href="/tags/osi" title="osi">osi</a>
+    
+      <a class="ui label" href="/tags/tcp/ip" title="tcp/ip">tcp/ip</a>
+    
+      <a class="ui label" href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86" title="包管理">包管理</a>
+    
+      <a class="ui label" href="/tags/%E7%88%AC%E8%99%AB" title="爬虫">爬虫</a>
+    
+      <a class="ui label" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" title="计算机网络">计算机网络</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/java" class="item">java</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" class="item">异常体系</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/file%E4%B8%8Eio/" class="item">File与io</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/javaweb/" class="item">JavaWeb</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/" class="item">Collection体系知识点</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" class="item">Maven包管理</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/lazywhitebear/" class="item">Lazywhitebear</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" class="item">计算机网络</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://example.org/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" class="item">OSI模型与TCPIP模型简介</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui bottom attached center aligned segment">
+      
+      <p>© 2020 Lazybear</p>
+      
+      <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'http:\/\/example.org\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu">
+          
+
+          
+
+          
+
+          
+
+          
+        </nav>
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>
