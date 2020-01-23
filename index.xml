@@ -6,10 +6,19 @@
     <description>Recent content on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Jan 2020 16:41:02 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 09:45:48 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SuPuCheng</title>
+      <link>http://Lazybear.online/about/desc/</link>
+      <pubDate>Thu, 23 Jan 2020 09:45:48 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/about/desc/</guid>
+      <description>&lt;p&gt;Hi, my name is Su Pu Cheng.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>异常体系</title>
