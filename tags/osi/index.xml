@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OSI on Lazybear</title>
-    <link>http://example.org/tags/osi/</link>
+    <link>http://Lazybear.online/tags/osi/</link>
     <description>Recent content in OSI on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 19 Jan 2020 16:35:45 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/osi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://Lazybear.online/tags/osi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OSI模型与TCPIP模型简介</title>
-      <link>http://example.org/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</link>
+      <link>http://Lazybear.online/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</link>
       <pubDate>Sun, 19 Jan 2020 16:35:45 +0800</pubDate>
       
-      <guid>http://example.org/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</guid>
+      <guid>http://Lazybear.online/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</guid>
       <description>&lt;p&gt;OSI和TCP / IP都是最受欢迎和使用最广泛的通信网络协议。它们之间的主要区别在于OSI是一种概念模型，实际上并未用于通信。它定义了如何在网络或不同体系结构中传输数据。而TCP / IP被广泛用于链路的建立和网络互动。TCP / IP还仅允许在网络层上使用连接模式，但是这两种方法都在传输层上。使用OSI模型，它可以促进无连接和面向连接的网络通信，但是面向连接的通信仅在传输层中被允许。&lt;/p&gt;</description>
     </item>
     

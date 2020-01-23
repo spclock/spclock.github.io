@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>爬虫 on Lazybear</title>
-    <link>http://example.org/tags/%E7%88%AC%E8%99%AB/</link>
+    <link>http://Lazybear.online/tags/%E7%88%AC%E8%99%AB/</link>
     <description>Recent content in 爬虫 on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 18 Jan 2020 21:45:54 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://Lazybear.online/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JavaWeb</title>
-      <link>http://example.org/posts/javaweb/</link>
+      <link>http://Lazybear.online/posts/javaweb/</link>
       <pubDate>Sat, 18 Jan 2020 21:45:54 +0800</pubDate>
       
-      <guid>http://example.org/posts/javaweb/</guid>
+      <guid>http://Lazybear.online/posts/javaweb/</guid>
       <description>&lt;p&gt;java爬虫&lt;/p&gt;</description>
     </item>
     

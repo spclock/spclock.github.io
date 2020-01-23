@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lazybear</title>
-    <link>http://example.org/tags/</link>
+    <link>http://Lazybear.online/tags/</link>
     <description>Recent content in Tags on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 22 Jan 2020 16:41:02 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://Lazybear.online/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Exception</title>
-      <link>http://example.org/tags/exception/</link>
+      <link>http://Lazybear.online/tags/exception/</link>
       <pubDate>Wed, 22 Jan 2020 16:41:02 +0800</pubDate>
       
-      <guid>http://example.org/tags/exception/</guid>
+      <guid>http://Lazybear.online/tags/exception/</guid>
       <description></description>
     </item>
     
     <item>
       <title>handle Exception</title>
-      <link>http://example.org/tags/handle-exception/</link>
+      <link>http://Lazybear.online/tags/handle-exception/</link>
       <pubDate>Wed, 22 Jan 2020 16:41:02 +0800</pubDate>
       
-      <guid>http://example.org/tags/handle-exception/</guid>
+      <guid>http://Lazybear.online/tags/handle-exception/</guid>
       <description></description>
     </item>
     
     <item>
       <title>file</title>
-      <link>http://example.org/tags/file/</link>
+      <link>http://Lazybear.online/tags/file/</link>
       <pubDate>Wed, 22 Jan 2020 11:14:25 +0800</pubDate>
       
-      <guid>http://example.org/tags/file/</guid>
+      <guid>http://Lazybear.online/tags/file/</guid>
       <description></description>
     </item>
     
     <item>
       <title>io体系</title>
-      <link>http://example.org/tags/io%E4%BD%93%E7%B3%BB/</link>
+      <link>http://Lazybear.online/tags/io%E4%BD%93%E7%B3%BB/</link>
       <pubDate>Wed, 22 Jan 2020 11:14:25 +0800</pubDate>
       
-      <guid>http://example.org/tags/io%E4%BD%93%E7%B3%BB/</guid>
+      <guid>http://Lazybear.online/tags/io%E4%BD%93%E7%B3%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OSI</title>
-      <link>http://example.org/tags/osi/</link>
+      <link>http://Lazybear.online/tags/osi/</link>
       <pubDate>Sun, 19 Jan 2020 16:35:45 +0800</pubDate>
       
-      <guid>http://example.org/tags/osi/</guid>
+      <guid>http://Lazybear.online/tags/osi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TCP/IP</title>
-      <link>http://example.org/tags/tcp/ip/</link>
+      <link>http://Lazybear.online/tags/tcp/ip/</link>
       <pubDate>Sun, 19 Jan 2020 16:35:45 +0800</pubDate>
       
-      <guid>http://example.org/tags/tcp/ip/</guid>
+      <guid>http://Lazybear.online/tags/tcp/ip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>爬虫</title>
-      <link>http://example.org/tags/%E7%88%AC%E8%99%AB/</link>
+      <link>http://Lazybear.online/tags/%E7%88%AC%E8%99%AB/</link>
       <pubDate>Sat, 18 Jan 2020 21:45:54 +0800</pubDate>
       
-      <guid>http://example.org/tags/%E7%88%AC%E8%99%AB/</guid>
+      <guid>http://Lazybear.online/tags/%E7%88%AC%E8%99%AB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>计算机网络</title>
-      <link>http://example.org/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <link>http://Lazybear.online/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Sat, 18 Jan 2020 21:45:54 +0800</pubDate>
       
-      <guid>http://example.org/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+      <guid>http://Lazybear.online/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Collection</title>
-      <link>http://example.org/tags/collection/</link>
+      <link>http://Lazybear.online/tags/collection/</link>
       <pubDate>Fri, 17 Jan 2020 08:18:00 +0800</pubDate>
       
-      <guid>http://example.org/tags/collection/</guid>
+      <guid>http://Lazybear.online/tags/collection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Maven</title>
-      <link>http://example.org/tags/maven/</link>
+      <link>http://Lazybear.online/tags/maven/</link>
       <pubDate>Wed, 15 Jan 2020 09:01:48 +0800</pubDate>
       
-      <guid>http://example.org/tags/maven/</guid>
+      <guid>http://Lazybear.online/tags/maven/</guid>
       <description></description>
     </item>
     
     <item>
       <title>包管理</title>
-      <link>http://example.org/tags/%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+      <link>http://Lazybear.online/tags/%E5%8C%85%E7%AE%A1%E7%90%86/</link>
       <pubDate>Wed, 15 Jan 2020 09:01:48 +0800</pubDate>
       
-      <guid>http://example.org/tags/%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
+      <guid>http://Lazybear.online/tags/%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>file on Lazybear</title>
-    <link>http://example.org/tags/file/</link>
+    <link>http://Lazybear.online/tags/file/</link>
     <description>Recent content in file on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 22 Jan 2020 11:14:25 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/file/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://Lazybear.online/tags/file/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>File与io</title>
-      <link>http://example.org/posts/file%E4%B8%8Eio/</link>
+      <link>http://Lazybear.online/posts/file%E4%B8%8Eio/</link>
       <pubDate>Wed, 22 Jan 2020 11:14:25 +0800</pubDate>
       
-      <guid>http://example.org/posts/file%E4%B8%8Eio/</guid>
+      <guid>http://Lazybear.online/posts/file%E4%B8%8Eio/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     
