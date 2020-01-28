@@ -5,36 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-File与io
+
+
+  tag | 数据库
+
+
+
+
 </title>
 
     
 
 
   
-  <meta name="author" content="spc" />
-  <meta name="description" content="Cut out summary from your post content here.
-" />
+  <meta name="author" content="" />
+  <meta name="description" content="" />
 
 
 
 <meta name="generator" content="Hugo 0.62.2" />
 
-<link rel="canonical" href="http://Lazybear.online/posts/file%E4%B8%8Eio/" />
+<link rel="canonical" href="http://Lazybear.online/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
 
 
-<meta property="og:title" content="File与io" />
-<meta property="og:description" content="Cut out summary from your post content here." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://Lazybear.online/posts/file%E4%B8%8Eio/" />
-<meta property="article:published_time" content="2020-01-22T11:14:25+08:00" />
-<meta property="article:modified_time" content="2020-01-22T11:14:25+08:00" />
+<meta property="og:title" content="数据库" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://Lazybear.online/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+<meta property="og:updated_time" content="2020-01-23T09:13:59+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="File与io"/>
-<meta name="twitter:description" content="Cut out summary from your post content here."/>
+<meta name="twitter:title" content="数据库"/>
+<meta name="twitter:description" content=""/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -69,103 +73,7 @@ File与io
 
           
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
-
-    <section class="ui top attached segment" id="dream-save-post-as-img">
-      <header style="margin-top: 0 !important;">
-        <h2 class="ui header">
-          File与io
-          <div class="sub header">@ spc · Wednesday, Jan 22, 2020 · 1 minute read · Update at Jan 22, 2020</div>
-        </h2>
-      </header>
-      <article style="margin-top: 2rem;"><p>Cut out summary from your post content here.</p>
-<h1 id="io体系">io体系</h1>
-<ol>
-<li>inputStream 字节输入流</li>
-<li>outputStream 字节输出流</li>
-<li>Reader 字符输入流 解码</li>
-<li>Writer 字符输出流 编码</li>
-<li>Buffer 缓冲区</li>
-</ol>
-<p>⼀切⽂件的本质</p>
-<ul>
-<li>⼀段字节流：
-<ul>
-<li>⽂本⽂件（txt/代码/HTML等）</li>
-<li>⼆进制⽂件</li>
-</ul>
-</li>
-<li>每个程序负责解释⽂件中的字节流
-mp4，html，class，avi 都是一段字节流，每个程序都有不同解析。</li>
-</ul>
-<ol>
-<li>⽂件写⼊字节流</li>
-<li>从⽹络读取字节流</li>
-<li>从其他什么破烂玩意读取字节流
-如果你不是对⽂件系统⼗分熟悉的话，请永远使⽤绝对路
-径！！！</li>
-</ol>
-<h1 id="file">File</h1>
-<p>不要误会！不要误会！不要误会！
-• File并不代表⼀个“⽂件”，它只代表⼀个“路径”
-• 抽象的“⽂件”路径：⽂件或者⽂件夹
-• File的常⻅⽅法
-• 绝对路径与相对路径
-• 读/写⽂件
-• NIO （Java 7+）
-• Non-blocking I/O，在Java领域，也称为New I/O（与多线程有关）
-• NIO的Path - 就是旧版本的File （有互相转换的方法）</p>
-<p>经典的IO模型基于流的（就意味着一个一个字节的传）
-优点：容易理解，方便抽象（方便抽象：能处理文件、网络和其他）
-缺点：慢！！！</p>
-<p>NIO
-基本数据模型：块
-NIO处理：1. 缓冲buffer 或 cache  2. 并发</p></article>
-    </section>
-
-    <footer class="ui attached segment dream-tags">
-      
-        
-          <a class="ui label" href="/tags/file" title="file">file</a>
-        
-          <a class="ui label" href="/tags/io%E4%BD%93%E7%B3%BB" title="io体系">io体系</a>
-        
-      
-      <div
-        class="ui label"
-        style="float: right; background: #1b1c1d !important; cursor: pointer;"
-        onclick="savePostAsImg()">
-        <i class="save icon"></i> Save as image
-      </div>
-    </footer>
-
-    
-
-    
-      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'http:\/\/Lazybear.online\/posts\/file%E4%B8%8Eio\/';  
-            this.page.identifier = '\/posts\/file%E4%B8%8Eio\/'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    
-
-  </div>
-  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -301,6 +209,40 @@ NIO处理：1. 缓冲buffer 或 cache  2. 并发</p></article>
 </article>
 
   </div>
+
+  
+    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      
+<article class="ui raised card dream-card">
+
+  <div class="image">
+    
+      <img src="/img/landscape2.jpg" alt="SQL" />
+    
+  </div>
+
+  <div class="content">
+    <a class="header" style="color: black !important;" href="http://Lazybear.online/posts/sql/">SQL</a>
+    <div class="meta">
+      <p class="date">Thursday, Jan 23, 2020</p>
+      <p class="author">@ spc</p>
+    </div>
+    <div class="description">
+      有关数据库和sql的语法知识
+
+    </div>
+  </div>
+
+  <div class="extra content">
+    <a>
+      <i class="clock icon"></i>
+      1 minute read
+    </a>
+  </div>
+</article>
+
+    </div>
+  
 </div>
 
         </section>
@@ -361,6 +303,30 @@ NIO处理：1. 缓冲buffer 或 cache  2. 并发</p></article>
 
   
   
+    <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
+      <footer class="ui segment">
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'http:\/\/Lazybear.online\/tags\/%E6%95%B0%E6%8D%AE%E5%BA%93\/about';  
+            this.page.identifier = '/about'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    </section>
+  
+
 </div>
 
         </section>

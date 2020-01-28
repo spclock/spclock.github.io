@@ -6,10 +6,19 @@
     <description>Recent content in java on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Jan 2020 16:41:02 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 09:13:59 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SQL</title>
+      <link>http://Lazybear.online/posts/sql/</link>
+      <pubDate>Thu, 23 Jan 2020 09:13:59 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/sql/</guid>
+      <description>&lt;p&gt;有关数据库和sql的语法知识&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>异常体系</title>
@@ -54,15 +63,6 @@
       
       <guid>http://Lazybear.online/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
       <description>&lt;h1 id=&#34;maven笔记&#34;&gt;maven笔记&lt;/h1&gt;</description>
-    </item>
-    
-    <item>
-      <title>Lazywhitebear</title>
-      <link>http://Lazybear.online/posts/lazywhitebear/</link>
-      <pubDate>Wed, 15 Jan 2020 08:41:11 +0800</pubDate>
-      
-      <guid>http://Lazybear.online/posts/lazywhitebear/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     
   </channel>

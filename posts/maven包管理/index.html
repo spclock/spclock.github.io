@@ -104,7 +104,7 @@ Maven包管理
 <p>这就涉及到了java编译运行时 Jvm会帮你创建一个命令，命令的其中一个参数 <code>-classpath 全包名XXX....</code>
 JVM遇到一个新的类就好去<code>-classpath </code>上找对应的jar包里面的类，找到就执行，否则报错。</p>
 <p><strong>传递性依赖</strong>：简单来说就是你用的jar包里面又用别的jar包，然后别的jar包又用另一个jar包。
-<img src="/content/posts/img/%E5%8C%85%E6%A0%91%E5%9B%BE.png" alt="包树图"></p>
+<img src="/posts/img/%E5%8C%85%E6%A0%91%E5%9B%BE.png" alt="包树图"></p>
 <p>classpath hell：全限定类名是类的唯一标识 (例子：org.apache.commons.lang3)
 但多个同名类同时出现在Classpath中，就是噩梦开始（包冲突问题）</p>
 <h1 id="包管理">包管理</h1>
@@ -275,9 +275,13 @@ LinkageError
     
       <a class="ui label" href="/tags/osi" title="osi">osi</a>
     
+      <a class="ui label" href="/tags/sql" title="sql">sql</a>
+    
       <a class="ui label" href="/tags/tcp/ip" title="tcp/ip">tcp/ip</a>
     
       <a class="ui label" href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86" title="包管理">包管理</a>
+    
+      <a class="ui label" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93" title="数据库">数据库</a>
     
       <a class="ui label" href="/tags/%E7%88%AC%E8%99%AB" title="爬虫">爬虫</a>
     
@@ -296,6 +300,12 @@ LinkageError
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/sql/" class="item">SQL</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">
@@ -324,12 +334,6 @@ LinkageError
             <div class="item">
               <div class="content">
                 <a href="http://Lazybear.online/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" class="item">Maven包管理</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://Lazybear.online/posts/lazywhitebear/" class="item">Lazywhitebear</a>
               </div>
             </div>
           

@@ -19,7 +19,37 @@
   
   <url>
     <loc>http://Lazybear.online/categories/</loc>
-    <lastmod>2020-01-22T16:41:02+08:00</lastmod>
+    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/categories/java/</loc>
+    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/posts/</loc>
+    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/posts/sql/</loc>
+    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/sql/</loc>
+    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/</loc>
+    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
   </url>
   
   <url>
@@ -29,21 +59,6 @@
   
   <url>
     <loc>http://Lazybear.online/tags/handle-exception/</loc>
-    <lastmod>2020-01-22T16:41:02+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://Lazybear.online/categories/java/</loc>
-    <lastmod>2020-01-22T16:41:02+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://Lazybear.online/posts/</loc>
-    <lastmod>2020-01-22T16:41:02+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://Lazybear.online/tags/</loc>
     <lastmod>2020-01-22T16:41:02+08:00</lastmod>
   </url>
   
@@ -125,11 +140,6 @@
   <url>
     <loc>http://Lazybear.online/tags/%E5%8C%85%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2020-01-15T09:01:48+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://Lazybear.online/posts/lazywhitebear/</loc>
-    <lastmod>2020-01-15T08:41:11+08:00</lastmod>
   </url>
   
 </urlset>
