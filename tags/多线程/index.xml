@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>多线程 on Lazybear</title>
+    <link>http://Lazybear.online/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+    <description>Recent content in 多线程 on Lazybear</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 29 Jan 2020 11:07:05 +0800</lastBuildDate>
+    
+	<atom:link href="http://Lazybear.online/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thread</title>
+      <link>http://Lazybear.online/posts/thread/</link>
+      <pubDate>Wed, 29 Jan 2020 11:07:05 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/thread/</guid>
+      <description>&lt;p&gt;什么是进程、线程和多线程，怎么用和有什么用，需要注意什么。不会就给我看&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

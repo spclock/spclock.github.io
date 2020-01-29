@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://Lazybear.online/about/</loc>
-    <lastmod>2020-01-23T09:45:48+08:00</lastmod>
+    <loc>http://Lazybear.online/categories/</loc>
+    <lastmod>2020-01-29T11:07:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/categories/java/</loc>
+    <lastmod>2020-01-29T11:07:05+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://Lazybear.online/</loc>
+    <lastmod>2020-01-29T11:07:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/posts/</loc>
+    <lastmod>2020-01-29T11:07:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/</loc>
+    <lastmod>2020-01-29T11:07:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/thread/</loc>
+    <lastmod>2020-01-29T11:07:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/posts/thread/</loc>
+    <lastmod>2020-01-29T11:07:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2020-01-29T11:07:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/about/</loc>
     <lastmod>2020-01-23T09:45:48+08:00</lastmod>
   </url>
   
@@ -18,32 +53,12 @@
   </url>
   
   <url>
-    <loc>http://Lazybear.online/categories/</loc>
-    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://Lazybear.online/categories/java/</loc>
-    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://Lazybear.online/posts/</loc>
-    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://Lazybear.online/posts/sql/</loc>
     <lastmod>2020-01-23T09:13:59+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://Lazybear.online/tags/sql/</loc>
-    <lastmod>2020-01-23T09:13:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://Lazybear.online/tags/</loc>
     <lastmod>2020-01-23T09:13:59+08:00</lastmod>
   </url>
   
