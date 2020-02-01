@@ -30,7 +30,7 @@ Thread
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://Lazybear.online/posts/thread/" />
 <meta property="article:published_time" content="2020-01-29T11:07:05+08:00" />
-<meta property="article:modified_time" content="2020-01-29T11:07:05+08:00" />
+<meta property="article:modified_time" content="2020-01-29T11:07:09+08:00" />
 
 
 
@@ -93,21 +93,27 @@ Thread
         </h2>
       </header>
       <article style="margin-top: 2rem;"><p>什么是进程、线程和多线程，怎么用和有什么用，需要注意什么。不会就给我看</p>
-<h1 id="进程和线程概念">进程和线程概念</h1>
-<ol>
-<li>
-<p><strong>进程</strong>(Process)是计算机中已<code>运行程序</code>的实体。进程本身不会运行，是线程的容器。程序本身只是指令的集合，进程才是程序(那些指令)的真正运行。若干进程有可能与同一个程序相关系，且每个进程皆可以同步(循序)或不同步(平行)的方式独立运行。进程为现今分时系统的基本运作单位。</p>
-</li>
-<li>
-<p><strong>线程</strong>(thread)是操作系统能够进行运算调度的<code>最小单位</code>。它被包涵在进程之中。</p>
-</li>
-</ol>
+<h1 id="进程线程和任务概念">进程、线程和任务概念</h1>
+<h2 id="1进程">1.进程</h2>
+<p>**进程(Process)**是计算机中已<code>运行程序</code>的实体。进程本身不会运行，是线程的容器。程序本身只是指令的集合，进程才是程序(那些指令)的真正运行。若干进程有可能与同一个程序相关系，且每个进程皆可以同步(循序)或不同步(平行)的方式独立运行。进程为现今分时系统的基本运作单位。</p>
+<h2 id="2线程">2.线程</h2>
+<p>**线程(thread)**是操作系统能够进行运算调度的<code>最小单位</code>。它被包涵在进程之中。</p>
 <ul>
 <li><strong>单线程</strong>：一条线程指的是进程中一个单一顺序的控制流。</li>
 <li><strong>多线程</strong>：一个进程中可以并发多个线程，每条线程并行执行不同的任务。
 在Unix System V及SunOS中也被称为轻量进程(lightweight processes)，但轻量进程更多指内核线程(kernel thread)，而把用户线程(user thread)称为线程。</li>
 </ul>
-<h2 id="多线程">多线程</h2>
+<h3 id="线程状态">线程状态</h3>
+<ul>
+<li><strong>初始(NEW)</strong>：新创建了一个线程对象，但还没有调用start()方法。</li>
+<li><strong>运行(RUNNABLE)</strong>：Java线程中将就绪（ready）和运行中（running）两种状态笼统的称为“运行”。线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获取CPU的使用权，此时处于就绪状态（ready）。就绪状态的线程在获得CPU时间片后变为运行中状态（running）。</li>
+<li><strong>阻塞(BLOCKED)</strong>：表示线程阻塞于锁。</li>
+<li><strong>等待(WAITING)</strong>：进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。</li>
+<li><strong>超时等待(TIMED_WAITING)</strong>：该状态不同于WAITING，它可以在指定的时间后自行返回。</li>
+<li><strong>终止(TERMINATED)</strong>：表示该线程已经执行完毕。<br>
+<a href="https://blog.csdn.net/pange1991/article/details/53860651">深入了解线程状态</a></li>
+</ul>
+<h3 id="多线程">多线程</h3>
 <ul>
 <li>Java中只有这么⼀种东⻄代表线程：<strong>Thread</strong></li>
 <li>start⽅法才能并发执⾏！</li>
@@ -115,7 +121,28 @@ Thread
 <li>⽅法栈(局部变量)是线程私有的</li>
 <li>静态变量/类变量是被所有线程共享的</li>
 </ul>
-<h2 id="什么要用多线程">什么要用多线程</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//创建一个线程第一种方法
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyThread</span> <span style="color:#66d9ef">extends</span> Thread<span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">//多线程的任务
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        MyThread thread<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> MyThread<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//第二种方法
+</span><span style="color:#75715e"></span>Thread thread<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span>任务<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#75715e">//任务可以是Runnable的匿名内部类
+</span></code></pre></div><h2 id="3任务">3.任务</h2>
+<p>**任务（task）**是最抽象的，是一个一般性的术语，指由软件完成的一个活动。一个任务既可以是一个进程，也可以是一个线程。简言之，它指的是一系列共同达到某一目的的操作。</p>
+<ul>
+<li>Runnable —— Thread 不能返回值，没有异常抛出</li>
+<li>Callable —— Future 能返回值，有异常抛出</li>
+<li>FutureTask</li>
+</ul>
+<h1 id="问题">问题</h1>
+<h2 id="为什么要用多线程">为什么要用多线程</h2>
 <p>因为要并发，cpu 太快了太闲了，需要合理使用时间片
 java程序是同步/阻塞的</p>
 <h2 id="什么时候使用多线程">什么时候使用多线程</h2>
@@ -125,7 +152,7 @@ java程序是同步/阻塞的</p>
 </ul>
 <h2 id="使用多线程需要注意什么">使用多线程需要注意什么</h2>
 <ol>
-<li>共享变量 (<strong>安全隐患</strong>：cpu会在多个线程中来回切换)</li>
+<li>共享变量 (<strong>安全隐患</strong>)</li>
 <li>每一个线程里面的变量都是私有的</li>
 </ol></article>
     </section>
@@ -208,6 +235,8 @@ java程序是同步/阻塞的</p>
     
       <a class="ui label" href="/tags/file" title="file">file</a>
     
+      <a class="ui label" href="/tags/git%E5%91%BD%E4%BB%A4" title="git命令">git命令</a>
+    
       <a class="ui label" href="/tags/handle-exception" title="handle-exception">handle-exception</a>
     
       <a class="ui label" href="/tags/io%E4%BD%93%E7%B3%BB" title="io体系">io体系</a>
@@ -224,11 +253,21 @@ java程序是同步/阻塞的</p>
     
       <a class="ui label" href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86" title="包管理">包管理</a>
     
+      <a class="ui label" href="/tags/%E5%8D%9A%E5%AE%A2" title="博客">博客</a>
+    
+      <a class="ui label" href="/tags/%E5%90%8C%E6%AD%A5" title="同步">同步</a>
+    
+      <a class="ui label" href="/tags/%E5%9F%9F%E5%90%8D" title="域名">域名</a>
+    
       <a class="ui label" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B" title="多线程">多线程</a>
     
       <a class="ui label" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93" title="数据库">数据库</a>
     
+      <a class="ui label" href="/tags/%E6%AD%BB%E9%94%81" title="死锁">死锁</a>
+    
       <a class="ui label" href="/tags/%E7%88%AC%E8%99%AB" title="爬虫">爬虫</a>
+    
+      <a class="ui label" href="/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8" title="线程安全">线程安全</a>
     
       <a class="ui label" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" title="计算机网络">计算机网络</a>
     
@@ -241,10 +280,48 @@ java程序是同步/阻塞的</p>
       
         <div class="title">
           <i class="dropdown icon"></i>
+          <a href="/categories/git" class="item">git</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/" class="item">git本地和远程命令</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/hugo" class="item">hugo</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/" class="item">域名与博客绑定配置</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
           <a href="/categories/java" class="item">java</a>
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/" class="item">线程安全or同步</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">

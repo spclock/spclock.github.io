@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+git本地和远程命令
+</title>
+
+    
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+  
+  <meta name="author" content="spc" />
+  <meta name="description" content="git的本地和远程仓库的有关命令
+" />
+
+
+
+<meta name="generator" content="Hugo 0.62.2" />
+
+<link rel="canonical" href="http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/" />
+
+
+<meta property="og:title" content="git本地和远程命令" />
+<meta property="og:description" content="git的本地和远程仓库的有关命令" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/" />
+<meta property="article:published_time" content="2020-02-01T20:45:56+08:00" />
+<meta property="article:modified_time" content="2020-02-01T20:45:56+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="git本地和远程命令"/>
+<meta name="twitter:description" content="git的本地和远程仓库的有关命令"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+<style>
+  a {
+    color: seagreen !important;
+  }
+</style>
+
+
+
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
+
+  </head>
+
+  
+  <body style="background-image: url(/about/background.jpg);">
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/Lazybear.online\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          git本地和远程命令
+          <div class="sub header">@ spc · Saturday, Feb 1, 2020 · 1 分钟阅读 · 更新于 Feb 1, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>git的本地和远程仓库的有关命令</p>
+<h1 id="学习git命令行">学习git命令行</h1>
+<h2 id="git命令本地">git命令（本地）</h2>
+<p>用git前要配置好</p>
+<pre><code class="language-git" data-lang="git">git config --global user.name 你的英文名
+git config --global user.email 你的邮箱
+git config --global push.default simple
+git config --global core.quotepath false
+git config --global core.editor &quot;code --wait&quot;
+git config --global core.autocrlf input
+</code></pre><p>注意：上面的英文名和邮箱跟 GitHub 没有关系。<br>
+上面的设置是默认vscode，你自己也可以设置与git相关的软件
+<code>git config --global --list 查看配置如何</code></p>
+<p><code>Git init </code>  创建名叫.git本地仓库（注意要看当前路径，不然设错路径文件很大）<br>
+<code>Git add 文件名</code>  (或者当前路径’ . ’) 添加准备commit的状态<br>
+<code>Git status</code>  顾名思义看状态</p>
+<p><code>Git commit –m </code>字符串（提交的理由）<br>
+<code>Git commit –v</code>详细看修改哪些地方，然后在第一行家提交理由
+打开vscode（自己之前设置打开的软件，可选的）</p>
+<p><code>Git log </code>查看当前.git仓库之前的版本</p>
+<p><code>Git reset --hard xxx </code>回退到xxx版本（之前commit过有记录版本号用git log）</p>
+<p><code>Git reflog </code>查看全部的版本号可以查看所有分支的所有操作记录（包括已经被删除的 commit 记录和 reset 的操作）</p>
+<p><code>Git branch </code>分支名 创建分支      <br>
+<code>Git branch –d </code>分支名 删除分支<br>
+<code>Git checkout </code>分支名 切换分支</p>
+<p><code>Git merge xxx </code>将xxx分支合并到当前分支(很多时候回发生冲突)</p>
+<p><img src="/posts/img/git%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81.jpg" alt="冲突解决办法"></p>
+<h2 id="git远程命令ssh绑定">git远程命令（ssh绑定）</h2>
+<h3 id="我的第一次生成钥匙一个私钥id_res-一个公钥id_respub">我的第一次生成钥匙（一个私钥id_res 一个公钥id_res.pub）</h3>
+<p><img src="/posts/img/ssh%E5%85%AC%E9%92%A5%E7%A7%81%E9%92%A5.jpg" alt="ssh公钥私钥"></p>
+<h3 id="生成完在github上设置自己的公钥">生成完在github上设置自己的公钥</h3>
+<p><img src="/posts/img/github%E8%AE%BE%E7%BD%AE%E5%85%AC%E9%92%A5.jpg" alt="github设置公钥"></p>
+<h3 id="在git-bash上验证">在git bash上验证</h3>
+<p><code>ssh -T git@github.com 然后github会给自己一个公钥证明自己是github官网</code>
+<img src="/posts/img/bash%E9%AA%8C%E8%AF%81ssh.jpg" alt="bash验证ssh"></p>
+<p>输出是 HI 自己的github名 就绑定成功</p>
+<p><img src="/posts/img/ssh%E9%AA%8C%E8%AF%81%E6%96%B9%E5%BC%8F.jpg" alt="冲突解决办法"></p>
+<h3 id="git-pushpull更新之后在push">Git Push（Pull更新之后在push）</h3>
+<p>开始上传本地仓库，没有就要（看回git本地命令了）
+上传命令（ssh）
+<code>git remote add origin git@github.com:spclock/first_Demo.git</code>
+git 远程的意思 add origin <a href="mailto:git@github.com">git@github.com</a>:git账号名/开源的项目名</p>
+<p>如何已经有origin，怎么改
+<code>Git remote set-url origin git@github.com:git账号名/开源的项目名</code>
+<code>git push -u origin master（分支的名字）</code>
+-u 如果再有push就执行上次那一个分支（直接git push）<br>
+如果你要换分支要重新打一次命令改参数</p>
+<h3 id="git-clone复制github上的链接">Git clone:复制github上的链接</h3>
+<h3 id="git-pull更新代码">Git Pull（更新代码）</h3>
+<p><img src="/posts/img/gitpull.jpg" alt="gitpull"></p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/git%E5%91%BD%E4%BB%A4" title="git命令">git命令</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'http:\/\/Lazybear.online\/posts\/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4\/';  
+            this.page.identifier = '\/posts\/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/about/whitebear.jpg">
+      
+    </div>
+
+    <h3 class="ui header">苏普承的博客<div class="sub header" style="margin-top: 0.5rem;">与其感慨路难行，不如马上出发。</div>
+    </h3>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="归档"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="所有标签"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="所有分类"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/collection" title="collection">collection</a>
+    
+      <a class="ui label" href="/tags/exception" title="exception">exception</a>
+    
+      <a class="ui label" href="/tags/file" title="file">file</a>
+    
+      <a class="ui label" href="/tags/git%E5%91%BD%E4%BB%A4" title="git命令">git命令</a>
+    
+      <a class="ui label" href="/tags/handle-exception" title="handle-exception">handle-exception</a>
+    
+      <a class="ui label" href="/tags/io%E4%BD%93%E7%B3%BB" title="io体系">io体系</a>
+    
+      <a class="ui label" href="/tags/maven" title="maven">maven</a>
+    
+      <a class="ui label" href="/tags/osi" title="osi">osi</a>
+    
+      <a class="ui label" href="/tags/sql" title="sql">sql</a>
+    
+      <a class="ui label" href="/tags/tcp/ip" title="tcp/ip">tcp/ip</a>
+    
+      <a class="ui label" href="/tags/thread" title="thread">thread</a>
+    
+      <a class="ui label" href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86" title="包管理">包管理</a>
+    
+      <a class="ui label" href="/tags/%E5%8D%9A%E5%AE%A2" title="博客">博客</a>
+    
+      <a class="ui label" href="/tags/%E5%90%8C%E6%AD%A5" title="同步">同步</a>
+    
+      <a class="ui label" href="/tags/%E5%9F%9F%E5%90%8D" title="域名">域名</a>
+    
+      <a class="ui label" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B" title="多线程">多线程</a>
+    
+      <a class="ui label" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93" title="数据库">数据库</a>
+    
+      <a class="ui label" href="/tags/%E6%AD%BB%E9%94%81" title="死锁">死锁</a>
+    
+      <a class="ui label" href="/tags/%E7%88%AC%E8%99%AB" title="爬虫">爬虫</a>
+    
+      <a class="ui label" href="/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8" title="线程安全">线程安全</a>
+    
+      <a class="ui label" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" title="计算机网络">计算机网络</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/git" class="item">git</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/" class="item">git本地和远程命令</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/hugo" class="item">hugo</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/" class="item">域名与博客绑定配置</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/java" class="item">java</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/" class="item">线程安全or同步</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/thread/" class="item">Thread</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/sql/" class="item">SQL</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" class="item">异常体系</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/file%E4%B8%8Eio/" class="item">File与io</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/javaweb/" class="item">JavaWeb</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/" class="item">Collection体系知识点</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" class="item">Maven包管理</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" class="item">计算机网络</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" class="item">OSI模型与TCPIP模型简介</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui bottom attached center aligned segment">
+      
+      <p>© 2020 Lazybear</p>
+      
+      <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/Lazybear.online\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">SuPuCheng</h3>
+        </div>
+        <div class="ui attached segment markdown-body">
+          <p>Hi, my name is Su Pu Cheng.</p>
+<p>This is my blog.</p>
+        </div>
+      </article>
+    </section>
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">社交链接</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu">
+          
+            <div class="item">
+              <a href="mailto:1124516293@qq.com">
+                <i class="large mail icon" title="email"></i>
+              </a>
+            </div>
+          
+
+          
+            <div class="item">
+              <a href="https://github.com/spclock" target="_blank">
+                <i class="large github icon" title="github"></i>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+        </nav>
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>

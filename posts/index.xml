@@ -6,10 +6,37 @@
     <description>Recent content in Posts on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 29 Jan 2020 11:07:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 21:40:17 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>域名与博客绑定配置</title>
+      <link>http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 01 Feb 2020 21:40:17 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;github和域名绑定教程&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git本地和远程命令</title>
+      <link>http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 01 Feb 2020 20:45:56 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;git的本地和远程仓库的有关命令&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>线程安全or同步</title>
+      <link>http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</link>
+      <pubDate>Thu, 30 Jan 2020 20:17:04 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</guid>
+      <description>&lt;p&gt;死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Thread</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git命令 on Lazybear</title>
+    <link>http://Lazybear.online/tags/git%E5%91%BD%E4%BB%A4/</link>
+    <description>Recent content in git命令 on Lazybear</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 01 Feb 2020 20:45:56 +0800</lastBuildDate>
+    
+	<atom:link href="http://Lazybear.online/tags/git%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git本地和远程命令</title>
+      <link>http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 01 Feb 2020 20:45:56 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;git的本地和远程仓库的有关命令&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
