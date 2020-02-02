@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>问题 on Lazybear</title>
+    <link>http://Lazybear.online/categories/%E9%97%AE%E9%A2%98/</link>
+    <description>Recent content in 问题 on Lazybear</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 02 Feb 2020 10:25:48 +0800</lastBuildDate>
+    
+	<atom:link href="http://Lazybear.online/categories/%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决死锁</title>
+      <link>http://Lazybear.online/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/</link>
+      <pubDate>Sun, 02 Feb 2020 10:25:48 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/</guid>
+      <description>&lt;p&gt;如何解决java进程的死锁问题&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
