@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 11 Feb 2020 19:12:39 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 10:10:04 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>java8</title>
       <link>http://Lazybear.online/tags/java8/</link>
-      <pubDate>Tue, 11 Feb 2020 19:12:39 +0800</pubDate>
+      <pubDate>Wed, 12 Feb 2020 10:10:04 +0800</pubDate>
       
       <guid>http://Lazybear.online/tags/java8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stream</title>
+      <link>http://Lazybear.online/tags/stream/</link>
+      <pubDate>Wed, 12 Feb 2020 10:10:04 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/tags/stream/</guid>
       <description></description>
     </item>
     
@@ -66,7 +75,7 @@
     </item>
     
     <item>
-      <title>Thread</title>
+      <title>thread</title>
       <link>http://Lazybear.online/tags/thread/</link>
       <pubDate>Thu, 30 Jan 2020 20:17:04 +0800</pubDate>
       

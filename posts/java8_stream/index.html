@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-
-
-  tag | 爬虫
-
-
-
-
+Java8_Stream
 </title>
 
     
@@ -20,27 +14,29 @@
 
 
   
-  <meta name="author" content="苏普承" />
-  <meta name="description" content="苏普承的生活记录～" />
+  <meta name="author" content="spc" />
+  <meta name="description" content="Stream简化代码，熟练能让你用得很爽
+" />
 
 
 
 <meta name="generator" content="Hugo 0.62.2" />
 
-<link rel="canonical" href="http://Lazybear.online/tags/%E7%88%AC%E8%99%AB/" />
+<link rel="canonical" href="http://Lazybear.online/posts/java8_stream/" />
 
 
-<meta property="og:title" content="爬虫" />
-<meta property="og:description" content="苏普承的生活记录～" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://Lazybear.online/tags/%E7%88%AC%E8%99%AB/" />
-<meta property="og:updated_time" content="2020-01-18T21:45:54+08:00" />
+<meta property="og:title" content="Java8_Stream" />
+<meta property="og:description" content="Stream简化代码，熟练能让你用得很爽" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://Lazybear.online/posts/java8_stream/" />
+<meta property="article:published_time" content="2020-02-12T10:10:04+08:00" />
+<meta property="article:modified_time" content="2020-02-12T10:15:04+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="爬虫"/>
-<meta name="twitter:description" content="苏普承的生活记录～"/>
+<meta name="twitter:title" content="Java8_Stream"/>
+<meta name="twitter:description" content="Stream简化代码，熟练能让你用得很爽"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -87,7 +83,101 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          Java8_Stream
+          <div class="sub header">@ spc · Wednesday, Feb 12, 2020 · 1 分钟阅读 · 更新于 Feb 12, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>Stream简化代码，熟练能让你用得很爽</p>
+<h1 id="stream">Stream</h1>
+<h1 id="stream的api-创建stream">Stream的API-创建Stream</h1>
+<ul>
+<li>Collection.stream()</li>
+<li>Stream.of</li>
+<li>String.chars()</li>
+<li>IntSteam.range()</li>
+</ul>
+<h1 id="stream的api-中间操作">Stream的API-中间操作</h1>
+<ul>
+<li>仍然返回Stream的操作</li>
+<li>filter</li>
+<li>map</li>
+<li>sorted</li>
+</ul>
+<h1 id="stream的api-终结操作">Stream的API-终结操作</h1>
+<ul>
+<li>返回⾮<code>Stream</code>的操作，包括void</li>
+<li>⼀个流只能被消费⼀次</li>
+<li>forEach</li>
+<li>count/max/min</li>
+<li>findFirst/findAny</li>
+<li>anyMatch/noneMatch</li>
+<li>⭐collect</li>
+</ul>
+<h1 id="collector与collectors">collector与Collectors</h1>
+<ul>
+<li>collect操作是最强⼤的操作</li>
+<li>toSet/toList/toCollection</li>
+<li>joining()</li>
+<li>toMap()</li>
+<li>groupingBy()</li>
+</ul>
+<h2 id="并发流">并发流</h2>
+<ul>
+<li>parallelStream()</li>
+<li>可以通过并发提⾼互相独⽴的操作的性能</li>
+<li>在正确使⽤的前提下，可以获得近似线性的性能提升</li>
+<li>但是！使⽤要⼩⼼，性能要测试，如果你不知道⾃⼰在做什么，就忘了它吧</li>
+</ul></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/java8" title="java8">java8</a>
+        
+          <a class="ui label" href="/tags/stream" title="Stream">Stream</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'http:\/\/Lazybear.online\/posts\/java8_stream\/';  
+            this.page.identifier = '\/posts\/java8_stream\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -325,40 +415,6 @@
 </article>
 
   </div>
-
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card" style="box-shadow: none;">
-
-  <div class="image">
-    
-      <img src="/img/food1.jpg" alt="JavaWeb" />
-    
-  </div>
-
-  <div class="content">
-    <a class="header" style="color: black !important;" href="http://Lazybear.online/posts/javaweb/">JavaWeb</a>
-    <div class="meta">
-      <p class="date">Saturday, Jan 18, 2020</p>
-      <p class="author">@ spc</p>
-    </div>
-    <div class="description">
-      java爬虫
-
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
-  </div>
-</article>
-
-    </div>
-  
 </div>
 
         </section>
@@ -431,30 +487,6 @@
 
   
   
-    <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
-      <footer class="ui segment">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'http:\/\/Lazybear.online\/tags\/%E7%88%AC%E8%99%AB\/about';  
-            this.page.identifier = '/about'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    </section>
-  
-
 </div>
 
         </section>

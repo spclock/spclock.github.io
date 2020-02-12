@@ -6,10 +6,19 @@
     <description>Recent content in java8 on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 11 Feb 2020 19:12:39 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 10:10:04 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/tags/java8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java8_Stream</title>
+      <link>http://Lazybear.online/posts/java8_stream/</link>
+      <pubDate>Wed, 12 Feb 2020 10:10:04 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/java8_stream/</guid>
+      <description>&lt;p&gt;Stream简化代码，熟练能让你用得很爽&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Java8函数式编程</title>
