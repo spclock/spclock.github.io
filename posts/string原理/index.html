@@ -94,8 +94,8 @@ String原理
       </header>
       <article style="margin-top: 2rem;"><p>String的原理</p>
 <h1 id="string的原理">String的原理</h1>
-<p>为什么在互联网C系列不好使，很少拿c来写后端应用
-因为C和C++字符串处理很烂<br>
+<p>为什么在互联网C系列不好使，很少拿c来写后端应用<br>
+因为C和C++字符串处理很烂。<br>
 能处理好字符串是Web服务器的基本要求</p>
 <ul>
 <li>Java</li>
@@ -117,9 +117,9 @@ String原理
 hash 约定</p>
 <ol>
 <li>二个对象相等必须返回hashcode是一样的</li>
-<li>在整一个java生命周期必须返回一样hashcode
-因此需要的对象是不可变</li>
+<li>在整一个java生命周期必须返回一样hashcode</li>
 </ol>
+<p>因此需要的对象是不可变</p>
 <h2 id="想修改怎么办">想修改怎么办</h2>
 <ul>
 <li>StringBuilder(优先使⽤，线程不安全，速度快)</li>
@@ -131,10 +131,11 @@ hash 约定</p>
 <li>字节 -&gt; 字符  (解码)</li>
 </ul>
 <h2 id="字符集-uoicode">字符集 ：Uoicode</h2>
-<p>存所有语言，int是最符合Uoicode存储 <br>
+<p><strong>字符集</strong>：相当于一个字典<br>
+<strong>码点(code point)</strong>：字典里面要找的字 <br>
+存所有语言，int是最符合Uoicode存储 <br>
 因此每一个字符都要4byte，这样太浪费了</p>
-<p><strong>BOM</strong> （字节顺序标记：ByteOrderMark）
-相当于一个字典查找对应字</p>
+<p><strong>BOM</strong> （字节顺序标记：ByteOrderMark）</p>
 <ul>
 <li>每个数字代表⼀个字符，叫做“码点”（code point）</li>
 <li>最常⻅的两种编码⽅案：</li>
