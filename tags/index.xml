@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 13 Feb 2020 10:30:13 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2020 08:14:37 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>String</title>
+      <link>http://Lazybear.online/tags/string/</link>
+      <pubDate>Fri, 14 Feb 2020 08:14:37 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/tags/string/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>StringBuffer</title>
+      <link>http://Lazybear.online/tags/stringbuffer/</link>
+      <pubDate>Fri, 14 Feb 2020 08:14:37 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/tags/stringbuffer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>StringBuilder</title>
+      <link>http://Lazybear.online/tags/stringbuilder/</link>
+      <pubDate>Fri, 14 Feb 2020 08:14:37 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/tags/stringbuilder/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>数据结构</title>
@@ -93,7 +120,7 @@
     </item>
     
     <item>
-      <title>thread</title>
+      <title>Thread</title>
       <link>http://Lazybear.online/tags/thread/</link>
       <pubDate>Thu, 30 Jan 2020 20:17:04 +0800</pubDate>
       

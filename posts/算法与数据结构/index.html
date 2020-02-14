@@ -15,7 +15,8 @@
 
   
   <meta name="author" content="spc" />
-  <meta name="description" content="算法：查找、排序、遍历（它们分别时间复杂度？） 数据结构：数组、链表、栈、队列、哈希表、树（它们的插入、删除和查找时间？）
+  <meta name="description" content="算法：查找、排序、遍历（它们分别时间复杂度？)
+数据结构：数组、链表、栈、队列、哈希表、树（它们的插入、删除和查找时间？）
 " />
 
 
@@ -26,7 +27,7 @@
 
 
 <meta property="og:title" content="算法与数据结构" />
-<meta property="og:description" content="算法：查找、排序、遍历（它们分别时间复杂度？）
+<meta property="og:description" content="算法：查找、排序、遍历（它们分别时间复杂度？)
 数据结构：数组、链表、栈、队列、哈希表、树（它们的插入、删除和查找时间？）" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://Lazybear.online/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
@@ -37,7 +38,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="算法与数据结构"/>
-<meta name="twitter:description" content="算法：查找、排序、遍历（它们分别时间复杂度？）
+<meta name="twitter:description" content="算法：查找、排序、遍历（它们分别时间复杂度？)
 数据结构：数组、链表、栈、队列、哈希表、树（它们的插入、删除和查找时间？）"/>
 
 
@@ -94,7 +95,7 @@
           <div class="sub header">@ spc · Thursday, Feb 13, 2020 · 3 分钟阅读 · 更新于 Feb 13, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><p>算法：查找、排序、遍历（它们分别时间复杂度？）
+      <article style="margin-top: 2rem;"><p>算法：查找、排序、遍历（它们分别时间复杂度？)<br>
 数据结构：数组、链表、栈、队列、哈希表、树（它们的插入、删除和查找时间？）</p>
 <h1 id="数据结构">数据结构</h1>
 <h2 id="数组">数组</h2>
@@ -136,10 +137,17 @@
 <ul>
 <li>查找/插⼊/删除操作都是O(1)</li>
 <li>哈希算法与碰撞（int类型42亿，数据不止42亿）</li>
-<li>哈希桶的内部实现
+<li>哈希桶的内部实现</li>
+<li>hashCode()是不可逆
 想想和HashMap问题，java8</li>
-<li>java7的hasMap： 数组+链表</li>
-<li>java8的hasMap： 数组+链表/红黑树</li>
+<li>java7的hashMap： 数组+链表</li>
+<li>java8的hashMap： 数组+链表/红黑树</li>
+<li>hashMap的哈希桶为什么是2的n次方？
+<ul>
+<li>因为要快速拿到数组下标（2的n-1 &amp;&amp; hashCode ）</li>
+<li>能分布均匀</li>
+</ul>
+</li>
 </ul>
 <h2 id="叉树">⼆叉树</h2>
 <ul>
@@ -403,6 +411,12 @@
     
       <a class="ui label" href="/tags/stream" title="stream">stream</a>
     
+      <a class="ui label" href="/tags/string" title="string">string</a>
+    
+      <a class="ui label" href="/tags/stringbuffer" title="stringbuffer">stringbuffer</a>
+    
+      <a class="ui label" href="/tags/stringbuilder" title="stringbuilder">stringbuilder</a>
+    
       <a class="ui label" href="/tags/tcp/ip" title="tcp/ip">tcp/ip</a>
     
       <a class="ui label" href="/tags/thread" title="thread">thread</a>
@@ -478,6 +492,12 @@
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/string%E5%8E%9F%E7%90%86/" class="item">String原理</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">
