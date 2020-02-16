@@ -6,10 +6,19 @@
     <description>Recent content on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 14 Feb 2020 08:14:37 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2020 23:26:25 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Class and Reflect</title>
+      <link>http://Lazybear.online/posts/class-and-reflect/</link>
+      <pubDate>Sat, 15 Feb 2020 23:26:25 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/class-and-reflect/</guid>
+      <description>&lt;p&gt;类型与反射&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>String原理</title>
@@ -36,7 +45,8 @@
       <pubDate>Wed, 12 Feb 2020 10:10:04 +0800</pubDate>
       
       <guid>http://Lazybear.online/posts/java8_stream/</guid>
-      <description>&lt;p&gt;Stream简化代码，熟练能让你用得很爽&lt;/p&gt;</description>
+      <description>&lt;p&gt;精髓：数据变换，简化代码
+Stream简化代码，熟练能让你用得很爽&lt;/p&gt;</description>
     </item>
     
     <item>
