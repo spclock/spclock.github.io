@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-OSI模型与TCPIP模型简介
+注解
 </title>
 
     
@@ -15,28 +15,28 @@ OSI模型与TCPIP模型简介
 
   
   <meta name="author" content="spc" />
-  <meta name="description" content="OSI和TCP / IP都是最受欢迎和使用最广泛的通信网络协议。它们之间的主要区别在于OSI是一种概念模型，实际上并未用于通信。它定义了如何在网络或不同体系结构中传输数据。而TCP / IP被广泛用于链路的建立和网络互动。TCP / IP还仅允许在网络层上使用连接模式，但是这两种方法都在传输层上。使用OSI模型，它可以促进无连接和面向连接的网络通信，但是面向连接的通信仅在传输层中被允许。
+  <meta name="description" content="?注解，有哪些注解，?创建注解,?获得注解，注解怎么被处理?
 " />
 
 
 
 <meta name="generator" content="Hugo 0.62.2" />
 
-<link rel="canonical" href="http://Lazybear.online/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" />
+<link rel="canonical" href="http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/" />
 
 
-<meta property="og:title" content="OSI模型与TCPIP模型简介" />
-<meta property="og:description" content="OSI和TCP / IP都是最受欢迎和使用最广泛的通信网络协议。它们之间的主要区别在于OSI是一种概念模型，实际上并未用于通信。它定义了如何在网络或不同体系结构中传输数据。而TCP / IP被广泛用于链路的建立和网络互动。TCP / IP还仅允许在网络层上使用连接模式，但是这两种方法都在传输层上。使用OSI模型，它可以促进无连接和面向连接的网络通信，但是面向连接的通信仅在传输层中被允许。" />
+<meta property="og:title" content="注解" />
+<meta property="og:description" content="?注解，有哪些注解，?创建注解,?获得注解，注解怎么被处理?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://Lazybear.online/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" />
-<meta property="article:published_time" content="2020-01-19T16:35:45+08:00" />
-<meta property="article:modified_time" content="2020-01-19T16:35:45+08:00" />
+<meta property="og:url" content="http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/" />
+<meta property="article:published_time" content="2020-02-16T20:21:43+08:00" />
+<meta property="article:modified_time" content="2020-02-16T20:21:43+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="OSI模型与TCPIP模型简介"/>
-<meta name="twitter:description" content="OSI和TCP / IP都是最受欢迎和使用最广泛的通信网络协议。它们之间的主要区别在于OSI是一种概念模型，实际上并未用于通信。它定义了如何在网络或不同体系结构中传输数据。而TCP / IP被广泛用于链路的建立和网络互动。TCP / IP还仅允许在网络层上使用连接模式，但是这两种方法都在传输层上。使用OSI模型，它可以促进无连接和面向连接的网络通信，但是面向连接的通信仅在传输层中被允许。"/>
+<meta name="twitter:title" content="注解"/>
+<meta name="twitter:description" content="?注解，有哪些注解，?创建注解,?获得注解，注解怎么被处理?"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -88,48 +88,120 @@ OSI模型与TCPIP模型简介
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          OSI模型与TCPIP模型简介
-          <div class="sub header">@ spc · Sunday, Jan 19, 2020 · 1 分钟阅读 · 更新于 Jan 19, 2020</div>
+          注解
+          <div class="sub header">@ spc · Sunday, Feb 16, 2020 · 1 分钟阅读 · 更新于 Feb 16, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><p>OSI和TCP / IP都是最受欢迎和使用最广泛的通信网络协议。它们之间的主要区别在于OSI是一种概念模型，实际上并未用于通信。它定义了如何在网络或不同体系结构中传输数据。而TCP / IP被广泛用于链路的建立和网络互动。TCP / IP还仅允许在网络层上使用连接模式，但是这两种方法都在传输层上。使用OSI模型，它可以促进无连接和面向连接的网络通信，但是面向连接的通信仅在传输层中被允许。</p>
-<p><img src="/posts/img/TCPIPvsOSI.png" alt="TCPIPvsOSI"></p>
-<h1 id="osi模型">OSI模型</h1>
-<p>在OSI模型是一个概念模型由国际标准化组织，它允许各种通信系统通过标准的协议进行通信的发展。</p>
-<p><strong>应用程序层</strong>：这是唯一与用户数据直接交互的层。但是，应注意，软件应用程序不是应用程序层的组件；应用程序层负责软件用户赖以获取重要信息的协议和信息操纵。<br>
-<strong>表示层</strong>：该层的主要任务是准备信息，以便可以使用应用程序层，也就是说，第6层使信息可供消费应用程序使用。两个通信器可以使用不同的加密方法进行通信，以便将传入的数据转换为接收设备应用程序层可以理解的语法。<br>
-<strong>会话层</strong>：这是用于打开和关闭两台机器之间的通信的层。打开和关闭对应关系之间的时间段称为会话。
-<strong>传输层</strong>：流控制和错误控制负责此层。传输层检查接收端是否存在错误，以确保所接收数据的完整性，如果没有，则请求重新传输。<br>
-<strong>网络层</strong>：网络层允许在两个不同的网络之间传输信息。网络层还确定信息到达其目的地的最佳物理路线。<br>
-<strong>数据链路层</strong>：数据链路层从该层收集数据包并将其分成较小的部分。像网络层一样，互连通信中的流控制和错误控制也负责数据链路层。<br>
-<strong>物理层</strong>：此层包含信息传输中涉及的物理设备，例如电线和交换机。这也是1和0的字符串，其中信息变为比特流。</p>
-<h1 id="tcp--ip模型">TCP / IP模型：</h1>
-<p>Internet协议是为网络通信建立的规则集。TCP / IP被认为是可靠的网络协议模型。它是OSI模型的精简版本。</p>
-<p><strong>网络接口层</strong>： 网络访问层是OSI模型中可用的数据链路层和物理层的组合。物理寻址是在此层中完成的，即源和目标的MAC地址已分配给数据包。因此，该层负责数据的物理传输。<br>
-<strong>Internet层</strong>： Internet层用于将独立的数据包发送到目的地的网络。在此层中分配了所有连接到TCP / IP网络的机器，Web服务器，节点。<br>
-<strong>传输层</strong>：它允许信息以信息图表的形式从源传送到目标主机，而没有缺陷。<br>
-<strong>应用程序层</strong>：应用程序层在三层中执行OSI模型的任务：应用程序，表示层和会话层。节点和节点之间的交互是必需的，它可以处理用户界面的要求。应用层中可用的协议是TFTP，HTTP，Telnet，SSH，NTP，DNS，NFS，FTP，SNMP，DHCP，SMTP。</p>
-<h1 id="osi模型与tcp--ip模型之间的主要区别">OSI模型与TCP / Ip模型之间的主要区别</h1>
-<p>让我们讨论OSI模型与TCP / IP模型之间的一些主要区别</p>
+      <article style="margin-top: 2rem;"><p>?注解，有哪些注解，?创建注解,?获得注解，注解怎么被处理?</p>
+<h1 id="注解annotation">注解Annotation</h1>
+<p>注解就是说明书中的⼀⼩段信息/⽂本/标记。只提供信息，不做处理</p>
 <ul>
-<li>OSI知道水平方法，垂直方法称为TCP / IP方法。</li>
-<li>OSI是独立于协议且通用的，而TCP / IP具有支持Internet开发的常规法律。</li>
-<li>与OSI模型相比，TCP / IP模型更可靠</li>
-<li>包被提供给OSI传输层，但是在TCP / IP情况下不能确定。</li>
-<li>在OSI模型中，表示和会话层可用，而TCP / IP模型不包含该层。</li>
-<li>TCP / IP实现了操作系统的功能，OSI帮助指导网络并用作参考工具</li>
-<li>TCP / IP提供网络级别的连接功能，而OSI网络层提供连接和无连接服务。</li>
-<li>没有其他模型是TCP / IP，而OSI则尝试匹配其他模型设计，因为它是参考。</li>
-<li>协议可以轻松终止，而原始规则在TCP / IP模型中，而新规则可以在OSI模型中引入。</li>
-</ul></article>
+<li>默认extends Annotation</li>
+<li>可以携带参数</li>
+<li>可以在运⾏时被阅读</li>
+</ul>
+<h2 id="元注解">元注解</h2>
+<ul>
+<li>@Target  注解能放在哪里</li>
+<li>@Retention
+<ul>
+<li>SOURCE</li>
+<li>CLASS</li>
+<li>RUNTIME</li>
+</ul>
+</li>
+<li>@Documented</li>
+<li>@Inherited 继承，子类能看到注解</li>
+<li>@Repeatable</li>
+</ul>
+<h2 id="jdk的带注解">JDK的⾃带注解</h2>
+<ul>
+<li>@Deprecated</li>
+<li>@Override</li>
+<li>@SuppressWarnings</li>
+<li>@FunctionalInterface</li>
+</ul>
+<p>##　注解的属性</p>
+<ul>
+<li>基本数据类型 + String + 类(Class) + 以及它们的数组</li>
+<li>默认值</li>
+<li>名为value的属性</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">@interface</span> 洗涤手段<span style="color:#f92672">{</span>
+    String <span style="color:#a6e22e">value</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;水洗&#34;</span><span style="color:#f92672">;</span><span style="color:#75715e">//也可以 String[] , 默认值可不加
+</span><span style="color:#75715e"></span>    类型 <span style="color:#a6e22e">名为xxx属性</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> 
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//用注解例子
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">@洗涤手段</span>  <span style="color:#75715e">//默认是水洗
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">@xxx</span><span style="color:#f92672">(</span>value<span style="color:#f92672">=</span><span style="color:#f92672">{</span><span style="color:#e6db74">&#34;干洗&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;水洗&#34;</span><span style="color:#f92672">}</span><span style="color:#f92672">,</span> xxx<span style="color:#f92672">=</span>xxx<span style="color:#f92672">)</span> <span style="color:#75715e">//用String[]类型例子
+</span><span style="color:#75715e"></span>
+</code></pre></div><h1 id="获取注解">获取注解</h1>
+<p>通过反射</p>
+<pre><code>1. Method.getAnnotation
+2. Class.getAnnotation
+</code></pre>
+<h2 id="注解是怎么工作">注解是怎么工作</h2>
+<p>在运行时候通过反射来生效<br>
+<code>动态字节码增强：其中之一btyebuddy</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> Class<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">decorate</span><span style="color:#f92672">(</span>Class<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> klass<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>Class<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">new</span> ByteBuddy<span style="color:#f92672">(</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">subclass</span><span style="color:#f92672">(</span>klass<span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">method</span><span style="color:#f92672">(</span>ElementMatchers<span style="color:#f92672">.</span><span style="color:#a6e22e">isAnnotatedWith</span><span style="color:#f92672">(</span>Cache<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">intercept</span><span style="color:#f92672">(</span>MethodDelegation<span style="color:#f92672">.</span><span style="color:#a6e22e">to</span><span style="color:#f92672">(</span>CacheAdvisor<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">make</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>klass<span style="color:#f92672">.</span><span style="color:#a6e22e">getClassLoader</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">getLoaded</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#75715e">//ElementMatchers和MethodDelegation是ByteBuddy自带
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">//没写CacheKey, CacheValue类自己补全吧
+</span><span style="color:#75715e"></span>     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CacheAdvisor</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> ConcurrentHashMap<span style="color:#f92672">&lt;</span>CacheKey<span style="color:#f92672">,</span> CacheValue<span style="color:#f92672">&gt;</span> cache <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ConcurrentHashMap<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//运行时候能识别
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">@RuntimeType</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Object <span style="color:#a6e22e">cache</span><span style="color:#f92672">(</span>
+                <span style="color:#a6e22e">@SuperCall</span> Callable<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;</span> superCall<span style="color:#f92672">,</span>
+                <span style="color:#a6e22e">@Origin</span> Method method<span style="color:#f92672">,</span>
+                <span style="color:#a6e22e">@This</span> Object thisObject<span style="color:#f92672">,</span>
+                <span style="color:#a6e22e">@AllArguments</span> Object<span style="color:#f92672">[</span><span style="color:#f92672">]</span> arguments<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+            <span style="color:#75715e">//真的需要final？？？
+</span><span style="color:#75715e"></span>            CacheKey cacheKey <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CacheKey<span style="color:#f92672">(</span>thisObject<span style="color:#f92672">,</span> method<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">,</span> arguments<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">final</span> CacheValue resultExistingInCache <span style="color:#f92672">=</span> cache<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>cacheKey<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>resultExistingInCache <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cacheExpires<span style="color:#f92672">(</span>resultExistingInCache<span style="color:#f92672">,</span> method<span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">return</span> invokeRealMethodAndPutIntoCache<span style="color:#f92672">(</span>superCall<span style="color:#f92672">,</span> cacheKey<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">return</span> resultExistingInCache<span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> invokeRealMethodAndPutIntoCache<span style="color:#f92672">(</span>superCall<span style="color:#f92672">,</span> cacheKey<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Object <span style="color:#a6e22e">invokeRealMethodAndPutIntoCache</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@SuperCall</span> Callable<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;</span> superCall<span style="color:#f92672">,</span> CacheKey cacheKey<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+            Object methodResult <span style="color:#f92672">=</span> superCall<span style="color:#f92672">.</span><span style="color:#a6e22e">call</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            cache<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>cacheKey<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> CacheValue<span style="color:#f92672">(</span>methodResult<span style="color:#f92672">,</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">currentTimeMillis</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> methodResult<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">cacheExpires</span><span style="color:#f92672">(</span>CacheValue cacheValue<span style="color:#f92672">,</span> Method method<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">long</span> time <span style="color:#f92672">=</span> cacheValue<span style="color:#f92672">.</span><span style="color:#a6e22e">time</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">int</span> cacheSeconds <span style="color:#f92672">=</span> method<span style="color:#f92672">.</span><span style="color:#a6e22e">getAnnotation</span><span style="color:#f92672">(</span>Cache<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">cacheSeconds</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">currentTimeMillis</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">-</span> time <span style="color:#f92672">&gt;</span> cacheSeconds <span style="color:#f92672">*</span> 1000<span style="color:#f92672">;</span>
+
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="/tags/osi" title="OSI">OSI</a>
+          <a class="ui label" href="/tags/%E6%B3%A8%E8%A7%A3" title="注解">注解</a>
         
-          <a class="ui label" href="/tags/tcp/ip" title="TCP/IP">TCP/IP</a>
+          <a class="ui label" href="/tags/%E5%8F%8D%E5%B0%84" title="反射">反射</a>
         
       
       <div
@@ -150,8 +222,8 @@ OSI模型与TCPIP模型简介
 
 
           var disqus_config = function () {
-            this.page.url = 'http:\/\/Lazybear.online\/posts\/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B\/';  
-            this.page.identifier = '\/posts\/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B\/'; 
+            this.page.url = 'http:\/\/Lazybear.online\/posts\/%E6%B3%A8%E8%A7%A3\/';  
+            this.page.identifier = '\/posts\/%E6%B3%A8%E8%A7%A3\/'; 
           };
 
           (function() { 

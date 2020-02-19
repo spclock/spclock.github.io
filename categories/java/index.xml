@@ -6,10 +6,19 @@
     <description>Recent content in java on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 16 Feb 2020 10:30:04 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2020 20:21:43 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>注解</title>
+      <link>http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/</link>
+      <pubDate>Sun, 16 Feb 2020 20:21:43 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/</guid>
+      <description>&lt;p&gt;?注解，有哪些注解，?创建注解,?获得注解，注解怎么被处理?&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Java泛型</title>
@@ -72,7 +81,8 @@ Stream简化代码，熟练能让你用得很爽&lt;/p&gt;</description>
       <pubDate>Thu, 30 Jan 2020 20:17:04 +0800</pubDate>
       
       <guid>http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</guid>
-      <description>&lt;p&gt;死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程&lt;/p&gt;</description>
+      <description>&lt;p&gt;死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程。
+静态和非静态同步方法锁问题。&lt;/p&gt;</description>
     </item>
     
     <item>

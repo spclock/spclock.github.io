@@ -26,7 +26,8 @@
       <pubDate>Thu, 30 Jan 2020 20:17:04 +0800</pubDate>
       
       <guid>http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</guid>
-      <description>&lt;p&gt;死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程&lt;/p&gt;</description>
+      <description>&lt;p&gt;死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程。
+静态和非静态同步方法锁问题。&lt;/p&gt;</description>
     </item>
     
   </channel>

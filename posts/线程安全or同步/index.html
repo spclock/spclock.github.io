@@ -15,7 +15,7 @@
 
   
   <meta name="author" content="spc" />
-  <meta name="description" content="死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程
+  <meta name="description" content="死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程。 静态和非静态同步方法锁问题。
 " />
 
 
@@ -26,7 +26,8 @@
 
 
 <meta property="og:title" content="线程安全or同步" />
-<meta property="og:description" content="死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程" />
+<meta property="og:description" content="死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程。
+静态和非静态同步方法锁问题。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/" />
 <meta property="article:published_time" content="2020-01-30T20:17:04+08:00" />
@@ -36,7 +37,8 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="线程安全or同步"/>
-<meta name="twitter:description" content="死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程"/>
+<meta name="twitter:description" content="死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程。
+静态和非静态同步方法锁问题。"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -92,7 +94,8 @@
           <div class="sub header">@ spc · Thursday, Jan 30, 2020 · 4 分钟阅读 · 更新于 Jan 30, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><p>死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程</p>
+      <article style="margin-top: 2rem;"><p>死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程。
+静态和非静态同步方法锁问题。</p>
 <p><a href="#%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8%e5%90%8c%e6%ad%a5">线程安全(同步)</a><br>
 <a href="#%e7%94%9f%e4%ba%a7%e8%80%85%e6%b6%88%e8%b4%b9%e8%80%85">生产者消费者</a><br>
 <a href="#waitnotifynotifyall">wait/notify/notifyAll代码</a><br>
@@ -100,7 +103,11 @@
 <a href="#blockingqueue">blockingqueue代码</a></p>
 <h1 id="线程安全同步">线程安全(同步)</h1>
 <ol>
-<li>synchronirzed(① 方法函数上加synchronirzed，② 用的锁是this)</li>
+<li>synchronirzed(① 方法函数上加synchronirzed，② 用的锁是this)
+<ol>
+<li>静态同步方法锁：this.getClass()  非静态同步方法锁：实例对象</li>
+</ol>
+</li>
 <li>ReentrantLock(按synchronirzed撸出来的代码)
 <ol>
 <li>Lock代替synchronirzed （用完记得一定要finally{lock.unlock()}）</li>
@@ -540,6 +547,8 @@
     
       <a class="ui label" href="/tags/%E5%8D%9A%E5%AE%A2" title="博客">博客</a>
     
+      <a class="ui label" href="/tags/%E5%8F%8D%E5%B0%84" title="反射">反射</a>
+    
       <a class="ui label" href="/tags/%E5%90%8C%E6%AD%A5" title="同步">同步</a>
     
       <a class="ui label" href="/tags/%E5%9F%9F%E5%90%8D" title="域名">域名</a>
@@ -553,6 +562,8 @@
       <a class="ui label" href="/tags/%E6%AD%BB%E9%94%81" title="死锁">死锁</a>
     
       <a class="ui label" href="/tags/%E6%B3%9B%E5%9E%8B" title="泛型">泛型</a>
+    
+      <a class="ui label" href="/tags/%E6%B3%A8%E8%A7%A3" title="注解">注解</a>
     
       <a class="ui label" href="/tags/%E7%88%AC%E8%99%AB" title="爬虫">爬虫</a>
     
@@ -607,6 +618,12 @@
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/" class="item">注解</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">

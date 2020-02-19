@@ -136,10 +136,10 @@ Java泛型
 <span style="color:#75715e">//调用
 </span><span style="color:#75715e"></span>testObject<span style="color:#f92672">(</span>Zi zi<span style="color:#f92672">)</span>
 testArray<span style="color:#f92672">(</span>Zi<span style="color:#f92672">[</span><span style="color:#f92672">]</span> zi<span style="color:#f92672">)</span>
-testList<span style="color:#f92672">(</span>ArrayList<span style="color:#f92672">&lt;</span>Zi<span style="color:#f92672">&gt;</span> zi<span style="color:#f92672">)</span>  <span style="color:#960050;background-color:#1e0010">←</span>报错
-<span style="color:#75715e">// List&lt;String&gt;并不是List&lt;Object&gt;的⼦类型
-</span><span style="color:#75715e"></span>因为泛型擦除会带来不安全<span style="color:#960050;background-color:#1e0010">，</span>如果编译过了的话
-
+testList<span style="color:#f92672">(</span>ArrayList<span style="color:#f92672">&lt;</span>Zi<span style="color:#f92672">&gt;</span> zi<span style="color:#f92672">)</span>  <span style="color:#75715e">//←报错
+</span><span style="color:#75715e"></span><span style="color:#75715e">// List&lt;String&gt;并不是List&lt;Object&gt;的⼦类型
+</span><span style="color:#75715e"></span><span style="color:#75715e">//因为泛型擦除会带来不安全，如果编译过了的话
+</span><span style="color:#75715e"></span>
 <span style="color:#75715e">//绕过编译器检查
 </span><span style="color:#75715e"></span>ArrayList<span style="color:#f92672">&lt;</span>Fun<span style="color:#f92672">&gt;</span> list<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 ArrayList rawList<span style="color:#f92672">=</span>list<span style="color:#f92672">;</span>
@@ -266,6 +266,8 @@ ArrayList<span style="color:#f92672">&lt;</span>Zi<span style="color:#f92672">&g
     
       <a class="ui label" href="/tags/%E5%8D%9A%E5%AE%A2" title="博客">博客</a>
     
+      <a class="ui label" href="/tags/%E5%8F%8D%E5%B0%84" title="反射">反射</a>
+    
       <a class="ui label" href="/tags/%E5%90%8C%E6%AD%A5" title="同步">同步</a>
     
       <a class="ui label" href="/tags/%E5%9F%9F%E5%90%8D" title="域名">域名</a>
@@ -279,6 +281,8 @@ ArrayList<span style="color:#f92672">&lt;</span>Zi<span style="color:#f92672">&g
       <a class="ui label" href="/tags/%E6%AD%BB%E9%94%81" title="死锁">死锁</a>
     
       <a class="ui label" href="/tags/%E6%B3%9B%E5%9E%8B" title="泛型">泛型</a>
+    
+      <a class="ui label" href="/tags/%E6%B3%A8%E8%A7%A3" title="注解">注解</a>
     
       <a class="ui label" href="/tags/%E7%88%AC%E8%99%AB" title="爬虫">爬虫</a>
     
@@ -333,6 +337,12 @@ ArrayList<span style="color:#f92672">&lt;</span>Zi<span style="color:#f92672">&g
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/" class="item">注解</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">
