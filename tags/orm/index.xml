@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ORM on Lazybear</title>
+    <link>http://Lazybear.online/tags/orm/</link>
+    <description>Recent content in ORM on Lazybear</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 19 Feb 2020 09:26:31 +0800</lastBuildDate>
+    
+	<atom:link href="http://Lazybear.online/tags/orm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mybatis</title>
+      <link>http://Lazybear.online/posts/mybatis/</link>
+      <pubDate>Wed, 19 Feb 2020 09:26:31 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/mybatis/</guid>
+      <description>&lt;p&gt;ORM：Object Relational Mapping&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-
-
-  tag | Stream
-
-
-
-
+Mybatis
 </title>
 
     
@@ -20,27 +14,29 @@
 
 
   
-  <meta name="author" content="苏普承" />
-  <meta name="description" content="苏普承的生活记录～" />
+  <meta name="author" content="spc" />
+  <meta name="description" content="ORM：Object Relational Mapping
+" />
 
 
 
 <meta name="generator" content="Hugo 0.62.2" />
 
-<link rel="canonical" href="http://Lazybear.online/tags/stream/" />
+<link rel="canonical" href="http://Lazybear.online/posts/mybatis/" />
 
 
-<meta property="og:title" content="Stream" />
-<meta property="og:description" content="苏普承的生活记录～" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://Lazybear.online/tags/stream/" />
-<meta property="og:updated_time" content="2020-02-12T10:10:04+08:00" />
+<meta property="og:title" content="Mybatis" />
+<meta property="og:description" content="ORM：Object Relational Mapping" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://Lazybear.online/posts/mybatis/" />
+<meta property="article:published_time" content="2020-02-19T09:26:31+08:00" />
+<meta property="article:modified_time" content="2020-02-19T09:26:31+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Stream"/>
-<meta name="twitter:description" content="苏普承的生活记录～"/>
+<meta name="twitter:title" content="Mybatis"/>
+<meta name="twitter:description" content="ORM：Object Relational Mapping"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -87,7 +83,192 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          Mybatis
+          <div class="sub header">@ spc · Wednesday, Feb 19, 2020 · 2 分钟阅读 · 更新于 Feb 19, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>ORM：Object Relational Mapping</p>
+<p>对自己梳理清晰逻辑前言：
+对于复杂的需求，Mybatis 比较复杂</p>
+<ol>
+<li>方法要传入什么参数（sql需要的 或者 形成sql参数所需要参数 ）</li>
+<li>我觉得先什么都不写，先返回方法参数类型</li>
+<li>要分清 mapper.xml中sql 的parameterType resultType</li>
+</ol>
+<h1 id="mybatis">Mybatis</h1>
+<p>在调用时候你会觉得有点不对用的是mybatis包名是ibatis：<br>
+版本1和2是包名 ibatis<br>
+版本3是mybatis 因为向后兼容所以没改</p>
+<p>xml的属性要顺序的不然报错23333（config.xml 中的settings、typeAliases、environments、mappers）</p>
+<ul>
+<li>⾸先配置⽇志框架，可以极⼤地提⾼排查问题的效率</li>
+<li>然后配置数据源</li>
+<li>Mapper：接⼝由MyBatis动态代理
+<ul>
+<li>优点：⽅便</li>
+<li>缺点：SQL复杂的时候不够⽅便</li>
+</ul>
+</li>
+<li>Mapper：⽤XML编写复杂SQL
+<ul>
+<li>优点：可以⽅便地使⽤MyBatis的强⼤功能</li>
+<li>缺点：SQL和代码分离</li>
+</ul>
+</li>
+</ul>
+<h2 id="object-relationship-mapping">Object Relationship Mapping</h2>
+<ul>
+<li>对象关系映射
+<ul>
+<li>⾃动完成对象到数据库的映射</li>
+</ul>
+</li>
+<li>Association
+<ul>
+<li>⾃动装配对象</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;getInnerJoinOrders&#34;</span> <span style="color:#a6e22e">resultMap=</span><span style="color:#e6db74">&#34;Order&#34;</span><span style="color:#f92672">&gt;</span>
+        select  `ORDER`.ID as ORDER_ID ,USER.NAME as USER_NAME ,
+        GOODS.NAME as GOODS_NAME ,
+        (`ORDER`.GOODS_PRICE * `ORDER`.GOODS_NUM) as TOTAL_PRICE
+        from `ORDER`
+            inner join USER on `ORDER`.USER_ID=USER.id
+            inner join GOODS on `ORDER`.GOODS_ID=GOODS.id
+        where GOODS.NAME is not null  and  USER.NAME is not null
+    <span style="color:#f92672">&lt;/select&gt;</span>
+
+    <span style="color:#f92672">&lt;resultMap</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;Order&#34;</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;Order&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;ORDER_ID&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;totalPrice&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;TOTAL_PRICE&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;association</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;user&#34;</span> <span style="color:#a6e22e">javaType=</span><span style="color:#e6db74">&#34;User&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;USER_NAME&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;/association&gt;</span>
+        <span style="color:#f92672">&lt;association</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;goods&#34;</span> <span style="color:#a6e22e">javaType=</span><span style="color:#e6db74">&#34;Goods&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;GOODS_NAME&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;/association&gt;</span>
+    <span style="color:#f92672">&lt;/resultMap&gt;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">batchInsertUsers</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> users<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>SqlSession sqlSession <span style="color:#f92672">=</span> sqlSessionFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">openSession</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">selectOne</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Mapper.batchInsertUsers&#34;</span><span style="color:#f92672">,</span> users<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><h1 id="mapper">Mapper</h1>
+<ul>
+<li>parameterType
+<ul>
+<li>参数的#{}和${}  （防不防sql注入）</li>
+<li>参数是按照Java Bean约定读取的:getter/setter</li>
+</ul>
+</li>
+<li>resultType
+<ul>
+<li>typeAlias</li>
+<li>写参数是按照Java Bean约定的:getter/setter</li>
+</ul>
+</li>
+<li>Association</li>
+</ul>
+<p>typeAliases 别名</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;typeAliases</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;typeAliase</span> <span style="color:#a6e22e">aliase=</span><span style="color:#e6db74">&#34;User&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;全限定类名&#34;</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;/typeAliases&gt;</span>
+</code></pre></div><h2 id="动态sqlmybatis的灵魂">动态SQL——MyBatis的灵魂</h2>
+<ul>
+<li>if</li>
+<li>choose</li>
+<li>foreach</li>
+<li>script</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 建议官方文档下面代码只是方便自己回归 </span><span style="color:#75715e">--&gt;</span>
+<span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> java代码省略 </span><span style="color:#75715e">--&gt;</span>
+<span style="color:#75715e">&lt;!--</span><span style="color:#75715e">  &lt;if&gt; </span><span style="color:#75715e">--&gt;</span>
+<span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;getUserByPage&#34;</span> <span style="color:#a6e22e">parameterType=</span><span style="color:#e6db74">&#34;Map&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;User&#34;</span><span style="color:#f92672">&gt;</span>
+        select id,name,tel,address from USER
+        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;username != null&#34;</span><span style="color:#f92672">&gt;</span>
+            where name = #{username}
+        <span style="color:#f92672">&lt;/if&gt;</span>
+        limit #{offset} , #{limit} ;
+    <span style="color:#f92672">&lt;/select&gt;</span>
+<span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> &lt;foreach&gt; </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#f92672">&lt;insert</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;batchInsertUsers&#34;</span> <span style="color:#a6e22e">parameterType=</span><span style="color:#e6db74">&#34;java.util.List&#34;</span><span style="color:#f92672">&gt;</span>
+        insert into USER
+        (name,tel,address) values
+        <span style="color:#f92672">&lt;foreach</span> <span style="color:#a6e22e">collection=</span><span style="color:#e6db74">&#34;list&#34;</span> <span style="color:#a6e22e">item=</span><span style="color:#e6db74">&#34;user&#34;</span> <span style="color:#a6e22e">separator=</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">&gt;</span>
+            (#{user.name},#{user.tel},#{user.address})
+        <span style="color:#f92672">&lt;/foreach&gt;</span>
+    <span style="color:#f92672">&lt;/insert&gt;</span>
+</code></pre></div><h1 id="mybatis的缓存">MyBatis的缓存</h1>
+<ul>
+<li>缓存是如何⼯作的？</li>
+<li>MyBatis缓存源代码深⼊解读</li>
+<li>Decorator模式</li>
+</ul>
+<h1 id="mybatis-mapperproxy">MyBatis MapperProxy</h1>
+<p>动态字节码增强?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> User <span style="color:#a6e22e">selectUserById</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>SqlSession sqlSession <span style="color:#f92672">=</span> sqlSessionFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">openSession</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">final</span> SelectMap mapper <span style="color:#f92672">=</span> sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">getMapper</span><span style="color:#f92672">(</span>SelectMap<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> mapper<span style="color:#f92672">.</span><span style="color:#a6e22e">SelectIdGetUser</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">SelectMap</span> <span style="color:#f92672">{</span>
+        <span style="color:#a6e22e">@Select</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Select * from USER where id =#{id}&#34;</span><span style="color:#f92672">)</span>
+        User <span style="color:#a6e22e">SelectIdGetUser</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span> Integer id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>还有在config.xml 配置mapper class=&rdquo;&hellip;..&rdquo;
+返回的类型User 是通过JavaBean约定  （调试器会调到get/set方法里面去）</p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93" title="数据库">数据库</a>
+        
+          <a class="ui label" href="/tags/orm" title="ORM">ORM</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'http:\/\/Lazybear.online\/posts\/mybatis\/';  
+            this.page.identifier = '\/posts\/mybatis\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -393,40 +574,6 @@
 </article>
 
   </div>
-
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card" style="box-shadow: none;">
-
-  <div class="image">
-    
-      <img src="/img/landscape9.jpg" alt="Java8_Stream" />
-    
-  </div>
-
-  <div class="content">
-    <a class="header" style="color: black !important;" href="http://Lazybear.online/posts/java8_stream/">Java8_Stream</a>
-    <div class="meta">
-      <p class="date">Wednesday, Feb 12, 2020</p>
-      <p class="author">@ spc</p>
-    </div>
-    <div class="description">
-      精髓：数据变换，简化代码 Stream简化代码，熟练能让你用得很爽
-
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
-  </div>
-</article>
-
-    </div>
-  
 </div>
 
         </section>
@@ -499,30 +646,6 @@
 
   
   
-    <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
-      <footer class="ui segment">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'http:\/\/Lazybear.online\/tags\/stream\/about';  
-            this.page.identifier = '/about'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    </section>
-  
-
 </div>
 
         </section>
