@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+Spring
+</title>
+
+    
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+  
+  <meta name="author" content="spc" />
+  <meta name="description" content="spring? , ?要用spring , Spring怎么用? , 怎么实现？
+" />
+
+
+
+<meta name="generator" content="Hugo 0.62.2" />
+
+<link rel="canonical" href="http://Lazybear.online/posts/spring/" />
+
+
+<meta property="og:title" content="Spring" />
+<meta property="og:description" content="spring? , ?要用spring , Spring怎么用? , 怎么实现？" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://Lazybear.online/posts/spring/" />
+<meta property="article:published_time" content="2020-02-21T19:20:57+08:00" />
+<meta property="article:modified_time" content="2020-02-21T19:20:57+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spring"/>
+<meta name="twitter:description" content="spring? , ?要用spring , Spring怎么用? , 怎么实现？"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+<style>
+  a {
+    color: seagreen !important;
+  }
+</style>
+
+
+
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
+
+  </head>
+
+  
+  <body style="background-image: url(/img/background.jpg);">
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/Lazybear.online\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          Spring
+          <div class="sub header">@ spc · Friday, Feb 21, 2020 · 2 分钟阅读 · 更新于 Feb 21, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>spring? , ?要用spring , Spring怎么用? , 怎么实现？</p>
+<h1 id="spring">spring</h1>
+<ul>
+<li>Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。
+<ul>
+<li>Spring MVC 基于Spring和Servlet的Web应用框架
+<ul>
+<li>Spring Boot 集成度和自动化程度更高</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>servlet server  ~let 是小的意思<br>
+servlet 小服务器  代表例子Tomcat Jetty<br>
+servlet把http请求 封装成对象 给webapp</p>
+<h2 id="没spring前">没spring前</h2>
+<ul>
+<li>main
+<ul>
+<li>方便但多了代码是灾难</li>
+</ul>
+</li>
+<li>model(模块化)
+<ul>
+<li>方便维护，但依赖关系复杂</li>
+</ul>
+</li>
+</ul>
+<h2 id="spring容器">spring容器</h2>
+<ul>
+<li>bean是豆意思，在spring是一个容器中最小工作单元，其实是一个java对象，</li>
+<li>BeanFactory/ApplicationContext
+<ul>
+<li>容器本身对应的java对象</li>
+</ul>
+</li>
+<li>依赖注入（DI） Dependency Injection
+<ul>
+<li>（spring帮你实例化对象中加些属性，那些属性有你xml，properties等等写上的相关依赖）</li>
+<li>都是单例的？？</li>
+<li>@Autowired @Resource @Inject</li>
+<li>用Autowired就要在xml 加&lt;context:autotation-config /&gt;</li>
+</ul>
+</li>
+<li>控制反转（IoC）Inversion of Control
+<ul>
+<li>自己只需要声明什么依赖什么，有东西会帮你自动组装好</li>
+</ul>
+</li>
+</ul>
+<p>使用步骤
+bean id= class=…   &gt; 在xml里面
+依赖要而外配置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;beans</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans&#34;</span>
+       <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+       <span style="color:#a6e22e">xmlns:context=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/context&#34;</span> 
+       <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans 
+</span><span style="color:#e6db74">       http://www.springframework.org/schema/beans/spring-beans.xsd 
+</span><span style="color:#e6db74">       http://www.springframework.org/schema/context 
+</span><span style="color:#e6db74">       http://www.springframework.org/schema/context/spring-context.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+
+    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 识别@Autowried </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#f92672">&lt;context:autotation-config</span> <span style="color:#f92672">/&gt;</span>  
+    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 配置bean </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;id名字&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;全限定类名&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;id名字&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;全限定类名&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;id名字&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;全限定类名&#34;</span><span style="color:#f92672">/&gt;</span>
+   
+<span style="color:#f92672">&lt;/beans&gt;</span>
+</code></pre></div><p>不会自己手写ioc容器，它的步骤是什么？</p>
+<ol>
+<li>定义Bean  (properties/xml/&hellip;)</li>
+<li>加载bean定义</li>
+<li>实例化bean   (用map存)</li>
+<li>查找依赖，实现自动注入(动态字节码加属性)</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//projectName: simple-ioc0-container
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyIoCContainer</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 实现一个简单的IoC容器，使得：
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 1. 从beans.properties里加载bean定义
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 2. 自动扫描bean中的@Autowired注解并完成依赖注入
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        MyIoCContainer container <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyIoCContainer<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        container<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        OrderService orderService <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>OrderService<span style="color:#f92672">)</span> container<span style="color:#f92672">.</span><span style="color:#a6e22e">getBean</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;orderService&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        orderService<span style="color:#f92672">.</span><span style="color:#a6e22e">createOrder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> beans <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+    <span style="color:#75715e">// 启动该容器
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">start</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Properties properties <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Properties<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+            properties<span style="color:#f92672">.</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>MyIoCContainer<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/beans.properties&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">//往beans加入实例对象
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//beanName用的是 属性名而不是类型名称，看properties就知道了
+</span><span style="color:#75715e"></span>        properties<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span><span style="color:#f92672">(</span>beanName<span style="color:#f92672">,</span> beanClass<span style="color:#f92672">)</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                Class<span style="color:#f92672">&lt;</span><span style="color:#f92672">?</span><span style="color:#f92672">&gt;</span> klass <span style="color:#f92672">=</span> Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> beanClass<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                Object beanInstance <span style="color:#f92672">=</span> klass<span style="color:#f92672">.</span><span style="color:#a6e22e">getDeclaredConstructor</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                beans<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> beanName<span style="color:#f92672">,</span> beanInstance<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        beans<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span>dependencyInject<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#75715e">//只用Autowried依赖来举例子（实际上还有很多依赖）
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">dependencyInject</span><span style="color:#f92672">(</span>String beanName<span style="color:#f92672">,</span> Object beanInstance<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Field<span style="color:#f92672">&gt;</span> dependencyInject <span style="color:#f92672">=</span> Stream<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>beanInstance<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getDeclaredFields</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>field <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> field<span style="color:#f92672">.</span><span style="color:#a6e22e">getAnnotation</span><span style="color:#f92672">(</span>Autowired<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        dependencyInject<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>field <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                String fieldName <span style="color:#f92672">=</span> field<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                Object dependencyBeanInstance <span style="color:#f92672">=</span> beans<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>fieldName<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                field<span style="color:#f92672">.</span><span style="color:#a6e22e">setAccessible</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                field<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>beanInstance<span style="color:#f92672">,</span> dependencyBeanInstance<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IllegalAccessException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">// 从容器中获取一个bean
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getBean</span><span style="color:#f92672">(</span>String beanName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> beans<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>beanName<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Bean的定义除获取xml还有java支持的properties</p>
+<p>Spring怎么用
+用完你会觉得好神奇，怎么实现？</p>
+<p>默认情况下是不给修改private成员，怎么办？
+Field.setAccessible(true)</p>
+<p>在创建实例中的循环依赖是没办法解决的</p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/spring" title="spring">spring</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'http:\/\/Lazybear.online\/posts\/spring\/';  
+            this.page.identifier = '\/posts\/spring\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/about/whitebear.jpg">
+      
+    </div>
+
+    <h3 class="ui header">苏普承的博客<div class="sub header" style="margin-top: 0.5rem;">与其感慨路难行，不如马上出发。</div>
+    </h3>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="归档"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="所有标签"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="所有分类"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/class" title="class">class</a>
+    
+      <a class="ui label" href="/tags/collection" title="collection">collection</a>
+    
+      <a class="ui label" href="/tags/exception" title="exception">exception</a>
+    
+      <a class="ui label" href="/tags/file" title="file">file</a>
+    
+      <a class="ui label" href="/tags/git%E5%91%BD%E4%BB%A4" title="git命令">git命令</a>
+    
+      <a class="ui label" href="/tags/handle-exception" title="handle-exception">handle-exception</a>
+    
+      <a class="ui label" href="/tags/io%E4%BD%93%E7%B3%BB" title="io体系">io体系</a>
+    
+      <a class="ui label" href="/tags/java8" title="java8">java8</a>
+    
+      <a class="ui label" href="/tags/maven" title="maven">maven</a>
+    
+      <a class="ui label" href="/tags/orm" title="orm">orm</a>
+    
+      <a class="ui label" href="/tags/osi" title="osi">osi</a>
+    
+      <a class="ui label" href="/tags/reflect" title="reflect">reflect</a>
+    
+      <a class="ui label" href="/tags/spring" title="spring">spring</a>
+    
+      <a class="ui label" href="/tags/sql" title="sql">sql</a>
+    
+      <a class="ui label" href="/tags/stream" title="stream">stream</a>
+    
+      <a class="ui label" href="/tags/string" title="string">string</a>
+    
+      <a class="ui label" href="/tags/stringbuffer" title="stringbuffer">stringbuffer</a>
+    
+      <a class="ui label" href="/tags/stringbuilder" title="stringbuilder">stringbuilder</a>
+    
+      <a class="ui label" href="/tags/tcp/ip" title="tcp/ip">tcp/ip</a>
+    
+      <a class="ui label" href="/tags/thread" title="thread">thread</a>
+    
+      <a class="ui label" href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B" title="函数式编程">函数式编程</a>
+    
+      <a class="ui label" href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86" title="包管理">包管理</a>
+    
+      <a class="ui label" href="/tags/%E5%8D%9A%E5%AE%A2" title="博客">博客</a>
+    
+      <a class="ui label" href="/tags/%E5%8F%8D%E5%B0%84" title="反射">反射</a>
+    
+      <a class="ui label" href="/tags/%E5%90%8C%E6%AD%A5" title="同步">同步</a>
+    
+      <a class="ui label" href="/tags/%E5%9F%9F%E5%90%8D" title="域名">域名</a>
+    
+      <a class="ui label" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B" title="多线程">多线程</a>
+    
+      <a class="ui label" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93" title="数据库">数据库</a>
+    
+      <a class="ui label" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" title="数据结构">数据结构</a>
+    
+      <a class="ui label" href="/tags/%E6%AD%BB%E9%94%81" title="死锁">死锁</a>
+    
+      <a class="ui label" href="/tags/%E6%B3%9B%E5%9E%8B" title="泛型">泛型</a>
+    
+      <a class="ui label" href="/tags/%E6%B3%A8%E8%A7%A3" title="注解">注解</a>
+    
+      <a class="ui label" href="/tags/%E7%88%AC%E8%99%AB" title="爬虫">爬虫</a>
+    
+      <a class="ui label" href="/tags/%E7%AE%97%E6%B3%95" title="算法">算法</a>
+    
+      <a class="ui label" href="/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8" title="线程安全">线程安全</a>
+    
+      <a class="ui label" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" title="计算机网络">计算机网络</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/git" class="item">git</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/" class="item">git本地和远程命令</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/hugo" class="item">hugo</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/" class="item">域名与博客绑定配置</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/java" class="item">java</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/spring/" class="item">Spring</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/mybatis/" class="item">Mybatis</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/" class="item">注解</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/java%E6%B3%9B%E5%9E%8B/" class="item">Java泛型</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/class-and-reflect/" class="item">Class and Reflect</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/string%E5%8E%9F%E7%90%86/" class="item">String原理</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/java8_stream/" class="item">Java8_Stream</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" class="item">Java8函数式编程</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/" class="item">解决死锁</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/" class="item">线程安全or同步</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/thread/" class="item">Thread</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/sql/" class="item">SQL</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" class="item">异常体系</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/file%E4%B8%8Eio/" class="item">File与io</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/javaweb/" class="item">JavaWeb</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/" class="item">Collection体系知识点</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" class="item">Maven包管理</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" class="item">算法与数据结构</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="item">算法与数据结构</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" class="item">计算机网络</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" class="item">OSI模型与TCPIP模型简介</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/%E9%97%AE%E9%A2%98" class="item">问题</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/" class="item">解决死锁</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui bottom attached center aligned segment">
+      
+      <p>© 2020 Lazybear</p>
+      
+      <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/Lazybear.online\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">SuPuCheng</h3>
+        </div>
+        <div class="ui attached segment markdown-body">
+          <p>Hi, my name is Su Pu Cheng.</p>
+<p>This is my blog.</p>
+        </div>
+      </article>
+    </section>
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">社交链接</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu">
+          
+            <div class="item">
+              <a href="mailto:1124516293@qq.com">
+                <i class="large mail icon" title="email"></i>
+              </a>
+            </div>
+          
+
+          
+            <div class="item">
+              <a href="https://github.com/spclock" target="_blank">
+                <i class="large github icon" title="github"></i>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+        </nav>
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>
