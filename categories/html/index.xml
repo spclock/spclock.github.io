@@ -6,10 +6,19 @@
     <description>Recent content in html on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 23 Feb 2020 17:08:51 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2020 22:17:24 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/categories/html/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>浅析 URL</title>
+      <link>http://Lazybear.online/posts/%E6%B5%85%E6%9E%90-url/</link>
+      <pubDate>Sun, 23 Feb 2020 22:17:24 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/%E6%B5%85%E6%9E%90-url/</guid>
+      <description>&lt;p&gt;URL是什么，它由什么组成&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>HTML常用标签</title>
