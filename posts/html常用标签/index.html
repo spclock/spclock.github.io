@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-
-
-  tag | handle Exception
-
-
-
-
+HTML常用标签
 </title>
 
     
@@ -20,27 +14,29 @@
 
 
   
-  <meta name="author" content="苏普承" />
-  <meta name="description" content="苏普承的生活记录～" />
+  <meta name="author" content="spc" />
+  <meta name="description" content="a 、img 、table 标签的用法
+" />
 
 
 
 <meta name="generator" content="Hugo 0.62.2" />
 
-<link rel="canonical" href="http://Lazybear.online/tags/handle-exception/" />
+<link rel="canonical" href="http://Lazybear.online/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" />
 
 
-<meta property="og:title" content="handle Exception" />
-<meta property="og:description" content="苏普承的生活记录～" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://Lazybear.online/tags/handle-exception/" />
-<meta property="og:updated_time" content="2020-01-22T16:41:02+08:00" />
+<meta property="og:title" content="HTML常用标签" />
+<meta property="og:description" content="a 、img 、table 标签的用法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://Lazybear.online/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" />
+<meta property="article:published_time" content="2020-02-23T17:08:51+08:00" />
+<meta property="article:modified_time" content="2020-02-23T17:08:51+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="handle Exception"/>
-<meta name="twitter:description" content="苏普承的生活记录～"/>
+<meta name="twitter:title" content="HTML常用标签"/>
+<meta name="twitter:description" content="a 、img 、table 标签的用法"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -87,7 +83,206 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          HTML常用标签
+          <div class="sub header">@ spc · Sunday, Feb 23, 2020 · 1 分钟阅读 · 更新于 Feb 23, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>a 、img 、table 标签的用法</p>
+<h1 id="html常用标签">HTML常用标签</h1>
+<h2 id="a标签">a标签</h2>
+<p>属性</p>
+<ul>
+<li>href  (hyper reference)</li>
+<li>target</li>
+<li>download</li>
+<li>rel=noopener</li>
+</ul>
+<p>a标签作用</p>
+<ul>
+<li>跳转到网页、锚点、邮箱和电话</li>
+</ul>
+<p>为了防止<code>window.opener</code>被滥用，在使用<code>targrt=_blank</code>时需要加上<code>rel=noopener</code></p>
+<pre><code>&lt;a href=&quot;www.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; &gt;
+</code></pre>
+<p>属性href取值</p>
+<ul>
+<li>网址</li>
+<li>路径</li>
+<li>id=xxx（锚点）</li>
+<li>伪协议 ：javascript、mailto、tel</li>
+</ul>
+<p>属性target取值</p>
+<ul>
+<li>内置名字
+<ul>
+<li>_blank (new tab)</li>
+<li>_top (用顶部打开)</li>
+<li>_parent （上一级打开）</li>
+<li>_self （自己打开，默认）</li>
+</ul>
+</li>
+<li>其他命名
+<ul>
+<li>window的name (new tab's name)</li>
+<li>iframe的name</li>
+</ul>
+</li>
+</ul>
+<p>属性download</p>
+<ul>
+<li>作用 ：不打开只下载</li>
+<li>不是所用的浏览器都支持，尤其是手机浏览器可能不支持</li>
+</ul>
+<h1 id="iframe标签">iframe标签</h1>
+<p>内嵌标签</p>
+<h1 id="table标签">table标签</h1>
+<ul>
+<li>相关样式
+<ul>
+<li>table-layout</li>
+<li>border-collapse</li>
+<li>border-spacing</li>
+</ul>
+</li>
+</ul>
+<p>border-collapse: collapse;<br>
+因为默认是没合并有空隙，默认样式很丑所以用collapse</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> tr:table row 
+</span><span style="color:#75715e">th:table head一列 
+</span><span style="color:#75715e">td:table data </span><span style="color:#75715e">--&gt;</span>
+    &lt;<span style="color:#f92672">thead</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;The table header&lt;/<span style="color:#f92672">th</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;/<span style="color:#f92672">thead</span>&gt;
+    &lt;<span style="color:#f92672">tbody</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;The table body&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;with two columns&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;/<span style="color:#f92672">tbody</span>&gt;
+    &lt;<span style="color:#f92672">tfoot</span>&gt;
+    &lt;/<span style="color:#f92672">tfoot</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><h1 id="img标签">img标签</h1>
+<ul>
+<li>作用
+<ul>
+<li>发出get请求，展示图片</li>
+</ul>
+</li>
+<li>属性
+<ul>
+<li>alt/height/width/src(source)</li>
+<li>不要同时height/width，除非有规定，不然是破坏原本比例</li>
+</ul>
+</li>
+<li>事件
+<ul>
+<li>onload/onerror</li>
+</ul>
+</li>
+<li>响应式
+<ul>
+<li>max-width:100%</li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a></li>
+</ul>
+<h1 id="form标签">form标签</h1>
+<ul>
+<li>作用
+<ul>
+<li>发送get和post请求，然后刷新页面</li>
+</ul>
+</li>
+<li>属性
+<ul>
+<li>action (提交到的响应页面)</li>
+<li>autocomplete</li>
+<li>method (get and post)</li>
+<li>target (与a标签target)</li>
+</ul>
+</li>
+<li>事件 onsubmit</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;form</span> <span style="color:#a6e22e">action=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method=</span><span style="color:#e6db74">&#34;get&#34;</span> <span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;div</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;label</span> <span style="color:#a6e22e">for=</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">&gt;</span>Enter your name: <span style="color:#f92672">&lt;/label&gt;</span>
+    <span style="color:#f92672">&lt;input</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">q</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;/div&gt;</span>
+  <span style="color:#f92672">&lt;div</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;label</span> <span style="color:#a6e22e">for=</span><span style="color:#e6db74">&#34;email&#34;</span><span style="color:#f92672">&gt;</span>Enter your email: <span style="color:#f92672">&lt;/label&gt;</span>
+    <span style="color:#f92672">&lt;input</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">q</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;/div&gt;</span>
+  <span style="color:#f92672">&lt;div</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;input</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;提交&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;/div&gt;</span>
+<span style="color:#f92672">&lt;/form&gt;</span>
+
+<span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> button能有额外功能，例如加个&lt;br&gt; </span><span style="color:#75715e">--&gt;</span>
+<span style="color:#f92672">&lt;input</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;提交&#34;</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;button</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#f92672">&gt;</span>提交<span style="color:#f92672">&lt;/button&gt;</span>
+</code></pre></div><h2 id="input标签">input标签</h2>
+<ul>
+<li>作用：输入内容</li>
+<li>属性：button/checkbox/file/hidden/text/submit/&hellip;</li>
+<li>事件：onchange/onfocus/onblur</li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li>一般不监听input的click事件</li>
+<li>form里面的input要有name</li>
+<li>form里面要发一个submit才能触发submit事件</li>
+</ul></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE" title="常用标签">常用标签</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'http:\/\/Lazybear.online\/posts\/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE\/';  
+            this.page.identifier = '\/posts\/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -419,40 +614,6 @@
 </article>
 
   </div>
-
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card" style="box-shadow: none;">
-
-  <div class="image">
-    
-      <img src="/img/default3.jpg" alt="异常体系" />
-    
-  </div>
-
-  <div class="content">
-    <a class="header" style="color: black !important;" href="http://Lazybear.online/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/">异常体系</a>
-    <div class="meta">
-      <p class="date">Wednesday, Jan 22, 2020</p>
-      <p class="author">@ Author Name</p>
-    </div>
-    <div class="description">
-      Cut out summary from your post content here.
-
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
-  </div>
-</article>
-
-    </div>
-  
 </div>
 
         </section>
@@ -525,30 +686,6 @@
 
   
   
-    <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
-      <footer class="ui segment">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'http:\/\/Lazybear.online\/tags\/handle-exception\/about';  
-            this.page.identifier = '/about'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    </section>
-  
-
 </div>
 
         </section>

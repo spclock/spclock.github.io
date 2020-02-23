@@ -4,21 +4,41 @@
   
   <url>
     <loc>http://Lazybear.online/categories/</loc>
-    <lastmod>2020-02-21T19:20:57+08:00</lastmod>
+    <lastmod>2020-02-23T17:08:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://Lazybear.online/categories/java/</loc>
-    <lastmod>2020-02-21T19:20:57+08:00</lastmod>
+    <loc>http://Lazybear.online/categories/html/</loc>
+    <lastmod>2020-02-23T17:08:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
+    <lastmod>2020-02-23T17:08:51+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://Lazybear.online/</loc>
-    <lastmod>2020-02-21T19:20:57+08:00</lastmod>
+    <lastmod>2020-02-23T17:08:51+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://Lazybear.online/posts/</loc>
+    <lastmod>2020-02-23T17:08:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/</loc>
+    <lastmod>2020-02-23T17:08:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
+    <lastmod>2020-02-23T17:08:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/categories/java/</loc>
     <lastmod>2020-02-21T19:20:57+08:00</lastmod>
   </url>
   
@@ -29,11 +49,6 @@
   
   <url>
     <loc>http://Lazybear.online/tags/spring/</loc>
-    <lastmod>2020-02-21T19:20:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://Lazybear.online/tags/</loc>
     <lastmod>2020-02-21T19:20:57+08:00</lastmod>
   </url>
   
