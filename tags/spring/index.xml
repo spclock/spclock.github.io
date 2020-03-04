@@ -6,10 +6,19 @@
     <description>Recent content in spring on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 21 Feb 2020 19:20:57 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2020 13:40:23 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring生态系统</title>
+      <link>http://Lazybear.online/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Wed, 04 Mar 2020 13:40:23 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</guid>
+      <description>&lt;p&gt;Spring生态系统：spring springMVC MyBaits (ssm)&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Spring</title>

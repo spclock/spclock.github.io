@@ -15,7 +15,7 @@ Elasticsearch
 
   
   <meta name="author" content="spc" />
-  <meta name="description" content="Cut out summary from your post content here.
+  <meta name="description" content="Elasticsearch
 " />
 
 
@@ -26,7 +26,7 @@ Elasticsearch
 
 
 <meta property="og:title" content="Elasticsearch" />
-<meta property="og:description" content="Cut out summary from your post content here." />
+<meta property="og:description" content="Elasticsearch" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://Lazybear.online/posts/elasticsearch/" />
 <meta property="article:published_time" content="2020-03-02T07:50:28+08:00" />
@@ -36,7 +36,7 @@ Elasticsearch
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Elasticsearch"/>
-<meta name="twitter:description" content="Cut out summary from your post content here."/>
+<meta name="twitter:description" content="Elasticsearch"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -92,8 +92,14 @@ Elasticsearch
           <div class="sub header">@ spc · Monday, Mar 2, 2020 · 1 分钟阅读 · 更新于 Mar 2, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><p>Cut out summary from your post content here.</p>
-<p>The remaining content of your post.</p></article>
+      <article style="margin-top: 2rem;"><p>Elasticsearch</p>
+<h1 id="elasticsearch">Elasticsearch</h1>
+<p><img src="/posts/img/db_es.png" alt="db_es"></p>
+<p>Bulk (一次性发多个请求)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">BulkRequest bulkRequest<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> BulkRequest<span style="color:#f92672">(</span><span style="color:#f92672">)</span>
+bulkRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>request<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+client<span style="color:#f92672">.</span><span style="color:#a6e22e">bulk</span><span style="color:#f92672">(</span>bulkRequest <span style="color:#f92672">,</span> RequestOptions<span style="color:#f92672">.</span><span style="color:#a6e22e">DEFAULT</span><span style="color:#f92672">)</span>
+</code></pre></div></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
@@ -187,6 +193,8 @@ Elasticsearch
       <a class="ui label" href="/tags/java8" title="java8">java8</a>
     
       <a class="ui label" href="/tags/maven" title="maven">maven</a>
+    
+      <a class="ui label" href="/tags/maven%E9%97%AE%E9%A2%98" title="maven问题">maven问题</a>
     
       <a class="ui label" href="/tags/mysql" title="mysql">mysql</a>
     
@@ -337,6 +345,12 @@ Elasticsearch
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/" class="item">Spring生态系统</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">
@@ -509,6 +523,12 @@ Elasticsearch
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/maven%E9%97%AE%E9%A2%98/" class="item">Maven问题</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">

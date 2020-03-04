@@ -6,10 +6,19 @@
     <description>Recent content in 问题 on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 28 Feb 2020 14:50:49 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2020 14:17:09 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/categories/%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Maven问题</title>
+      <link>http://Lazybear.online/posts/maven%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 03 Mar 2020 14:17:09 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/maven%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;有关maven的问题&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>数据库字符编码问题</title>

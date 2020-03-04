@@ -104,7 +104,7 @@ Mybatis
 <p>在调用时候你会觉得有点不对用的是mybatis包名是ibatis：<br>
 版本1和2是包名 ibatis<br>
 版本3是mybatis 因为向后兼容所以没改</p>
-<p>xml的属性要顺序的不然报错23333（config.xml 中的settings、typeAliases、environments、mappers）</p>
+<p>xml的属性要顺序的不然报错（config.xml 中的settings、typeAliases、environments、mappers）</p>
 <ul>
 <li>⾸先配置⽇志框架，可以极⼤地提⾼排查问题的效率</li>
 <li>然后配置数据源</li>
@@ -159,7 +159,7 @@ Mybatis
             sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">selectOne</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Mapper.batchInsertUsers&#34;</span><span style="color:#f92672">,</span> users<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
-</code></pre></div><h1 id="mapper">Mapper</h1>
+</code></pre></div><h2 id="mapper">Mapper</h2>
 <ul>
 <li>parameterType
 <ul>
@@ -204,13 +204,13 @@ Mybatis
             (#{user.name},#{user.tel},#{user.address})
         <span style="color:#f92672">&lt;/foreach&gt;</span>
     <span style="color:#f92672">&lt;/insert&gt;</span>
-</code></pre></div><h1 id="mybatis的缓存">MyBatis的缓存</h1>
+</code></pre></div><h2 id="mybatis的缓存">MyBatis的缓存</h2>
 <ul>
 <li>缓存是如何⼯作的？</li>
 <li>MyBatis缓存源代码深⼊解读</li>
 <li>Decorator模式</li>
 </ul>
-<h1 id="mybatis-mapperproxy">MyBatis MapperProxy</h1>
+<h2 id="mybatis-mapperproxy">MyBatis MapperProxy</h2>
 <p>动态字节码增强?</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> User <span style="color:#a6e22e">selectUserById</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>SqlSession sqlSession <span style="color:#f92672">=</span> sqlSessionFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">openSession</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
@@ -223,7 +223,13 @@ Mybatis
         User <span style="color:#a6e22e">SelectIdGetUser</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span> Integer id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 </code></pre></div><p>还有在config.xml 配置mapper class=&rdquo;&hellip;..&rdquo;
-返回的类型User 是通过JavaBean约定  （调试器会调到get/set方法里面去）</p></article>
+返回的类型User 是通过JavaBean约定  （调试器会调到get/set方法里面去）</p>
+<h2 id="mybatis字符">MyBatis字符</h2>
+<p>Utf8 utf8mb4
+数据库 在mybatis中有一个驼峰形式 xx_xx to xxXx</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Session<span style="color:#f92672">.</span><span style="color:#a6e22e">commit</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> 等等 <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">catch</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>  session<span style="color:#f92672">.</span><span style="color:#a6e22e">rollback</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+Session<span style="color:#f92672">.</span><span style="color:#a6e22e">flushStatements</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+</code></pre></div></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
@@ -319,6 +325,8 @@ Mybatis
       <a class="ui label" href="/tags/java8" title="java8">java8</a>
     
       <a class="ui label" href="/tags/maven" title="maven">maven</a>
+    
+      <a class="ui label" href="/tags/maven%E9%97%AE%E9%A2%98" title="maven问题">maven问题</a>
     
       <a class="ui label" href="/tags/mysql" title="mysql">mysql</a>
     
@@ -469,6 +477,12 @@ Mybatis
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/" class="item">Spring生态系统</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">
@@ -641,6 +655,12 @@ Mybatis
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/maven%E9%97%AE%E9%A2%98/" class="item">Maven问题</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">
