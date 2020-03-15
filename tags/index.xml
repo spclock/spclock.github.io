@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>redis</title>
+      <link>http://Lazybear.online/tags/redis/</link>
+      <pubDate>Sun, 08 Mar 2020 11:19:57 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>maven问题</title>
       <link>http://Lazybear.online/tags/maven%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 03 Mar 2020 14:17:09 +0800</pubDate>
@@ -282,7 +291,7 @@
     </item>
     
     <item>
-      <title>Thread</title>
+      <title>thread</title>
       <link>http://Lazybear.online/tags/thread/</link>
       <pubDate>Thu, 30 Jan 2020 20:17:04 +0800</pubDate>
       

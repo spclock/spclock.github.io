@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redis on Lazybear</title>
+    <link>http://Lazybear.online/tags/redis/</link>
+    <description>Recent content in redis on Lazybear</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 08 Mar 2020 11:19:57 +0800</lastBuildDate>
+    
+	<atom:link href="http://Lazybear.online/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Redis</title>
+      <link>http://Lazybear.online/posts/redis/</link>
+      <pubDate>Sun, 08 Mar 2020 11:19:57 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/redis/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
