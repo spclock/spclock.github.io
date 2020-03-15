@@ -6,10 +6,19 @@
     <description>Recent content in java on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 04 Mar 2020 13:40:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 16:04:57 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AOP</title>
+      <link>http://Lazybear.online/posts/aop/</link>
+      <pubDate>Sun, 08 Mar 2020 16:04:57 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/aop/</guid>
+      <description>&lt;p&gt;AOP?怎么用？与oop对比好处？&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Spring生态系统</title>

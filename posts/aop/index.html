@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-Maven包管理
+AOP
 </title>
 
     
@@ -15,27 +15,28 @@ Maven包管理
 
   
   <meta name="author" content="spc" />
-  <meta name="description" content="maven笔记" />
+  <meta name="description" content="AOP?怎么用？与oop对比好处？
+" />
 
 
 
 <meta name="generator" content="Hugo 0.62.2" />
 
-<link rel="canonical" href="http://Lazybear.online/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" />
+<link rel="canonical" href="http://Lazybear.online/posts/aop/" />
 
 
-<meta property="og:title" content="Maven包管理" />
-<meta property="og:description" content="maven笔记" />
+<meta property="og:title" content="AOP" />
+<meta property="og:description" content="AOP?怎么用？与oop对比好处？" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://Lazybear.online/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" />
-<meta property="article:published_time" content="2020-01-15T09:01:48+08:00" />
-<meta property="article:modified_time" content="2020-01-15T09:01:48+08:00" />
+<meta property="og:url" content="http://Lazybear.online/posts/aop/" />
+<meta property="article:published_time" content="2020-03-08T16:04:57+08:00" />
+<meta property="article:modified_time" content="2020-03-08T16:04:57+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Maven包管理"/>
-<meta name="twitter:description" content="maven笔记"/>
+<meta name="twitter:title" content="AOP"/>
+<meta name="twitter:description" content="AOP?怎么用？与oop对比好处？"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -87,130 +88,87 @@ Maven包管理
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          Maven包管理
-          <div class="sub header">@ spc · Wednesday, Jan 15, 2020 · 1 分钟阅读 · 更新于 Jan 15, 2020</div>
+          AOP
+          <div class="sub header">@ spc · Sunday, Mar 8, 2020 · 1 分钟阅读 · 更新于 Mar 8, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><h1 id="maven笔记">maven笔记</h1>
-<h3 id="目录">目录</h3>
-<p><a href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%8c%85jar">什么是包</a><br>
-<a href="#%E5%8C%85%E7%9A%84%E6%95%85%E4%BA%8B">包的故事</a><br>
-<a href="#%E5%8C%85%E7%AE%A1%E7%90%86">包管理</a><br>
-<a href="#maven%e5%8c%85%e7%ae%a1%e7%90%86">Maven包管理</a><br>
-<a href="#%E5%8C%85%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98">包冲突问题</a><br>
-<a href="#%e6%b2%a1%e6%9c%89maven%e5%89%8d%e7%9a%84%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95">没有Maven前的解决办法</a><br>
-<a href="#maven%e8%a7%a3%e5%86%b3%e5%8c%85%e5%86%b2%e7%aa%81%e5%8a%9e%e6%b3%95">Maven解决包冲突办法</a><br>
-<a href="#%E9%A1%B9%E7%9B%AE%E7%BC%BA%E5%A4%B1%E5%8C%85%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">项目缺失包解决办法</a></p>
-<h1 id="什么是包jar">什么是包（jar）</h1>
-<p>很简单就相当于zip，类多了就用jar压缩</p>
-<h1 id="包的故事">包的故事</h1>
-<p>JVM是一个很<strong>耿直</strong>的虚拟机。为什么说JVM很耿直，因为JVM的工作被设计的很简单</p>
-<ol>
-<li>执行一个类的字节码</li>
-<li>当'1'的过程遇到新的类，就会加载它</li>
-</ol>
-<p><strong>问题</strong></p>
+      <article style="margin-top: 2rem;"><p>AOP?怎么用？与oop对比好处？</p>
+<h1 id="aop">AOP</h1>
 <ul>
-<li>那么你有没有想过一个问题，那些类JVM会在哪里找，这些类终不会无中生有吧！</li>
-<li>项目需要某个jar包，你有没有试过你复制了一个jar包到项目，但还是没有卵用！！！</li>
-</ul>
-<p><strong>答案</strong></p>
-<p>这就涉及到了java编译运行时 Jvm会帮你创建一个命令，命令的其中一个参数 <code>-classpath 全包名XXX....</code>
-JVM遇到一个新的类就好去<code>-classpath </code>上找对应的jar包里面的类，找到就执行，否则报错。</p>
-<p><strong>传递性依赖</strong>：简单来说就是你用的jar包里面又用别的jar包，然后别的jar包又用另一个jar包。
-<img src="/posts/img/%E5%8C%85%E6%A0%91%E5%9B%BE.png" alt="包树图"></p>
-<p>classpath hell：全限定类名是类的唯一标识 (例子：org.apache.commons.lang3)
-但多个同名类同时出现在Classpath中，就是噩梦开始（包冲突问题）</p>
-<h1 id="包管理">包管理</h1>
-<p>使用第三方类，
-包管理本质就是告诉JVM如何找到所需的第三方库
-以及成功解决其中的冲突问题（很困难）</p>
-<h1 id="maven包管理">Maven包管理</h1>
+<li>Aspect-Oriented Programming ⾯向切⾯编程</li>
+<li>相对于OOP（⾯向对象编程）</li>
+<li>AOP是⾯向切⾯编程，关注⼀个统⼀的切⾯
 <ul>
-<li>约定优于配置 （约定能通用，配置再好可能只是个人不能很好团队开发）</li>
-<li>Maven远远不止是包管理工具</li>
-<li>Maven中央仓库
-<ul>
-<li>按照一定约定存储包(像图书馆一样管理书籍)</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.junit.jupiter<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>junit-jupiter-engine<span style="color:#f92672">&lt;artifact</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>5.4.2<span style="color:#f92672">&lt;/version&gt;</span>
-      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
-  <span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div></li>
-<li>Maven本地仓库
-<ul>
-<li>默认位于~/.m2</li>
-<li>下载第三方包进行缓存</li>
+<li><code>面向方法的切面</code>来编程，而不是<code>面向某一个方法调</code>用来编程</li>
 </ul>
 </li>
-<li>Maven的包
+<li>AOP和Spring是不同的东⻄</li>
+</ul>
+<h2 id="aop适合于哪些场景">AOP适合于哪些场景</h2>
 <ul>
-<li>按照约定为所有的包编号，⽅便检索</li>
-<li>groupId/artifactId/version</li>
-<li>语义化版本</li>
-<li>SNAPSHOT快照版本</li>
+<li>需要统⼀处理的场景
+<ul>
+<li>⽇志</li>
+<li>缓存</li>
+<li>鉴权</li>
 </ul>
 </li>
-<li>传递性依赖的⾃动管理
+<li>如果⽤OOP来做需要怎么办？
 <ul>
-<li>原则：绝对不允许最终的classpath出现同名不同版本的jar包</li>
-<li>依赖冲突的解决：原则：最近的胜出</li>
-<li>依赖的scope
+<li>装饰器模式/静态代理
 <ul>
-<li>compile：生产代码的依赖</li>
-<li>test：只有测试代码的依赖，例如测试框架JUnit</li>
-<li>provided：编译时需要，但是运⾏时由容器提供，典型如Servlet API</li>
-<li>runtime：编译时候不需要，运⾏时候需要，典型如mysql,connector等JDBC的maven本地仓库</li>
+<li>代理模式主要是<code>控制对某个特定对象访问</code>，而装饰模式主要是<code>为了给对象添加行为</code>。</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h1 id="包冲突问题">包冲突问题</h1>
-<p>最先声明的原则：<br>
-<code>-classpath org.apache.commons.lang3(版本1):org.apache.commons.lang3(版本2)</code><br>
-多个同名类同时出现在Classpath中，JVM在<code>-classpath</code>按顺序找，找到哪一个先就用哪一个（就会用版本1 ）
-你本想用版本2（修复了版本1bug），之前导入版本1忘记删后面导入版本2，但JVM用了版本1，这样就是有bug问题。</p>
-<p>常见的包冲突异常如下：</p>
-<pre><code>AbstractMethodError
-NoClassDefFoundError
-ClassNotFoundException
-LinkageError
-</code></pre><h1 id="没有maven前的解决办法">没有Maven前的解决办法</h1>
-<p>手写命令行进行编译<br>
-不完整的简单例子：<br>
-<code>javac -classpath jar包名:jar包名:jar包名</code>
-一个一个依赖全部打上去，还要搞清楚那几个包中的类冲突并进行处理</p>
-<h1 id="maven解决包冲突办法">Maven解决包冲突办法</h1>
-<ol>
-<li>清楚那些相同类名，看依赖树（有三种方法）
-<ol>
-<li>idea右侧Maven的可视化视图</li>
-<li>终端bash运行<code>mvn dependency:tree</code></li>
-<li>idea下载Maven Helper插件查看依赖树</li>
-</ol>
+<h2 id="aop的实现">AOP的实现</h2>
+<ul>
+<li>JDK动态代理
+<ul>
+<li>优点：⽅便，不需要依赖任何第三⽅库</li>
+<li>缺点：功能受限，只适⽤于接⼝</li>
+</ul>
 </li>
-<li>采用某一个版本
-<ol>
-<li>用最近原则</li>
-<li>强行解除依赖关系</li>
-<li>最先原则</li>
-</ol>
+<li>CGLIB/ByteBuddy字节码⽣成
+<ul>
+<li>优点：强⼤，不受接⼝的限制</li>
+<li>缺点：需要引⽤额外的第三⽅类库</li>
+<li>不能增强final类/final/private⽅法</li>
+</ul>
 </li>
-</ol>
-<h1 id="项目缺失包解决办法">项目缺失包解决办法</h1>
-<pre><code>建议最好用google搜索 “jar包名 Maven” 搜索到的依赖加到pom.xml，刷新maven。</code></pre></article>
+</ul>
+<h2 id="装饰器模式">装饰器模式</h2>
+<ul>
+<li>Decorator pattern</li>
+<li>动态地为⼀个对象增加功能，但是不改变其结构</li>
+<li>本质上是⼀个“包装”</li>
+</ul>
+<h2 id="aop与spring">AOP与Spring</h2>
+<ul>
+<li>在Spring中使⽤AOP实现Redis缓存</li>
+<li>Spring是如何切换JDK动态代理和CGLIB的？
+<ul>
+<li>spring.aop.proxy-target-class=true</li>
+</ul>
+</li>
+<li>@Aspect声明切⾯
+<ul>
+<li>@Before</li>
+<li>@After</li>
+<li>@Around</li>
+</ul>
+</li>
+</ul></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86" title="包管理">包管理</a>
+          <a class="ui label" href="/tags/aop" title="AOP">AOP</a>
         
-          <a class="ui label" href="/tags/maven" title="Maven">Maven</a>
+          <a class="ui label" href="/tags/spring" title="Spring">Spring</a>
         
       
       <div
@@ -231,8 +189,8 @@ LinkageError
 
 
           var disqus_config = function () {
-            this.page.url = 'http:\/\/Lazybear.online\/posts\/maven%E5%8C%85%E7%AE%A1%E7%90%86\/';  
-            this.page.identifier = '\/posts\/maven%E5%8C%85%E7%AE%A1%E7%90%86\/'; 
+            this.page.url = 'http:\/\/Lazybear.online\/posts\/aop\/';  
+            this.page.identifier = '\/posts\/aop\/'; 
           };
 
           (function() { 
