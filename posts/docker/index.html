@@ -102,14 +102,176 @@ Docker
 <li>在服务型环境中部署和调整数据库或其他的后台应用；</li>
 <li>从头编译或者扩展现有的OpenShift或Cloud Foundry平台来搭建自己的PaaS环境。</li>
 </ul>
-<p>Docker 的命令自己手打吧<br>
-Docker elasticsearch 安装<br>
-<code>docker pull elasticsearch:7.6.0</code></p>
-<h2 id="重新启动container中docker">重新启动container中docker</h2>
-<p>用下面这个命令，把container全部列出来：<br>
-<code>docker container ls -a</code><br>
-然后start即可:<br>
-<code>docker container start xxxxyyyyzzzz</code></p></article>
+<p>Docker pull &lt;仓库&gt;&lt;image/镜像&gt;&lt;版本&gt;    仓库默认是<code>docker 版本默认laster</code><br>
+<code>Docker images</code></p>
+<p>Docker container ls -a<br>
+<code>Docker start &lt;id/name&gt;   Docker container start &lt;id/name&gt;</code><br>
+<code>Docker stop &lt;id/name&gt; </code><br>
+如果id前几个字符没重复就不用全写<br>
+Docker run <!-- raw HTML omitted --> 后面是image的参数命令      没创建证明报错用 -it 看看报什么错<br>
+Docker run -it <!-- raw HTML omitted --> 后面是image的参数命令    用完就删除container<br>
+Docker run -d <!-- raw HTML omitted --> 后面是image的参数命令<br>
+参数命令例子：bash（进入交互命令行）<br>
+Docker run &ndash;name <!-- raw HTML omitted --> -v <!-- raw HTML omitted -->:<!-- raw HTML omitted --> -p <!-- raw HTML omitted -->:<!-- raw HTML omitted --><br>
+-e &lt;环境变量名==xxx  例如：mysqlName and password&gt; -d <!-- raw HTML omitted --></p>
+<p>Docker rm &lt;id/name&gt; 在此次之前要stop，那为什么rm -rf 就可以<br>
+Docker exec &lt;id/name&gt;<br>
+Docker logs &lt;id/name&gt;  Docker logs -f &lt;id/name&gt;<br>
+Docker inspect &lt;id/name&gt;</p>
+<p>Docker tag &lt;id/name&gt; 127.0.0.1:5000/文件路径/文件名:版本号<br>
+Docker pull 127.0.0.1:5000/文件路径/文件名:版本号</p>
+<p>如何显示出来/访问：例子：localhost:8080/文件路径/文件名/tags/list<br>
+具体如何要自己上网查查</p>
+<h2 id="docker改变了了软件世界">Docker改变了了软件世界</h2>
+<ul>
+<li>在Docker出现之前……
+<ul>
+<li>软件在操作系统上是如何工作的？</li>
+<li>如何交付软件？</li>
+<li>如何部署软件？</li>
+</ul>
+</li>
+<li>Docker出现之后……</li>
+</ul>
+<h2 id="docker能做什什么">Docker能做什什么？</h2>
+<ul>
+<li>保证开发、测试、交付、部署的环境完全一致</li>
+<li>保证资源的隔离</li>
+<li>启动临时的、⽤用完即弃的环境，例如测试</li>
+<li>迅速（秒级）超大规模部署和扩容</li>
+</ul>
+<h2 id="docker的基本概念">Docker的基本概念</h2>
+<ul>
+<li>镜像 image
+<ul>
+<li>一个预先定义好的模板⽂文件，Docker引擎可以按照这个模板
+⽂文件启动⽆无数个一模一样，互不干扰的容器</li>
+</ul>
+</li>
+<li>容器 container
+<ul>
+<li>一台虚拟的计算机，拥有独⽴的：
+<ul>
+<li>网络</li>
+<li>文件系统</li>
+<li>进程</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>默认和宿主机不不发生任何交互
+<ul>
+<li>意味着数据是没有持久化的！</li>
+</ul>
+</li>
+</ul>
+<h2 id="docker-pullimages">docker pull/images</h2>
+<ul>
+<li>下载一个指定的镜像，⽅方便便随时启动</li>
+<li>docker pull mysql:5.7.28 下载指定镜像</li>
+<li>docker images 查看本地已有的镜像</li>
+</ul>
+<p>registry.cn-beijing.aliyuncs.com/dr1/hcsp:0.0.16<br>
+镜像仓库镜像名tag</p>
+<h2 id="docker-runps">docker run/ps</h2>
+<ul>
+<li>docker run装载镜像成为一个容器器
+<ul>
+<li>就好像从蛋糕模⼦子做出来一个蛋糕</li>
+<li>在这个容器看来，自己就是一台独⽴立的计算机</li>
+<li>每个容器有⼀一个ID，支持缩写</li>
+</ul>
+</li>
+<li>docker run -it &lt;镜像名&gt; &lt;镜像中要运行的命令和参数&gt;  没填image参数默认是bash dockerfile有写得
+<ul>
+<li>交互式命令行，当前shell中运行，Ctrl-C退出</li>
+</ul>
+</li>
+<li>docker run -d &lt;镜像名&gt; &lt;镜像中要运行的命令和参数&gt;
+<ul>
+<li>daemon模式，在后台运⾏行行</li>
+</ul>
+</li>
+</ul>
+<h2 id="docker-run-常用的参数">docker run 常用的参数</h2>
+<ul>
+<li>&ndash;name 为容器指定一个「名字」</li>
+<li>&ndash;restart=always 遇到错误自动重启</li>
+<li>-v &lt;本地文件&gt;:&lt;容器文件&gt;</li>
+<li>-p &lt;本地端口&gt;:&lt;容器端口&gt;</li>
+<li>-e NAME=VALUE</li>
+</ul>
+<h2 id="docker-startstop">docker start/stop</h2>
+<ul>
+<li>启动/停止一个容器
+<ul>
+<li>可以想象为开关机</li>
+</ul>
+</li>
+</ul>
+<h2 id="docker-rm">docker rm</h2>
+<ul>
+<li>删除⼀一个容器
+<ul>
+<li>想象成将电脑丢掉</li>
+</ul>
+</li>
+</ul>
+<h2 id="docker-exec">docker exec</h2>
+<ul>
+<li>指定目标容器，进⼊入容器执行命令
+<ul>
+<li>docker run -it &lt;目标容器ID&gt; &lt;目标命令（通常为bash）&gt;</li>
+<li>可以「想象」成ssh</li>
+</ul>
+</li>
+<li>调试、解决问题必备命令</li>
+</ul>
+<h2 id="docker-logs">docker logs</h2>
+<ul>
+<li>docker logs &lt;容器ID或容器名&gt;
+<ul>
+<li>查看目标容器器的输出</li>
+</ul>
+</li>
+<li>docker logs -f &lt;容器ID或容器名&gt;</li>
+</ul>
+<h2 id="docker-inspect">docker inspect</h2>
+<ul>
+<li>高级命令，可以无视
+<ul>
+<li>查看容器的详细状态</li>
+</ul>
+</li>
+</ul>
+<h2 id="分层的镜像">分层的镜像</h2>
+<p>图片自己补全</p>
+<h2 id="dockerfile">Dockerfile</h2>
+<ul>
+<li>指定镜像如何⽣生成</li>
+<li>编写第一个Dockerfile</li>
+<li>docker build .</li>
+<li>每个镜像会有一个唯一的ID</li>
+</ul>
+<h2 id="docker的镜像仓库与tag">Docker的镜像仓库与tag</h2>
+<ul>
+<li>可以任意对镜像进行tag操作
+<ul>
+<li>决定了未来这个镜像会被push到哪⾥</li>
+<li>决定了未来从哪⾥载镜像</li>
+</ul>
+</li>
+<li>可以方便的创建镜像仓库的私服
+<ul>
+<li>&ndash;registry-mirror</li>
+<li>&ndash;insecure-registry</li>
+</ul>
+</li>
+</ul>
+<h2 id="docker与k8s">Docker与K8s</h2>
+<p>图片</p>
+<h2 id="docker与kubernetes">Docker与Kubernetes</h2>
+<p>图片</p></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
@@ -218,6 +380,8 @@ Docker elasticsearch 安装<br>
     
       <a class="ui label" href="/tags/reflect" title="reflect">reflect</a>
     
+      <a class="ui label" href="/tags/regex" title="regex">regex</a>
+    
       <a class="ui label" href="/tags/spring" title="spring">spring</a>
     
       <a class="ui label" href="/tags/spring-web" title="spring-web">spring-web</a>
@@ -245,6 +409,8 @@ Docker elasticsearch 安装<br>
       <a class="ui label" href="/tags/%E5%8D%9A%E5%AE%A2" title="博客">博客</a>
     
       <a class="ui label" href="/tags/%E5%8F%8D%E5%B0%84" title="反射">反射</a>
+    
+      <a class="ui label" href="/tags/%E5%8F%91%E5%B8%83" title="发布">发布</a>
     
       <a class="ui label" href="/tags/%E5%90%8C%E6%AD%A5" title="同步">同步</a>
     
@@ -275,6 +441,8 @@ Docker elasticsearch 安装<br>
       <a class="ui label" href="/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8" title="线程安全">线程安全</a>
     
       <a class="ui label" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" title="计算机网络">计算机网络</a>
+    
+      <a class="ui label" href="/tags/%E9%83%A8%E7%BD%B2" title="部署">部署</a>
     
   </section>
   
@@ -359,6 +527,18 @@ Docker elasticsearch 安装<br>
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/" class="item">Java程序的发布和部署</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://Lazybear.online/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="item">正则表达式</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">

@@ -6,10 +6,28 @@
     <description>Recent content on Lazybear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 08 Mar 2020 16:04:57 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 21:06:03 +0800</lastBuildDate>
     
 	<atom:link href="http://Lazybear.online/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java程序的发布和部署</title>
+      <link>http://Lazybear.online/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Sun, 15 Mar 2020 21:06:03 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/</guid>
+      <description>&lt;p&gt;如何java发布和部署？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>正则表达式</title>
+      <link>http://Lazybear.online/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Sun, 15 Mar 2020 21:02:13 +0800</pubDate>
+      
+      <guid>http://Lazybear.online/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>&lt;p&gt;why use regex?&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AOP</title>
@@ -26,7 +44,7 @@
       <pubDate>Sun, 08 Mar 2020 11:19:57 +0800</pubDate>
       
       <guid>http://Lazybear.online/posts/redis/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <description>&lt;p&gt;why Redis?&lt;/p&gt;</description>
     </item>
     
     <item>
