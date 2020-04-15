@@ -92,7 +92,79 @@
           <div class="sub header">@ spc · Sunday, Mar 15, 2020 · 1 分钟阅读 · 更新于 Mar 15, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><p>why use regex?</p></article>
+      <article style="margin-top: 2rem;"><p>why use regex?</p>
+<h1 id="正则表达式">正则表达式</h1>
+<h2 id="常用的单元字符">常用的单元字符</h2>
+<ul>
+<li>^</li>
+<li>$</li>
+<li>.</li>
+<li>\w \s	\d	\b</li>
+</ul>
+<h2 id="重复">重复</h2>
+<ul>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+<li>?</li>
+<li>{n}	{n,}	{n,m}</li>
+</ul>
+<h2 id="选择">选择</h2>
+<ul>
+<li>[aeiou]</li>
+<li>[0-9]</li>
+<li>[A-Z]</li>
+<li>{A-Z0-9]</li>
+<li>h|H 等价于 [hH]</li>
+</ul>
+<h2 id="反义">反义</h2>
+<p>[^aeiou]	[^A]	\W	\S	\D	\B</p>
+<p>例子：
+(?m)^\[.*?\]</p>
+<p>java中的正则表达式</p>
+<ul>
+<li>
+<p>String</p>
+<ul>
+<li>split()</li>
+<li>replaceAll()/replaceFirst()</li>
+</ul>
+</li>
+<li>
+<p>matches()</p>
+<ul>
+<li>尽量少用或者少编译，因为效率低 （看源代码就知道了）</li>
+<li>java中的正则表达式是比较昂贵的
+<ul>
+<li>正则表达式需要解析，代码非常昂贵 （解析过程非常复杂，看源代码Pattern）</li>
+<li>匹配过程非常昂贵 （它匹配是方式是回溯法）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>因此在写正则表达式中用常量编译一次就可以了
+private static final Pattern name=Pattern.compile(&ldquo;正则表达式&rdquo;);</p>
+<p>匹配
+1.regexName.matcher(&ldquo;文本&rdquo;)   &lt;&mdash;&mdash;&mdash;- return Object[]？？？
+2.String.replaceAll(regexName,&ldquo;文本&rdquo;)； 调用Pattern.compile(); regexName.matcher(&ldquo;文本&rdquo;);</p>
+<h2 id="分组和捕获">分组和捕获</h2>
+<p>正则表达式匹配到返回Object[]？？？</p>
+<p>Matcher matcher
+第一个matcher.group(0)是整一个正则表达式
+matcher.group(1)是第一个分组就是 ()</p>
+<ul>
+<li>分组的编号计算只看左括号</li>
+<li>(?:)不捕获和分配编号，括号只用于分组或标记优先级</li>
+</ul>
+<p>还有没有些 (?:)这样类型 例如 ?m</p></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
@@ -231,8 +303,6 @@
     
       <a class="ui label" href="/tags/%E5%8F%8D%E5%B0%84" title="反射">反射</a>
     
-      <a class="ui label" href="/tags/%E5%8F%91%E5%B8%83" title="发布">发布</a>
-    
       <a class="ui label" href="/tags/%E5%90%8C%E6%AD%A5" title="同步">同步</a>
     
       <a class="ui label" href="/tags/%E5%9F%9F%E5%90%8D" title="域名">域名</a>
@@ -262,8 +332,6 @@
       <a class="ui label" href="/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8" title="线程安全">线程安全</a>
     
       <a class="ui label" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" title="计算机网络">计算机网络</a>
-    
-      <a class="ui label" href="/tags/%E9%83%A8%E7%BD%B2" title="部署">部署</a>
     
   </section>
   
@@ -348,12 +416,6 @@
         </div>
         <div class="content">
           <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://Lazybear.online/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/" class="item">Java程序的发布和部署</a>
-              </div>
-            </div>
           
             <div class="item">
               <div class="content">
