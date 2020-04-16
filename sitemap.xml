@@ -3,32 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://Lazybear.online/tags/automated-test/</loc>
+    <lastmod>2020-04-16T21:30:01+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://Lazybear.online/categories/</loc>
-    <lastmod>2020-03-15T21:02:13+08:00</lastmod>
+    <lastmod>2020-04-16T21:30:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/ci/</loc>
+    <lastmod>2020-04-16T21:30:01+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://Lazybear.online/categories/java/</loc>
-    <lastmod>2020-03-15T21:02:13+08:00</lastmod>
+    <lastmod>2020-04-16T21:30:01+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://Lazybear.online/</loc>
-    <lastmod>2020-03-15T21:02:13+08:00</lastmod>
+    <lastmod>2020-04-16T21:30:01+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://Lazybear.online/posts/</loc>
-    <lastmod>2020-03-15T21:02:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://Lazybear.online/tags/regex/</loc>
-    <lastmod>2020-03-15T21:02:13+08:00</lastmod>
+    <lastmod>2020-04-16T21:30:01+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://Lazybear.online/tags/</loc>
+    <lastmod>2020-04-16T21:30:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2020-04-16T21:30:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://Lazybear.online/tags/regex/</loc>
     <lastmod>2020-03-15T21:02:13+08:00</lastmod>
   </url>
   
