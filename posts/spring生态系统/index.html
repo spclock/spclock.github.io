@@ -109,7 +109,7 @@ Spring生态系统
 <li>前后端分离和后端渲染</li>
 </ol>
 <p>MVC :model  view  controller<br>
-　　模板引擎  视图  controller</p>
+　　数据  视图  controller</p>
 <h2 id="spring生态系统中的主要子项目">Spring生态系统中的主要子项目：</h2>
 <ol>
 <li>Spring Framework：Spring项目的核心。IoC、AOP、MVC、JDBC、事务处理等等。</li>
@@ -126,7 +126,67 @@ Spring生态系统
 <li>Spring Mobile：基于Spring MVC构建，为移动终端的服务器应用开发提供支持。</li>
 <li>Spring Social：Spring框架的扩展，帮助Spring应用更方便的使用SNS。</li>
 <li>Spring Data：为Spring 应用提供使用非关系型数据的能力。</li>
-</ol></article>
+</ol>
+<h1 id="spring的原理和组成">Spring的原理和组成</h1>
+<p>封装一系列的开箱即用的组件功能：</p>
+<ul>
+<li>Spring JDBC</li>
+<li>SpringMVC</li>
+<li>Spring Security</li>
+<li>Spring AOP</li>
+<li>Spring ORM</li>
+<li>Spring Test</li>
+</ul>
+<h1 id="spring-mvc">Spring MVC</h1>
+<p>User argent &ndash;http request &mdash; dispatcher Servlet &mdash;- handlerMapping &mdash;Controller<br>
+&mdash;- ViewResolver<br>
+&mdash;- Model &mdash;View</p>
+<h1 id="spring-boot">Spring Boot</h1>
+<p>Springboot 基本上是Spring框架的扩展，它消除了设置Spring应用程序所需的xml配置，为了更快更高效的开发生态系统
+SpringBoot中一些特点：</p>
+<ol>
+<li>创建独立的Spring应用</li>
+<li>嵌入Tomcat，Jetty，Undertow而且不需要部署。</li>
+<li>提供的 starters pom来简化Maven配置</li>
+<li>尽可能自动部署spring应用</li>
+<li>提供生产指标，健壮检查和外部化配置</li>
+</ol>
+<h2 id="spring-boot-的核心配置文件">Spring Boot 的核心配置文件</h2>
+<ol>
+<li>Application配置文件主要用于Spring Boot项目的自动化配置</li>
+<li>Bootstrap配置文件应用场景：
+<ol>
+<li>使用Spring Cloud Config配置中心时需要在bootstrap配置文件中添加连接到配置中心的配置属性来加载外部配置中心的配置信息。</li>
+<li>一些固定的不能被覆盖的属性</li>
+<li>一些加密/解密的场景</li>
+</ol>
+</li>
+</ol>
+<h2 id="spring-boot-自动配置原理">Spring Boot 自动配置原理</h2>
+<p>@EnableAutoConfiguration，@Configuration，@ConditionalOnClass
+得到配置文件，根据类路径下是否有这个类去自动配置。</p>
+<h2 id="springboot-starters">SpringBoot Starters</h2>
+<h2 id="springboot实现热部署">SpringBoot实现热部署</h2>
+<p>主要有两种方式：</p>
+<ul>
+<li>Spring Loaded</li>
+<li>Spring-boot-devtools</li>
+</ul>
+<h2 id="spring-boot-starter-parent">Spring-boot-starter-parent</h2>
+<p>我们在创建一个SpringBoot项目，默认都会有<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->spring-boot-starter-parent<!-- raw HTML omitted -->主要有如下作用：</p>
+<ol>
+<li>定义了java编译版本（现在还是1.8）</li>
+<li>使用utf-8格式编码</li>
+<li>继承spring-boot-dependencies，这个里边定义了依赖的版本，因此我们在写依赖时才不需要写版本号。</li>
+<li>执行打包操作的配置</li>
+<li>自动化的资源过滤</li>
+<li>自动化的插件配置</li>
+<li>针对application.properties和application.yml的资源过滤，包括profile定义的不同环境的配置文件，例如application-dev.properties和application-dev.yml</li>
+</ol>
+<h2 id="spring中如何解决跨域问题">Spring中如何解决跨域问题</h2>
+<p>前端通过jsonp来解决，不过jsonp只可以发送GET请求，在RESTful风格的应用中就显得非常无助，因此我们推荐后端通过（CORS Cross-origin resource sharing）来解决跨域问题。
+之前xml配置CORS，现在通过@CrossOrigin</p></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
