@@ -21,18 +21,19 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.88.1" />
 
-<link rel="canonical" href="http://Lazybear.online/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
+<link rel="canonical" href="http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
 
 
 <meta property="og:title" content="算法与数据结构" />
 <meta property="og:description" content="算法：查找、排序、遍历（它们分别时间复杂度？)
 数据结构：数组、链表、栈、队列、哈希表、树（它们的插入、删除和查找时间？）" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://Lazybear.online/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
+<meta property="og:url" content="http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-02-13T10:30:13+08:00" />
 <meta property="article:modified_time" content="2020-02-13T10:30:13+08:00" />
+
 
 
 
@@ -77,7 +78,7 @@
     <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/Lazybear.online\/'"></i>
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/shuangpinai.top\/'"></i>
   </div>
   <div class="item">
     <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
@@ -92,7 +93,7 @@
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
           算法与数据结构
-          <div class="sub header">@ spc · Thursday, Feb 13, 2020 · 3 分钟阅读 · 更新于 Feb 13, 2020</div>
+          <div class="sub header">@ spc · Thursday, Feb 13, 2020 · 3 分钟阅读 · 更新于 2月 13, 2020</div>
         </h2>
       </header>
       <article style="margin-top: 2rem;"><p>算法：查找、排序、遍历（它们分别时间复杂度？)<br>
@@ -167,16 +168,16 @@
 <h1 id="算法">算法</h1>
 <h2 id="binarysearch">binarySearch</h2>
 <p>在jdk有自带的binarySearch可以参考如何自己手写代码</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">binarySearch</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> strings<span style="color:#f92672">,</span> String target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">binarySearch</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> strings<span style="color:#f92672">,</span> String target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> low <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
         <span style="color:#66d9ef">int</span> high <span style="color:#f92672">=</span> strings<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>low <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> high<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> low <span style="color:#f92672">+</span> high <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> 1<span style="color:#f92672">;</span>
-            String midVal <span style="color:#f92672">=</span> strings<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>low <span style="color:#f92672">&lt;=</span> high<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> low <span style="color:#f92672">+</span> high <span style="color:#f92672">&gt;&gt;&gt;</span> 1<span style="color:#f92672">;</span>
+            String midVal <span style="color:#f92672">=</span> strings<span style="color:#f92672">[</span>mid<span style="color:#f92672">];</span>
             <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>midVal<span style="color:#f92672">.</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>target<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
                 low <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>midVal<span style="color:#f92672">.</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>target<span style="color:#f92672">)</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>midVal<span style="color:#f92672">.</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>target<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
                     <span style="color:#66d9ef">return</span> mid<span style="color:#f92672">;</span>
                 <span style="color:#f92672">}</span>
                 high <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
@@ -195,40 +196,40 @@
 </li>
 <li>广度优先遍历 <strong>bfs</strong>（队列来实现）</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//队列次序： 1 32 543 7654
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//队列次序： 1 32 543 7654
 </span><span style="color:#75715e"></span> <span style="color:#75715e">// 请实现二叉树的广度优先遍历（层次遍历）
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">bfs</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>root<span style="color:#f92672">=</span><span style="color:#f92672">=</span><span style="color:#66d9ef">null</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;empty tree&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>root<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span><span style="color:#f92672">){</span>
+            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;empty tree&#34;</span><span style="color:#f92672">);</span>
         <span style="color:#f92672">}</span>
-        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-        ArrayDeque<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-        queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>root<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span>queue<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            TreeNode currentNode <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span><span style="color:#a6e22e">removeFirst</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-            result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        ArrayDeque<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;&gt;();</span>
+        queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>queue<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            TreeNode currentNode <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span><span style="color:#a6e22e">removeFirst</span><span style="color:#f92672">();</span>
+            result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
             <span style="color:#f92672">}</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
         <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#75715e">// 请实现二叉树的深度优先遍历（前序）
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#75715e">// 请实现二叉树的深度优先遍历（前序）
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">dfs</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-        ArrayDeque<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-        stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>root<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            TreeNode currentNode <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-            result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        ArrayDeque<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;&gt;();</span>
+        stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            TreeNode currentNode <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+            result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
             <span style="color:#f92672">}</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
         <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
@@ -243,77 +244,77 @@
 <li>归并排序 O(N*log2N)</li>
 <li>堆排序 O(N*log2N)</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">// 选择排序
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">// 选择排序
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// 按照从小到大排序
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort1</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> array<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort1</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">int</span> minIndex <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">[</span>minIndex<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">[</span>minIndex<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
                     minIndex <span style="color:#f92672">=</span> j<span style="color:#f92672">;</span>
                 <span style="color:#f92672">}</span>
             <span style="color:#f92672">}</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>minIndex <span style="color:#f92672">!</span><span style="color:#f92672">=</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
-                array<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>minIndex<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>minIndex <span style="color:#f92672">!=</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+                array<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>minIndex<span style="color:#f92672">];</span>
                 array<span style="color:#f92672">[</span>minIndex<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">     <span style="color:#75715e">// 冒泡排序
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">     <span style="color:#75715e">// 冒泡排序
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// 按照从小到大排序
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bubbleSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> array<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bubbleSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">int</span> temp<span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1 <span style="color:#f92672">-</span> i<span style="color:#f92672">;</span> j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> array<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                    temp <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
-                    array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1 <span style="color:#f92672">-</span> i<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> array<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                    temp <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+                    array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">];</span>
                     array<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
                 <span style="color:#f92672">}</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">// 插入排序
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">// 插入排序
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// 按照从小到大排序
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertion_sort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> array<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">int</span> key <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertion_sort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> key <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
             <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 0 <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> key<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                array<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
-                j<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> key<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                array<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+                j<span style="color:#f92672">--;</span>
             <span style="color:#f92672">}</span>
             array<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> key<span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">// 快速排序
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">// 快速排序
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// 按照从小到大排序
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">//arr数组、head头下标、tail尾下标
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">qSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> tail<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> tail <span style="color:#f92672">|</span><span style="color:#f92672">|</span> arr <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">qSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> tail<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">&gt;=</span> tail <span style="color:#f92672">||</span> arr <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;=</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> head<span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> tail<span style="color:#f92672">,</span> pivot <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span><span style="color:#f92672">(</span>head <span style="color:#f92672">+</span> tail<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> head<span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> tail<span style="color:#f92672">,</span> pivot <span style="color:#f92672">=</span> arr<span style="color:#f92672">[(</span>head <span style="color:#f92672">+</span> tail<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">];</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;=</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> pivot<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#f92672">+</span><span style="color:#f92672">+</span>i<span style="color:#f92672">;</span>
+                <span style="color:#f92672">++</span>i<span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>
             <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> pivot<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#f92672">-</span><span style="color:#f92672">-</span>j<span style="color:#f92672">;</span>
+                <span style="color:#f92672">--</span>j<span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>
             <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
-                arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+                arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
                 arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> t<span style="color:#f92672">;</span>
-                <span style="color:#f92672">+</span><span style="color:#f92672">+</span>i<span style="color:#f92672">;</span>
-                <span style="color:#f92672">-</span><span style="color:#f92672">-</span>j<span style="color:#f92672">;</span>
-            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">=</span><span style="color:#f92672">=</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#f92672">+</span><span style="color:#f92672">+</span>i<span style="color:#f92672">;</span>
+                <span style="color:#f92672">++</span>i<span style="color:#f92672">;</span>
+                <span style="color:#f92672">--</span>j<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">==</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#f92672">++</span>i<span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
-        qSort<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> head<span style="color:#f92672">,</span> j<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-        qSort<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> i<span style="color:#f92672">,</span> tail<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        qSort<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> head<span style="color:#f92672">,</span> j<span style="color:#f92672">);</span>
+        qSort<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> i<span style="color:#f92672">,</span> tail<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 </code></pre></div></article>
     </section>
@@ -344,7 +345,7 @@
 
 
           var disqus_config = function () {
-            this.page.url = 'http:\/\/Lazybear.online\/posts\/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84\/';  
+            this.page.url = 'http:\/\/shuangpinai.top\/posts\/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84\/';  
             this.page.identifier = '\/posts\/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84\/'; 
           };
 
@@ -462,6 +463,8 @@
     
       <a class="ui label" href="/tags/%E5%8F%8D%E5%B0%84" title="反射">反射</a>
     
+      <a class="ui label" href="/tags/%E5%8F%91%E5%B8%83" title="发布">发布</a>
+    
       <a class="ui label" href="/tags/%E5%90%8C%E6%AD%A5" title="同步">同步</a>
     
       <a class="ui label" href="/tags/%E5%9F%9F%E5%90%8D" title="域名">域名</a>
@@ -492,6 +495,8 @@
     
       <a class="ui label" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" title="计算机网络">计算机网络</a>
     
+      <a class="ui label" href="/tags/%E9%83%A8%E7%BD%B2" title="部署">部署</a>
+    
   </section>
   
 
@@ -508,7 +513,7 @@
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/docker/" class="item">Docker</a>
+                <a href="http://shuangpinai.top/posts/docker/" class="item">Docker</a>
               </div>
             </div>
           
@@ -524,7 +529,7 @@
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/" class="item">git本地和远程命令</a>
+                <a href="http://shuangpinai.top/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/" class="item">git本地和远程命令</a>
               </div>
             </div>
           
@@ -540,13 +545,13 @@
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E6%B5%85%E6%9E%90-url/" class="item">浅析 URL</a>
+                <a href="http://shuangpinai.top/posts/%E6%B5%85%E6%9E%90-url/" class="item">浅析 URL</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="item">HTML常用标签</a>
+                <a href="http://shuangpinai.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="item">HTML常用标签</a>
               </div>
             </div>
           
@@ -562,7 +567,7 @@
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/" class="item">域名与博客绑定配置</a>
+                <a href="http://shuangpinai.top/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/" class="item">域名与博客绑定配置</a>
               </div>
             </div>
           
@@ -578,145 +583,157 @@
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/jvm/" class="item">JVM</a>
+                <a href="http://shuangpinai.top/posts/spring%E6%B5%81%E7%A8%8B/" class="item">Spring流程</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" class="item">持续化集成 自动化测试</a>
+                <a href="http://shuangpinai.top/posts/jvm/" class="item">JVM</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="item">正则表达式</a>
+                <a href="http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" class="item">持续化集成 自动化测试</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/aop/" class="item">AOP</a>
+                <a href="http://shuangpinai.top/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/" class="item">Java程序的发布和部署</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/redis/" class="item">Redis</a>
+                <a href="http://shuangpinai.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="item">正则表达式</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/" class="item">Spring生态系统</a>
+                <a href="http://shuangpinai.top/posts/aop/" class="item">AOP</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/spring-web%E5%BA%94%E7%94%A8/" class="item">Spring Web应用</a>
+                <a href="http://shuangpinai.top/posts/redis/" class="item">Redis</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/spring/" class="item">Spring</a>
+                <a href="http://shuangpinai.top/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/" class="item">Spring生态系统</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/mybatis/" class="item">Mybatis</a>
+                <a href="http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/" class="item">Spring Web应用</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/" class="item">注解</a>
+                <a href="http://shuangpinai.top/posts/spring/" class="item">Spring</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/java%E6%B3%9B%E5%9E%8B/" class="item">Java泛型</a>
+                <a href="http://shuangpinai.top/posts/mybatis/" class="item">Mybatis</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/class-and-reflect/" class="item">Class and Reflect</a>
+                <a href="http://shuangpinai.top/posts/%E6%B3%A8%E8%A7%A3/" class="item">注解</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/string%E5%8E%9F%E7%90%86/" class="item">String原理</a>
+                <a href="http://shuangpinai.top/posts/java%E6%B3%9B%E5%9E%8B/" class="item">Java泛型</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/java8_stream/" class="item">Java8_Stream</a>
+                <a href="http://shuangpinai.top/posts/class-and-reflect/" class="item">Class and Reflect</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" class="item">Java8函数式编程</a>
+                <a href="http://shuangpinai.top/posts/string%E5%8E%9F%E7%90%86/" class="item">String原理</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/" class="item">解决死锁</a>
+                <a href="http://shuangpinai.top/posts/java8_stream/" class="item">Java8_Stream</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/" class="item">线程安全or同步</a>
+                <a href="http://shuangpinai.top/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" class="item">Java8函数式编程</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/thread/" class="item">Thread</a>
+                <a href="http://shuangpinai.top/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/" class="item">解决死锁</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/sql/" class="item">SQL</a>
+                <a href="http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/" class="item">线程安全or同步</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" class="item">异常体系</a>
+                <a href="http://shuangpinai.top/posts/thread/" class="item">Thread</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/file%E4%B8%8Eio/" class="item">File与io</a>
+                <a href="http://shuangpinai.top/posts/sql/" class="item">SQL</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/javaweb/" class="item">JavaWeb</a>
+                <a href="http://shuangpinai.top/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" class="item">异常体系</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/" class="item">Collection体系知识点</a>
+                <a href="http://shuangpinai.top/posts/file%E4%B8%8Eio/" class="item">File与io</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" class="item">Maven包管理</a>
+                <a href="http://shuangpinai.top/posts/javaweb/" class="item">JavaWeb</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://shuangpinai.top/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/" class="item">Collection体系知识点</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="http://shuangpinai.top/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" class="item">Maven包管理</a>
               </div>
             </div>
           
@@ -732,13 +749,13 @@
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/mysql/" class="item">MySQL</a>
+                <a href="http://shuangpinai.top/posts/mysql/" class="item">MySQL</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/elasticsearch/" class="item">Elasticsearch</a>
+                <a href="http://shuangpinai.top/posts/elasticsearch/" class="item">Elasticsearch</a>
               </div>
             </div>
           
@@ -754,7 +771,7 @@
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="item">算法与数据结构</a>
+                <a href="http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="item">算法与数据结构</a>
               </div>
             </div>
           
@@ -770,7 +787,7 @@
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" class="item">OSI模型与TCPIP模型简介</a>
+                <a href="http://shuangpinai.top/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" class="item">OSI模型与TCPIP模型简介</a>
               </div>
             </div>
           
@@ -786,19 +803,19 @@
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/maven%E9%97%AE%E9%A2%98/" class="item">Maven问题</a>
+                <a href="http://shuangpinai.top/posts/maven%E9%97%AE%E9%A2%98/" class="item">Maven问题</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" class="item">数据库字符编码问题</a>
+                <a href="http://shuangpinai.top/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" class="item">数据库字符编码问题</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="http://Lazybear.online/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/" class="item">解决死锁</a>
+                <a href="http://shuangpinai.top/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/" class="item">解决死锁</a>
               </div>
             </div>
           
@@ -811,7 +828,7 @@
 
   <section class="ui bottom attached center aligned segment">
       
-      <p>© 2020 Lazybear</p>
+      <p>© 2020 - 2022 shuangpinai</p>
       
       <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
   </section>
@@ -829,7 +846,7 @@
     <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/Lazybear.online\/'"></i>
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/shuangpinai.top\/'"></i>
   </div>
   <div class="item">
     <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>

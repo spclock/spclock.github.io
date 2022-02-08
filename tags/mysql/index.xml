@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MySQL on Lazybear</title>
-    <link>http://Lazybear.online/tags/mysql/</link>
-    <description>Recent content in MySQL on Lazybear</description>
+    <title>MySQL on shuangpinai</title>
+    <link>http://shuangpinai.top/tags/mysql/</link>
+    <description>Recent content in MySQL on shuangpinai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 Mar 2020 07:51:37 +0800</lastBuildDate>
-    
-	<atom:link href="http://Lazybear.online/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 Mar 2020 07:51:37 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MySQL</title>
-      <link>http://Lazybear.online/posts/mysql/</link>
+      <link>http://shuangpinai.top/posts/mysql/</link>
       <pubDate>Mon, 02 Mar 2020 07:51:37 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/mysql/</guid>
+      <guid>http://shuangpinai.top/posts/mysql/</guid>
       <description>&lt;p&gt;mysql相关知识&lt;/p&gt;</description>
     </item>
     

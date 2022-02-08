@@ -1,332 +1,346 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Lazybear</title>
-    <link>http://Lazybear.online/posts/</link>
-    <description>Recent content in Posts on Lazybear</description>
+    <title>Posts on shuangpinai</title>
+    <link>http://shuangpinai.top/posts/</link>
+    <description>Recent content in Posts on shuangpinai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 15 Jul 2020 14:06:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://Lazybear.online/posts/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 23 Jul 2020 21:16:13 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring流程</title>
+      <link>http://shuangpinai.top/posts/spring%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Thu, 23 Jul 2020 21:16:13 +0800</pubDate>
+      
+      <guid>http://shuangpinai.top/posts/spring%E6%B5%81%E7%A8%8B/</guid>
+      <description>&lt;p&gt;spring流程&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>JVM</title>
-      <link>http://Lazybear.online/posts/jvm/</link>
+      <link>http://shuangpinai.top/posts/jvm/</link>
       <pubDate>Wed, 15 Jul 2020 14:06:09 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/jvm/</guid>
+      <guid>http://shuangpinai.top/posts/jvm/</guid>
       <description>&lt;p&gt;深入了解JVM&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>持续化集成 自动化测试</title>
-      <link>http://Lazybear.online/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+      <link>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Thu, 16 Apr 2020 21:30:01 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
+      <guid>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
       <description>&lt;p&gt;解放你的双手，省去重复劳动&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>Java程序的发布和部署</title>
+      <link>http://shuangpinai.top/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Sun, 15 Mar 2020 21:06:03 +0800</pubDate>
+      
+      <guid>http://shuangpinai.top/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/</guid>
+      <description>&lt;p&gt;如何java发布和部署？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>正则表达式</title>
-      <link>http://Lazybear.online/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <link>http://shuangpinai.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
       <pubDate>Sun, 15 Mar 2020 21:02:13 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <guid>http://shuangpinai.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
       <description>&lt;p&gt;why use regex?&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AOP</title>
-      <link>http://Lazybear.online/posts/aop/</link>
+      <link>http://shuangpinai.top/posts/aop/</link>
       <pubDate>Sun, 08 Mar 2020 16:04:57 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/aop/</guid>
+      <guid>http://shuangpinai.top/posts/aop/</guid>
       <description>&lt;p&gt;AOP?怎么用？与oop对比好处？如何代理，注解处理？&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Redis</title>
-      <link>http://Lazybear.online/posts/redis/</link>
+      <link>http://shuangpinai.top/posts/redis/</link>
       <pubDate>Sun, 08 Mar 2020 11:19:57 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/redis/</guid>
+      <guid>http://shuangpinai.top/posts/redis/</guid>
       <description>&lt;p&gt;why Redis?&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Spring生态系统</title>
-      <link>http://Lazybear.online/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</link>
+      <link>http://shuangpinai.top/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Wed, 04 Mar 2020 13:40:23 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>http://shuangpinai.top/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</guid>
       <description>&lt;p&gt;Spring生态系统：spring springMVC MyBaits (ssm)&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Maven问题</title>
-      <link>http://Lazybear.online/posts/maven%E9%97%AE%E9%A2%98/</link>
+      <link>http://shuangpinai.top/posts/maven%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 03 Mar 2020 14:17:09 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/maven%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://shuangpinai.top/posts/maven%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;有关maven的问题&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Spring Web应用</title>
-      <link>http://Lazybear.online/posts/spring-web%E5%BA%94%E7%94%A8/</link>
+      <link>http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/</link>
       <pubDate>Mon, 02 Mar 2020 07:57:49 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/spring-web%E5%BA%94%E7%94%A8/</guid>
+      <guid>http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>http://Lazybear.online/posts/docker/</link>
+      <link>http://shuangpinai.top/posts/docker/</link>
       <pubDate>Mon, 02 Mar 2020 07:52:23 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/docker/</guid>
+      <guid>http://shuangpinai.top/posts/docker/</guid>
       <description>&lt;p&gt;Docker?&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>MySQL</title>
-      <link>http://Lazybear.online/posts/mysql/</link>
+      <link>http://shuangpinai.top/posts/mysql/</link>
       <pubDate>Mon, 02 Mar 2020 07:51:37 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/mysql/</guid>
+      <guid>http://shuangpinai.top/posts/mysql/</guid>
       <description>&lt;p&gt;mysql相关知识&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Elasticsearch</title>
-      <link>http://Lazybear.online/posts/elasticsearch/</link>
+      <link>http://shuangpinai.top/posts/elasticsearch/</link>
       <pubDate>Mon, 02 Mar 2020 07:50:28 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/elasticsearch/</guid>
+      <guid>http://shuangpinai.top/posts/elasticsearch/</guid>
       <description>&lt;p&gt;Elasticsearch&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>数据库字符编码问题</title>
-      <link>http://Lazybear.online/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</link>
+      <link>http://shuangpinai.top/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</link>
       <pubDate>Fri, 28 Feb 2020 14:50:49 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://shuangpinai.top/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;各种的字符乱码解决方案&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>浅析 URL</title>
-      <link>http://Lazybear.online/posts/%E6%B5%85%E6%9E%90-url/</link>
+      <link>http://shuangpinai.top/posts/%E6%B5%85%E6%9E%90-url/</link>
       <pubDate>Sun, 23 Feb 2020 22:17:24 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E6%B5%85%E6%9E%90-url/</guid>
+      <guid>http://shuangpinai.top/posts/%E6%B5%85%E6%9E%90-url/</guid>
       <description>&lt;p&gt;URL是什么，它由什么组成&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>HTML常用标签</title>
-      <link>http://Lazybear.online/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <link>http://shuangpinai.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Sun, 23 Feb 2020 17:08:51 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <guid>http://shuangpinai.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
       <description>&lt;p&gt;a 、img 、table 标签的用法&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Spring</title>
-      <link>http://Lazybear.online/posts/spring/</link>
+      <link>http://shuangpinai.top/posts/spring/</link>
       <pubDate>Fri, 21 Feb 2020 19:20:57 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/spring/</guid>
+      <guid>http://shuangpinai.top/posts/spring/</guid>
       <description>&lt;p&gt;spring? , ?要用spring , Spring怎么用? , 怎么实现？&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Mybatis</title>
-      <link>http://Lazybear.online/posts/mybatis/</link>
+      <link>http://shuangpinai.top/posts/mybatis/</link>
       <pubDate>Wed, 19 Feb 2020 09:26:31 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/mybatis/</guid>
+      <guid>http://shuangpinai.top/posts/mybatis/</guid>
       <description>&lt;p&gt;ORM：Object Relational Mapping&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>注解</title>
-      <link>http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/</link>
+      <link>http://shuangpinai.top/posts/%E6%B3%A8%E8%A7%A3/</link>
       <pubDate>Sun, 16 Feb 2020 20:21:43 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E6%B3%A8%E8%A7%A3/</guid>
+      <guid>http://shuangpinai.top/posts/%E6%B3%A8%E8%A7%A3/</guid>
       <description>&lt;p&gt;?注解，有哪些注解，?创建注解,?获得注解，注解怎么被处理?
 怎么能找到处理注解代码？&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Java泛型</title>
-      <link>http://Lazybear.online/posts/java%E6%B3%9B%E5%9E%8B/</link>
+      <link>http://shuangpinai.top/posts/java%E6%B3%9B%E5%9E%8B/</link>
       <pubDate>Sun, 16 Feb 2020 10:30:04 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/java%E6%B3%9B%E5%9E%8B/</guid>
+      <guid>http://shuangpinai.top/posts/java%E6%B3%9B%E5%9E%8B/</guid>
       <description>&lt;p&gt;java是假泛型！！！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Class and Reflect</title>
-      <link>http://Lazybear.online/posts/class-and-reflect/</link>
+      <link>http://shuangpinai.top/posts/class-and-reflect/</link>
       <pubDate>Sat, 15 Feb 2020 23:26:25 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/class-and-reflect/</guid>
+      <guid>http://shuangpinai.top/posts/class-and-reflect/</guid>
       <description>&lt;p&gt;类型与反射&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>String原理</title>
-      <link>http://Lazybear.online/posts/string%E5%8E%9F%E7%90%86/</link>
+      <link>http://shuangpinai.top/posts/string%E5%8E%9F%E7%90%86/</link>
       <pubDate>Fri, 14 Feb 2020 08:14:37 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/string%E5%8E%9F%E7%90%86/</guid>
+      <guid>http://shuangpinai.top/posts/string%E5%8E%9F%E7%90%86/</guid>
       <description>&lt;p&gt;String的原理&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>算法与数据结构</title>
-      <link>http://Lazybear.online/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <link>http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
       <pubDate>Thu, 13 Feb 2020 10:30:13 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <guid>http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
       <description>&lt;p&gt;算法：查找、排序、遍历（它们分别时间复杂度？)&lt;br&gt;
 数据结构：数组、链表、栈、队列、哈希表、树（它们的插入、删除和查找时间？）&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Java8_Stream</title>
-      <link>http://Lazybear.online/posts/java8_stream/</link>
+      <link>http://shuangpinai.top/posts/java8_stream/</link>
       <pubDate>Wed, 12 Feb 2020 10:10:04 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/java8_stream/</guid>
+      <guid>http://shuangpinai.top/posts/java8_stream/</guid>
       <description>&lt;p&gt;精髓：数据变换，简化代码
 Stream简化代码，熟练能让你用得很爽&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Java8函数式编程</title>
-      <link>http://Lazybear.online/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+      <link>http://shuangpinai.top/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Tue, 11 Feb 2020 19:12:39 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
+      <guid>http://shuangpinai.top/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
       <description>&lt;p&gt;学习java8函数式编程&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>解决死锁</title>
-      <link>http://Lazybear.online/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/</link>
+      <link>http://shuangpinai.top/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/</link>
       <pubDate>Sun, 02 Feb 2020 10:25:48 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/</guid>
+      <guid>http://shuangpinai.top/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/</guid>
       <description>&lt;p&gt;如何解决java进程的死锁问题&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>域名与博客绑定配置</title>
-      <link>http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</link>
+      <link>http://shuangpinai.top/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Sat, 01 Feb 2020 21:40:17 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</guid>
+      <guid>http://shuangpinai.top/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</guid>
       <description>&lt;p&gt;github和域名绑定教程&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>git本地和远程命令</title>
-      <link>http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</link>
+      <link>http://shuangpinai.top/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 01 Feb 2020 20:45:56 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://shuangpinai.top/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</guid>
       <description>&lt;p&gt;git的本地和远程仓库的有关命令&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>线程安全or同步</title>
-      <link>http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</link>
+      <link>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</link>
       <pubDate>Thu, 30 Jan 2020 20:17:04 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</guid>
+      <guid>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</guid>
       <description>&lt;p&gt;死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程。
 静态和非静态同步方法锁问题。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Thread</title>
-      <link>http://Lazybear.online/posts/thread/</link>
+      <link>http://shuangpinai.top/posts/thread/</link>
       <pubDate>Wed, 29 Jan 2020 11:07:05 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/thread/</guid>
+      <guid>http://shuangpinai.top/posts/thread/</guid>
       <description>&lt;p&gt;什么是进程、线程和多线程，怎么用和有什么用，需要注意什么。不会就给我看&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>SQL</title>
-      <link>http://Lazybear.online/posts/sql/</link>
+      <link>http://shuangpinai.top/posts/sql/</link>
       <pubDate>Thu, 23 Jan 2020 09:13:59 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/sql/</guid>
+      <guid>http://shuangpinai.top/posts/sql/</guid>
       <description>&lt;p&gt;有关数据库和sql的语法知识&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>异常体系</title>
-      <link>http://Lazybear.online/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</link>
+      <link>http://shuangpinai.top/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</link>
       <pubDate>Wed, 22 Jan 2020 16:41:02 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</guid>
+      <guid>http://shuangpinai.top/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>File与io</title>
-      <link>http://Lazybear.online/posts/file%E4%B8%8Eio/</link>
+      <link>http://shuangpinai.top/posts/file%E4%B8%8Eio/</link>
       <pubDate>Wed, 22 Jan 2020 11:14:25 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/file%E4%B8%8Eio/</guid>
+      <guid>http://shuangpinai.top/posts/file%E4%B8%8Eio/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>OSI模型与TCPIP模型简介</title>
-      <link>http://Lazybear.online/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</link>
+      <link>http://shuangpinai.top/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</link>
       <pubDate>Sun, 19 Jan 2020 16:35:45 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</guid>
+      <guid>http://shuangpinai.top/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</guid>
       <description>&lt;p&gt;OSI和TCP / IP都是最受欢迎和使用最广泛的通信网络协议。它们之间的主要区别在于OSI是一种概念模型，实际上并未用于通信。它定义了如何在网络或不同体系结构中传输数据。而TCP / IP被广泛用于链路的建立和网络互动。TCP / IP还仅允许在网络层上使用连接模式，但是这两种方法都在传输层上。使用OSI模型，它可以促进无连接和面向连接的网络通信，但是面向连接的通信仅在传输层中被允许。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>JavaWeb</title>
-      <link>http://Lazybear.online/posts/javaweb/</link>
+      <link>http://shuangpinai.top/posts/javaweb/</link>
       <pubDate>Sat, 18 Jan 2020 21:45:54 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/javaweb/</guid>
+      <guid>http://shuangpinai.top/posts/javaweb/</guid>
       <description>&lt;p&gt;java爬虫&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Collection体系知识点</title>
-      <link>http://Lazybear.online/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+      <link>http://shuangpinai.top/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
       <pubDate>Fri, 17 Jan 2020 08:18:00 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+      <guid>http://shuangpinai.top/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
       <description>&lt;p&gt;Collection体系原理与实践&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Maven包管理</title>
-      <link>http://Lazybear.online/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+      <link>http://shuangpinai.top/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</link>
       <pubDate>Wed, 15 Jan 2020 09:01:48 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
+      <guid>http://shuangpinai.top/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
       <description>&lt;h1 id=&#34;maven笔记&#34;&gt;maven笔记&lt;/h1&gt;</description>
     </item>
     

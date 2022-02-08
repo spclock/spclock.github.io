@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>数据库 on Lazybear</title>
-    <link>http://Lazybear.online/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
-    <description>Recent content in 数据库 on Lazybear</description>
+    <title>数据库 on shuangpinai</title>
+    <link>http://shuangpinai.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 数据库 on shuangpinai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 Mar 2020 07:51:37 +0800</lastBuildDate>
-    
-	<atom:link href="http://Lazybear.online/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 Mar 2020 07:51:37 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MySQL</title>
-      <link>http://Lazybear.online/posts/mysql/</link>
+      <link>http://shuangpinai.top/posts/mysql/</link>
       <pubDate>Mon, 02 Mar 2020 07:51:37 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/mysql/</guid>
+      <guid>http://shuangpinai.top/posts/mysql/</guid>
       <description>&lt;p&gt;mysql相关知识&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Elasticsearch</title>
-      <link>http://Lazybear.online/posts/elasticsearch/</link>
+      <link>http://shuangpinai.top/posts/elasticsearch/</link>
       <pubDate>Mon, 02 Mar 2020 07:50:28 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/elasticsearch/</guid>
+      <guid>http://shuangpinai.top/posts/elasticsearch/</guid>
       <description>&lt;p&gt;Elasticsearch&lt;/p&gt;</description>
     </item>
     

@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>String on Lazybear</title>
-    <link>http://Lazybear.online/tags/string/</link>
-    <description>Recent content in String on Lazybear</description>
+    <title>String on shuangpinai</title>
+    <link>http://shuangpinai.top/tags/string/</link>
+    <description>Recent content in String on shuangpinai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 14 Feb 2020 08:14:37 +0800</lastBuildDate>
-    
-	<atom:link href="http://Lazybear.online/tags/string/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 14 Feb 2020 08:14:37 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/string/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>String原理</title>
-      <link>http://Lazybear.online/posts/string%E5%8E%9F%E7%90%86/</link>
+      <link>http://shuangpinai.top/posts/string%E5%8E%9F%E7%90%86/</link>
       <pubDate>Fri, 14 Feb 2020 08:14:37 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/string%E5%8E%9F%E7%90%86/</guid>
+      <guid>http://shuangpinai.top/posts/string%E5%8E%9F%E7%90%86/</guid>
       <description>&lt;p&gt;String的原理&lt;/p&gt;</description>
     </item>
     

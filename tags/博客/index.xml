@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>博客 on Lazybear</title>
-    <link>http://Lazybear.online/tags/%E5%8D%9A%E5%AE%A2/</link>
-    <description>Recent content in 博客 on Lazybear</description>
+    <title>博客 on shuangpinai</title>
+    <link>http://shuangpinai.top/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on shuangpinai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 01 Feb 2020 21:40:17 +0800</lastBuildDate>
-    
-	<atom:link href="http://Lazybear.online/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 01 Feb 2020 21:40:17 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>域名与博客绑定配置</title>
-      <link>http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</link>
+      <link>http://shuangpinai.top/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Sat, 01 Feb 2020 21:40:17 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</guid>
+      <guid>http://shuangpinai.top/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/</guid>
       <description>&lt;p&gt;github和域名绑定教程&lt;/p&gt;</description>
     </item>
     

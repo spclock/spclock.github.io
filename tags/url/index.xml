@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>URL on Lazybear</title>
-    <link>http://Lazybear.online/tags/url/</link>
-    <description>Recent content in URL on Lazybear</description>
+    <title>URL on shuangpinai</title>
+    <link>http://shuangpinai.top/tags/url/</link>
+    <description>Recent content in URL on shuangpinai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 23 Feb 2020 22:17:24 +0800</lastBuildDate>
-    
-	<atom:link href="http://Lazybear.online/tags/url/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 23 Feb 2020 22:17:24 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/url/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>浅析 URL</title>
-      <link>http://Lazybear.online/posts/%E6%B5%85%E6%9E%90-url/</link>
+      <link>http://shuangpinai.top/posts/%E6%B5%85%E6%9E%90-url/</link>
       <pubDate>Sun, 23 Feb 2020 22:17:24 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/%E6%B5%85%E6%9E%90-url/</guid>
+      <guid>http://shuangpinai.top/posts/%E6%B5%85%E6%9E%90-url/</guid>
       <description>&lt;p&gt;URL是什么，它由什么组成&lt;/p&gt;</description>
     </item>
     

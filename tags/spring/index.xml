@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>spring on Lazybear</title>
-    <link>http://Lazybear.online/tags/spring/</link>
-    <description>Recent content in spring on Lazybear</description>
+    <title>Spring on shuangpinai</title>
+    <link>http://shuangpinai.top/tags/spring/</link>
+    <description>Recent content in Spring on shuangpinai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 08 Mar 2020 16:04:57 +0800</lastBuildDate>
-    
-	<atom:link href="http://Lazybear.online/tags/spring/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 23 Jul 2020 21:16:13 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring流程</title>
+      <link>http://shuangpinai.top/posts/spring%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Thu, 23 Jul 2020 21:16:13 +0800</pubDate>
+      
+      <guid>http://shuangpinai.top/posts/spring%E6%B5%81%E7%A8%8B/</guid>
+      <description>&lt;p&gt;spring流程&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AOP</title>
-      <link>http://Lazybear.online/posts/aop/</link>
+      <link>http://shuangpinai.top/posts/aop/</link>
       <pubDate>Sun, 08 Mar 2020 16:04:57 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/aop/</guid>
+      <guid>http://shuangpinai.top/posts/aop/</guid>
       <description>&lt;p&gt;AOP?怎么用？与oop对比好处？如何代理，注解处理？&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Spring生态系统</title>
-      <link>http://Lazybear.online/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</link>
+      <link>http://shuangpinai.top/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Wed, 04 Mar 2020 13:40:23 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>http://shuangpinai.top/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/</guid>
       <description>&lt;p&gt;Spring生态系统：spring springMVC MyBaits (ssm)&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Spring</title>
-      <link>http://Lazybear.online/posts/spring/</link>
+      <link>http://shuangpinai.top/posts/spring/</link>
       <pubDate>Fri, 21 Feb 2020 19:20:57 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/spring/</guid>
+      <guid>http://shuangpinai.top/posts/spring/</guid>
       <description>&lt;p&gt;spring? , ?要用spring , Spring怎么用? , 怎么实现？&lt;/p&gt;</description>
     </item>
     

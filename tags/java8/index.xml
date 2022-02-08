@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>java8 on Lazybear</title>
-    <link>http://Lazybear.online/tags/java8/</link>
-    <description>Recent content in java8 on Lazybear</description>
+    <title>java8 on shuangpinai</title>
+    <link>http://shuangpinai.top/tags/java8/</link>
+    <description>Recent content in java8 on shuangpinai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 12 Feb 2020 10:10:04 +0800</lastBuildDate>
-    
-	<atom:link href="http://Lazybear.online/tags/java8/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 12 Feb 2020 10:10:04 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/java8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java8_Stream</title>
-      <link>http://Lazybear.online/posts/java8_stream/</link>
+      <link>http://shuangpinai.top/posts/java8_stream/</link>
       <pubDate>Wed, 12 Feb 2020 10:10:04 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/java8_stream/</guid>
+      <guid>http://shuangpinai.top/posts/java8_stream/</guid>
       <description>&lt;p&gt;精髓：数据变换，简化代码
 Stream简化代码，熟练能让你用得很爽&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Java8函数式编程</title>
-      <link>http://Lazybear.online/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+      <link>http://shuangpinai.top/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Tue, 11 Feb 2020 19:12:39 +0800</pubDate>
       
-      <guid>http://Lazybear.online/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
+      <guid>http://shuangpinai.top/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
       <description>&lt;p&gt;学习java8函数式编程&lt;/p&gt;</description>
     </item>
     
