@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>HashMap - 双皮奶</title><meta name="description" content=""><meta property="og:title" content="HashMap" />
+<meta property="og:description" content="对hashmap的认识有多少点进来看看吧" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shuangpinai.top/posts/hashmap/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-09T23:02:04+08:00" />
+<meta property="article:modified_time" content="2022-02-09T23:02:04+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HashMap"/>
+<meta name="twitter:description" content="对hashmap的认识有多少点进来看看吧"/>
+<meta name="application-name" content="双皮奶">
+<meta name="apple-mobile-web-app-title" content="双皮奶"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://shuangpinai.top/posts/hashmap/" /><link rel="prev" href="http://shuangpinai.top/posts/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" /><link rel="stylesheet" href="/css/page.min.css"><link rel="stylesheet" href="/css/home.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "HashMap",
+        "inLanguage": "zh-cn",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/shuangpinai.top\/posts\/hashmap\/"
+        },"genre": "posts","keywords": "HashMap","wordcount":  70 ,
+        "url": "http:\/\/shuangpinai.top\/posts\/hashmap\/","datePublished": "2022-02-09T23:02:04+08:00","dateModified": "2022-02-09T23:02:04+08:00","publisher": {
+            "@type": "Organization",
+            "name": "Spc"},"author": {
+                "@type": "Person",
+                "name": "Spc"
+            },"description": ""
+    }
+    </script></head><body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="双皮奶">双皮奶</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="双皮奶">双皮奶</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><div class="menu-item"><a href="javascript:void(0);" class="theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div></div>
+    </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single" data-toc="disable"><div class="single-card" ><h2 class="single-title animated flipInX">HashMap</h2><div class="post-meta">
+                <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Spc</a></span>&nbsp;<span class="post-category">出版于  <a href="/categories/%E9%9D%A2%E8%AF%95/"><i class="far fa-folder fa-fw"></i>面试</a></span></div>
+                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-09">2022-02-09</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 70 字</span>&nbsp;
+                    <span><i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟</span>&nbsp;</div>
+            </div>
+            
+            <hr><div class="details toc" id="toc-static"  data-kept="">
+                    <div class="details-summary toc-title">
+                        <span>目录</span>
+                        <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+                    <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                </div><div class="content" id="content"><p>对hashmap的认识有多少点进来看看吧</p>
+<h1 id="hashmap">HashMap</h1>
+<p>底层数据结构：</p>
+<p>jdk1.7：数组+链表 <strong>链表是解决hash冲突</strong></p>
+<p>jdk1.8：数组+链表+红黑树 <strong>链表过长会影响性能</strong></p>
+<ul>
+<li>当链表超过 8 且数据总量超过 64 才会转红黑树。</li>
+<li>将链表转换成红黑树前会判断，如果当前数组的长度小于 64，那么会选择先进行数组扩容，而不是转换为红黑树，以减少搜索时间。</li>
+</ul>
+<p>HashMap 的扩容方式？</p>
+<p>Hashmap 在容量超过负载因子所定义的容量之后，就会扩容。Java 里的数组是无法自动扩容的，方法是将 Hashmap 的大小扩大为原来数组的两倍，并将原来的对象放入新的数组中。<strong>jdk1.7使用头插法 jdk1.8使用尾插法</strong></p>
+<p>链表长度为8，为什么选择8 ？（泊松分布）</p>
+<p>HashMap源码中，容器中节点分布在 hash 桶中的频率遵循**<a href="https://link.zhihu.com/?target=http%3A//en.wikipedia.org/wiki/Poisson_distribution" target="_blank" rel="noopener noreffer">泊松分布</a>**，按照泊松分布的计算公式计算出了桶中元素个数和概率的对照表，可以看到链表中元素个数为 8 时的概率已经非常小，再多的就更少了，所以原作者在选择链表元素个数时选择了 8，是根据概率统计而选择的。</p>
+<p>默认加载因子是多少？为什么是 0.75 ？</p>
+<p>默认的loadFactor是0.75，0.75是对空间和时间效率的一个平衡选择，一般不要修改，除非在时间和空间比较特殊的情况下 ：</p>
+<ul>
+<li>如果内存空间很多而又对时间效率要求很高，可以降低负载因子Load factor的值 。</li>
+<li>相反，如果内存空间紧张而对时间效率要求不高，可以增加负载因子loadFactor的值，这个值可以大于1。</li>
+</ul>
+<p>hashmap 和 hashtable 区别？</p>
+<p><strong>线程安全问题</strong>： hashtable的方法是同步，hashmap中的方法是非同步，</p>
+<p>**继承关系：**HashTable是基于陈旧的Dictionary类继承来的。 HashMap继承的抽象类AbstractMap实现了Map接口。</p>
+<p><strong>允不允许null值：</strong> HashTable中，key和value都不允许出现null值，否则会抛出NullPointerException异常。 HashMap中，null可以作为键，这样的键只有一个；可以有一个或多个键所对应的值为null。</p>
+<p><strong>默认初始容量和扩容机制：</strong> HashTable中的hash数组初始大小是11，增加的方式是 old*2+1。HashMap中hash数组的默认大小是16，而且一定是2的指数。</p>
+<p><strong>哈希值的使用不同 ：</strong> HashTable直接使用对象的hashCode。 HashMap重新计算hash值。</p>
+<p><strong>遍历方式的内部实现上不同 ：</strong> Hashtable、HashMap都使用了 Iterator。而由于历史原因，Hashtable还使用了Enumeration的方式 。 HashMap 实现 Iterator，支持fast-fail，Hashtable的 Iterator 遍历支持fast-fail，用 Enumeration 不支持 fast-fail</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info"><div class="post-info-tag"><span><a href="/tags/hashmap/">HashMap</a>
+                </span></div><div class="post-info-line"><div class="post-info-mod">
+                <span>更新于 2022-02-09</span>
+            </div><div class="post-info-mod"></div>
+        </div></div><div class="post-nav"><a href="/posts/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" class="prev" rel="prev" title="Mysql索引失效"><i class="fas fa-angle-left fa-fw"></i>Previous Post</a></div></div>
+</div></article></div>
+            </main>
+            <footer class="footer"><div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/khusika/FeelIt" target="_blank" rel="noopener noreffer" title="FeelIt 1.0.1"><i class="fas fa-hand-holding-heart fa-fw"></i> FeelIt</a>
+        </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/"></a></span></div>
+</div>
+</footer>
+        </div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-chevron-up fa-fw"></i>
+            </a></div><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body></html>

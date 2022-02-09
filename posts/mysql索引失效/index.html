@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Mysql索引失效 - 双皮奶</title><meta name="description" content=""><meta property="og:title" content="Mysql索引失效" />
+<meta property="og:description" content="mysql索引失效" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shuangpinai.top/posts/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-09T22:59:03+08:00" />
+<meta property="article:modified_time" content="2022-02-09T22:59:03+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mysql索引失效"/>
+<meta name="twitter:description" content="mysql索引失效"/>
+<meta name="application-name" content="双皮奶">
+<meta name="apple-mobile-web-app-title" content="双皮奶"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://shuangpinai.top/posts/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" /><link rel="prev" href="http://shuangpinai.top/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" /><link rel="next" href="http://shuangpinai.top/posts/hashmap/" /><link rel="stylesheet" href="/css/page.min.css"><link rel="stylesheet" href="/css/home.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Mysql索引失效",
+        "inLanguage": "zh-cn",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/shuangpinai.top\/posts\/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88\/"
+        },"genre": "posts","keywords": "mysql索引","wordcount":  61 ,
+        "url": "http:\/\/shuangpinai.top\/posts\/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88\/","datePublished": "2022-02-09T22:59:03+08:00","dateModified": "2022-02-09T22:59:03+08:00","publisher": {
+            "@type": "Organization",
+            "name": "Spc"},"author": {
+                "@type": "Person",
+                "name": "Spc"
+            },"description": ""
+    }
+    </script></head><body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="双皮奶">双皮奶</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="双皮奶">双皮奶</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><div class="menu-item"><a href="javascript:void(0);" class="theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div></div>
+    </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single" data-toc="disable"><div class="single-card" ><h2 class="single-title animated flipInX">Mysql索引失效</h2><div class="post-meta">
+                <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Spc</a></span>&nbsp;<span class="post-category">出版于  <a href="/categories/%E9%9D%A2%E8%AF%95/"><i class="far fa-folder fa-fw"></i>面试</a></span></div>
+                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-09">2022-02-09</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 61 字</span>&nbsp;
+                    <span><i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟</span>&nbsp;</div>
+            </div>
+            
+            <hr><div class="details toc" id="toc-static"  data-kept="">
+                    <div class="details-summary toc-title">
+                        <span>目录</span>
+                        <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+                    <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                </div><div class="content" id="content"><p>mysql索引失效</p>
+<h1 id="mysql索引失效">MySql索引失效</h1>
+<ul>
+<li>select *</li>
+<li>like %</li>
+<li>使用 or</li>
+<li>不满足最左匹配原则</li>
+<li>索引列上使用函数</li>
+<li>索引列上使用计算</li>
+<li>字段类型不同 例如：int varchar     索引int = varchar 会隐式转换</li>
+<li>列对比</li>
+<li>not in 和 not exists</li>
+<li>order by的坑</li>
+</ul>
+<blockquote>
+<p>如果使用了<code>or</code>关键字，那么它前面和后面的字段都要加索引，不然所有的索引都会失效，这是一个大坑。</p>
+</blockquote>
+<blockquote>
+<p>在 MySQL 中应该对 in / not in查询的字节长度是有限制的。 当超过了长度（不确定）就不在走索引</p>
+</blockquote>
+<p><strong>in/ not in</strong> <a href="https://segmentfault.com/a/1190000023825926" target="_blank" rel="noopener noreffer">https://segmentfault.com/a/1190000023825926</a></p>
+<blockquote>
+<p>not exists    t1 表哪种情况都不会走索引，而 t2 表是有索引的情况下就会走索引。为什么会出现这种情况？</p>
+</blockquote>
+<p>对于 in 查询来说，会先执行子查询，如上边的 t2 表，然后把查询得到的结果和外表 t1 做笛卡尔积，再通过条件进行筛选（这里的条件就是指 name 是否相等），把每个符合条件的数据都加入到结果集中。</p>
+<p>对于 exists 来说，是先查询遍历外表 t1 ，然后每次遍历时，再检查在内表是否符合匹配条件，即检查是否存在 name 相等的数据。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info"><div class="post-info-tag"><span><a href="/tags/mysql%E7%B4%A2%E5%BC%95/">mysql索引</a>
+                </span></div><div class="post-info-line"><div class="post-info-mod">
+                <span>更新于 2022-02-09</span>
+            </div><div class="post-info-mod"></div>
+        </div></div><div class="post-nav"><a href="/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="prev" rel="prev" title="设计模式"><i class="fas fa-angle-left fa-fw"></i>Previous Post</a>
+            <a href="/posts/hashmap/" class="next" rel="next" title="HashMap">Next Post<i class="fas fa-angle-right fa-fw"></i></a></div></div>
+</div></article></div>
+            </main>
+            <footer class="footer"><div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/khusika/FeelIt" target="_blank" rel="noopener noreffer" title="FeelIt 1.0.1"><i class="fas fa-hand-holding-heart fa-fw"></i> FeelIt</a>
+        </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/"></a></span></div>
+</div>
+</footer>
+        </div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-chevron-up fa-fw"></i>
+            </a></div><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body></html>
