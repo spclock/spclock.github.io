@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>设计模式 on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
-    <description>Recent content in 设计模式 on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Tue, 08 Feb 2022 13:03:17 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>设计模式</title>
-      <link>http://shuangpinai.top/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
-      <pubDate>Tue, 08 Feb 2022 13:03:17 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
-      <description>&lt;p&gt;23种设计模式&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>设计模式 - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+        <description>设计模式 - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 08 Feb 2022 13:03:17 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>设计模式</title>
+    <link>http://shuangpinai.top/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <pubDate>Tue, 08 Feb 2022 13:03:17 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+    <description><![CDATA[<p>23种设计模式</p>]]></description>
+</item>
+</channel>
 </rss>

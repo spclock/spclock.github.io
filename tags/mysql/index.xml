@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>MySQL on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/mysql/</link>
-    <description>Recent content in MySQL on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Mon, 02 Mar 2020 07:51:37 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>MySQL</title>
-      <link>http://shuangpinai.top/posts/mysql/</link>
-      <pubDate>Mon, 02 Mar 2020 07:51:37 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/mysql/</guid>
-      <description>&lt;p&gt;mysql相关知识&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>MySQL - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/mysql/</link>
+        <description>MySQL - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 02 Mar 2020 07:51:37 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/mysql/" rel="self" type="application/rss+xml" /><item>
+    <title>MySQL</title>
+    <link>http://shuangpinai.top/posts/mysql/</link>
+    <pubDate>Mon, 02 Mar 2020 07:51:37 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/mysql/</guid>
+    <description><![CDATA[<p>mysql相关知识</p>]]></description>
+</item>
+</channel>
 </rss>

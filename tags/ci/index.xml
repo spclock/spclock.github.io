@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>CI on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/ci/</link>
-    <description>Recent content in CI on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Thu, 16 Apr 2020 21:30:01 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/ci/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>持续化集成 自动化测试</title>
-      <link>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Thu, 16 Apr 2020 21:30:01 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
-      <description>&lt;p&gt;解放你的双手，省去重复劳动&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>CI - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/ci/</link>
+        <description>CI - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 16 Apr 2020 21:30:01 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/ci/" rel="self" type="application/rss+xml" /><item>
+    <title>持续化集成 自动化测试</title>
+    <link>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+    <pubDate>Thu, 16 Apr 2020 21:30:01 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
+    <description><![CDATA[<p>解放你的双手，省去重复劳动</p>]]></description>
+</item>
+</channel>
 </rss>

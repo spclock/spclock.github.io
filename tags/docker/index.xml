@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>docker on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/docker/</link>
-    <description>Recent content in docker on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Mon, 02 Mar 2020 07:52:23 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Docker</title>
-      <link>http://shuangpinai.top/posts/docker/</link>
-      <pubDate>Mon, 02 Mar 2020 07:52:23 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/docker/</guid>
-      <description>&lt;p&gt;Docker?&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>docker - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/docker/</link>
+        <description>docker - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 02 Mar 2020 07:52:23 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/docker/" rel="self" type="application/rss+xml" /><item>
+    <title>Docker</title>
+    <link>http://shuangpinai.top/posts/docker/</link>
+    <pubDate>Mon, 02 Mar 2020 07:52:23 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/docker/</guid>
+    <description><![CDATA[<p>Docker?</p>]]></description>
+</item>
+</channel>
 </rss>

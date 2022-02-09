@@ -1,21 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>算法 on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/%E7%AE%97%E6%B3%95/</link>
-    <description>Recent content in 算法 on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Thu, 13 Feb 2020 10:30:13 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>算法与数据结构</title>
-      <link>http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
-      <pubDate>Thu, 13 Feb 2020 10:30:13 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
-      <description>&lt;p&gt;算法：查找、排序、遍历（它们分别时间复杂度？)&lt;br&gt;
-数据结构：数组、链表、栈、队列、哈希表、树（它们的插入、删除和查找时间？）&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>算法 - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/%E7%AE%97%E6%B3%95/</link>
+        <description>算法 - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 13 Feb 2020 10:30:13 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>算法与数据结构</title>
+    <link>http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+    <pubDate>Thu, 13 Feb 2020 10:30:13 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+    <description><![CDATA[<p>算法：查找、排序、遍历（它们分别时间复杂度？)<br>
+数据结构：数组、链表、栈、队列、哈希表、树（它们的插入、删除和查找时间？）</p>]]></description>
+</item>
+</channel>
 </rss>

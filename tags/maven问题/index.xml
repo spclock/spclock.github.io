@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>maven问题 on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/maven%E9%97%AE%E9%A2%98/</link>
-    <description>Recent content in maven问题 on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Tue, 03 Mar 2020 14:17:09 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/maven%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Maven问题</title>
-      <link>http://shuangpinai.top/posts/maven%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Tue, 03 Mar 2020 14:17:09 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/maven%E9%97%AE%E9%A2%98/</guid>
-      <description>&lt;p&gt;有关maven的问题&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>maven问题 - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/maven%E9%97%AE%E9%A2%98/</link>
+        <description>maven问题 - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 03 Mar 2020 14:17:09 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/maven%E9%97%AE%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>Maven问题</title>
+    <link>http://shuangpinai.top/posts/maven%E9%97%AE%E9%A2%98/</link>
+    <pubDate>Tue, 03 Mar 2020 14:17:09 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/maven%E9%97%AE%E9%A2%98/</guid>
+    <description><![CDATA[<p>有关maven的问题</p>]]></description>
+</item>
+</channel>
 </rss>

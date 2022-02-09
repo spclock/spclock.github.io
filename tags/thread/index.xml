@@ -1,30 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Thread on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/thread/</link>
-    <description>Recent content in Thread on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Thu, 30 Jan 2020 20:17:04 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/thread/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>线程安全or同步</title>
-      <link>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</link>
-      <pubDate>Thu, 30 Jan 2020 20:17:04 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</guid>
-      <description>&lt;p&gt;死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程。
-静态和非静态同步方法锁问题。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Thread</title>
-      <link>http://shuangpinai.top/posts/thread/</link>
-      <pubDate>Wed, 29 Jan 2020 11:07:05 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/thread/</guid>
-      <description>&lt;p&gt;什么是进程、线程和多线程，怎么用和有什么用，需要注意什么。不会就给我看&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Thread - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/thread/</link>
+        <description>Thread - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 30 Jan 2020 20:17:04 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/thread/" rel="self" type="application/rss+xml" /><item>
+    <title>线程安全or同步</title>
+    <link>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</link>
+    <pubDate>Thu, 30 Jan 2020 20:17:04 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/</guid>
+    <description><![CDATA[<p>死锁排查，线程安全，生产者消费者，线程池，按自己想法调度线程。
+静态和非静态同步方法锁问题。</p>]]></description>
+</item>
+<item>
+    <title>Thread</title>
+    <link>http://shuangpinai.top/posts/thread/</link>
+    <pubDate>Wed, 29 Jan 2020 11:07:05 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/thread/</guid>
+    <description><![CDATA[<p>什么是进程、线程和多线程，怎么用和有什么用，需要注意什么。不会就给我看</p>]]></description>
+</item>
+</channel>
 </rss>

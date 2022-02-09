@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>git命令 on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/git%E5%91%BD%E4%BB%A4/</link>
-    <description>Recent content in git命令 on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Sat, 01 Feb 2020 20:45:56 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/git%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>git本地和远程命令</title>
-      <link>http://shuangpinai.top/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Sat, 01 Feb 2020 20:45:56 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</guid>
-      <description>&lt;p&gt;git的本地和远程仓库的有关命令&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>git命令 - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/git%E5%91%BD%E4%BB%A4/</link>
+        <description>git命令 - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 01 Feb 2020 20:45:56 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/git%E5%91%BD%E4%BB%A4/" rel="self" type="application/rss+xml" /><item>
+    <title>git本地和远程命令</title>
+    <link>http://shuangpinai.top/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Sat, 01 Feb 2020 20:45:56 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[<p>git的本地和远程仓库的有关命令</p>]]></description>
+</item>
+</channel>
 </rss>

@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Spring web on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/spring-web/</link>
-    <description>Recent content in Spring web on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Mon, 02 Mar 2020 07:57:49 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/spring-web/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Spring Web应用</title>
-      <link>http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/</link>
-      <pubDate>Mon, 02 Mar 2020 07:57:49 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Spring web - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/spring-web/</link>
+        <description>Spring web - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 02 Mar 2020 07:57:49 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/spring-web/" rel="self" type="application/rss+xml" /><item>
+    <title>Spring Web应用</title>
+    <link>http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/</link>
+    <pubDate>Mon, 02 Mar 2020 07:57:49 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/</guid>
+    <description><![CDATA[<p>Cut out summary from your post content here.</p>]]></description>
+</item>
+</channel>
 </rss>

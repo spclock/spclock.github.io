@@ -1,99 +1,121 @@
 <!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-File与io
-</title>
-
-    
-  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-
-
-  
-  <meta name="author" content="spc" />
-  <meta name="description" content="Cut out summary from your post content here.
-" />
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-<link rel="canonical" href="http://shuangpinai.top/posts/file%E4%B8%8Eio/" />
-
-
-<meta property="og:title" content="File与io" />
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>File与io - 双皮奶</title><meta name="description" content=""><meta property="og:title" content="File与io" />
 <meta property="og:description" content="Cut out summary from your post content here." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://shuangpinai.top/posts/file%E4%B8%8Eio/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-22T11:14:25+08:00" />
 <meta property="article:modified_time" content="2020-01-22T11:14:25+08:00" />
 
-
-
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="File与io"/>
 <meta name="twitter:description" content="Cut out summary from your post content here."/>
+<meta name="application-name" content="双皮奶">
+<meta name="apple-mobile-web-app-title" content="双皮奶"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://shuangpinai.top/posts/file%E4%B8%8Eio/" /><link rel="prev" href="http://shuangpinai.top/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" /><link rel="next" href="http://shuangpinai.top/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" /><link rel="stylesheet" href="/css/page.min.css"><link rel="stylesheet" href="/css/home.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "File与io",
+        "inLanguage": "zh-cn",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/shuangpinai.top\/posts\/file%E4%B8%8Eio\/"
+        },"genre": "posts","keywords": "file, io体系","wordcount":  61 ,
+        "url": "http:\/\/shuangpinai.top\/posts\/file%E4%B8%8Eio\/","datePublished": "2020-01-22T11:14:25+08:00","dateModified": "2020-01-22T11:14:25+08:00","publisher": {
+            "@type": "Organization",
+            "name": "spc"},"author": {
+                "@type": "Person",
+                "name": "spc"
+            },"description": ""
+    }
+    </script></head><body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-
-<link rel="stylesheet" href="/css/github-markdown.css" />
-<link rel="stylesheet" href="/css/semantic.min.css" />
-<link rel="stylesheet" href="/css/site.css" />
-
-
-<style>
-  a {
-    color: seagreen !important;
-  }
-</style>
-
-
-
-<style>
-  .inverted a {
-     color: darkseagreen !important;
-  }
-</style>
-
-
-  </head>
-
-  
-  <body style="background-image: url(/img/background.jpg);">
-  
-    <div class="flip-container">
-      <div class="flipper">
-        <section class="front">
-          
-<nav class="ui secondary inverted menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/shuangpinai.top\/'"></i>
-  </div>
-  <div class="item">
-    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          
-<div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
-
-    <section class="ui top attached segment" id="dream-save-post-as-img">
-      <header style="margin-top: 0 !important;">
-        <h2 class="ui header">
-          File与io
-          <div class="sub header">@ spc · Wednesday, Jan 22, 2020 · 1 分钟阅读 · 更新于 1月 22, 2020</div>
-        </h2>
-      </header>
-      <article style="margin-top: 2rem;"><p>Cut out summary from your post content here.</p>
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="双皮奶">双皮奶</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="双皮奶">双皮奶</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><div class="menu-item"><a href="javascript:void(0);" class="theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div></div>
+    </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single" data-toc="disable"><div class="single-card" ><h2 class="single-title animated flipInX">File与io</h2><div class="post-meta">
+                <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>spc</a></span>&nbsp;<span class="post-category">出版于  <a href="/categories/java/"><i class="far fa-folder fa-fw"></i>java</a></span></div>
+                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-22">2020-01-22</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 61 字</span>&nbsp;
+                    <span><i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟</span>&nbsp;</div>
+            </div>
+            
+            <hr><div class="details toc" id="toc-static"  data-kept="">
+                    <div class="details-summary toc-title">
+                        <span>目录</span>
+                        <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+                    <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#nio">NIO</a></li>
+  </ul>
+</nav></div>
+                </div><div class="content" id="content"><p>Cut out summary from your post content here.</p>
 <h1 id="io体系">io体系</h1>
 <ol>
 <li>inputStream 字节输入流</li>
@@ -137,632 +159,22 @@ mp4，html，class，avi 都是一段字节流，每个程序都有不同解析�
 缺点：慢！！！</p>
 <h2 id="nio">NIO</h2>
 <p>基本数据模型：块<br>
-NIO处理：1. 缓冲buffer 或 cache  2. 并发</p></article>
-    </section>
-
-    <footer class="ui attached segment dream-tags">
-      
-        
-          <a class="ui label" href="/tags/file" title="file">file</a>
-        
-          <a class="ui label" href="/tags/io%E4%BD%93%E7%B3%BB" title="io体系">io体系</a>
-        
-      
-      <div
-        class="ui label"
-        style="float: right; background: #1b1c1d !important; cursor: pointer;"
-        onclick="savePostAsImg()">
-        <i class="save icon"></i> Save as image
-      </div>
-    </footer>
-
-    
-
-    
-      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'http:\/\/shuangpinai.top\/posts\/file%E4%B8%8Eio\/';  
-            this.page.identifier = '\/posts\/file%E4%B8%8Eio\/'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + 'spc' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    
-
-  </div>
-  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
-    <article class="dream-header">
-  <section class="ui top attached center aligned segment">
-    <div class="ui small circular image">
-      
-        <img src="/about/whitebear.jpg">
-      
-    </div>
-
-    <h3 class="ui header">苏普承的博客<div class="sub header" style="margin-top: 0.5rem;">与其感慨路难行，不如马上出发。</div>
-    </h3>
-
-    <div class="ui horizontal list">
-      
-      <a class="item" href="/posts">
-        <i class="archive icon" title="归档"></i>
-      </a>
-      
-      <a class="item" href="/tags">
-        <i class="tags icon" title="所有标签"></i>
-      </a>
-      <a class="item" href="/categories">
-        <i class="th list icon" title="所有分类"></i>
-      </a>
-    </div>
-  </section>
-
-  
-  <section class="ui attached center aligned segment dream-tags">
-    
-      <a class="ui label" href="/tags/aop" title="aop">aop</a>
-    
-      <a class="ui label" href="/tags/automated-test" title="automated-test">automated-test</a>
-    
-      <a class="ui label" href="/tags/ci" title="ci">ci</a>
-    
-      <a class="ui label" href="/tags/class" title="class">class</a>
-    
-      <a class="ui label" href="/tags/collection" title="collection">collection</a>
-    
-      <a class="ui label" href="/tags/docker" title="docker">docker</a>
-    
-      <a class="ui label" href="/tags/elasticsearch" title="elasticsearch">elasticsearch</a>
-    
-      <a class="ui label" href="/tags/exception" title="exception">exception</a>
-    
-      <a class="ui label" href="/tags/file" title="file">file</a>
-    
-      <a class="ui label" href="/tags/git%E5%91%BD%E4%BB%A4" title="git命令">git命令</a>
-    
-      <a class="ui label" href="/tags/handle-exception" title="handle-exception">handle-exception</a>
-    
-      <a class="ui label" href="/tags/io%E4%BD%93%E7%B3%BB" title="io体系">io体系</a>
-    
-      <a class="ui label" href="/tags/java8" title="java8">java8</a>
-    
-      <a class="ui label" href="/tags/jvm" title="jvm">jvm</a>
-    
-      <a class="ui label" href="/tags/maven" title="maven">maven</a>
-    
-      <a class="ui label" href="/tags/maven%E9%97%AE%E9%A2%98" title="maven问题">maven问题</a>
-    
-      <a class="ui label" href="/tags/mysql" title="mysql">mysql</a>
-    
-      <a class="ui label" href="/tags/orm" title="orm">orm</a>
-    
-      <a class="ui label" href="/tags/osi" title="osi">osi</a>
-    
-      <a class="ui label" href="/tags/redis" title="redis">redis</a>
-    
-      <a class="ui label" href="/tags/reflect" title="reflect">reflect</a>
-    
-      <a class="ui label" href="/tags/regex" title="regex">regex</a>
-    
-      <a class="ui label" href="/tags/spring" title="spring">spring</a>
-    
-      <a class="ui label" href="/tags/spring-web" title="spring-web">spring-web</a>
-    
-      <a class="ui label" href="/tags/sql" title="sql">sql</a>
-    
-      <a class="ui label" href="/tags/stream" title="stream">stream</a>
-    
-      <a class="ui label" href="/tags/string" title="string">string</a>
-    
-      <a class="ui label" href="/tags/stringbuffer" title="stringbuffer">stringbuffer</a>
-    
-      <a class="ui label" href="/tags/stringbuilder" title="stringbuilder">stringbuilder</a>
-    
-      <a class="ui label" href="/tags/tcp/ip" title="tcp/ip">tcp/ip</a>
-    
-      <a class="ui label" href="/tags/thread" title="thread">thread</a>
-    
-      <a class="ui label" href="/tags/url" title="url">url</a>
-    
-      <a class="ui label" href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B" title="函数式编程">函数式编程</a>
-    
-      <a class="ui label" href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86" title="包管理">包管理</a>
-    
-      <a class="ui label" href="/tags/%E5%8D%9A%E5%AE%A2" title="博客">博客</a>
-    
-      <a class="ui label" href="/tags/%E5%8F%8D%E5%B0%84" title="反射">反射</a>
-    
-      <a class="ui label" href="/tags/%E5%8F%91%E5%B8%83" title="发布">发布</a>
-    
-      <a class="ui label" href="/tags/%E5%90%8C%E6%AD%A5" title="同步">同步</a>
-    
-      <a class="ui label" href="/tags/%E5%9F%9F%E5%90%8D" title="域名">域名</a>
-    
-      <a class="ui label" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B" title="多线程">多线程</a>
-    
-      <a class="ui label" href="/tags/%E5%AD%97%E7%AC%A6%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98" title="字符乱码问题">字符乱码问题</a>
-    
-      <a class="ui label" href="/tags/%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE" title="常用标签">常用标签</a>
-    
-      <a class="ui label" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93" title="数据库">数据库</a>
-    
-      <a class="ui label" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" title="数据结构">数据结构</a>
-    
-      <a class="ui label" href="/tags/%E6%A1%86%E6%9E%B6" title="框架">框架</a>
-    
-      <a class="ui label" href="/tags/%E6%AD%BB%E9%94%81" title="死锁">死锁</a>
-    
-      <a class="ui label" href="/tags/%E6%B3%9B%E5%9E%8B" title="泛型">泛型</a>
-    
-      <a class="ui label" href="/tags/%E6%B3%A8%E8%A7%A3" title="注解">注解</a>
-    
-      <a class="ui label" href="/tags/%E7%88%AC%E8%99%AB" title="爬虫">爬虫</a>
-    
-      <a class="ui label" href="/tags/%E7%AE%97%E6%B3%95" title="算法">算法</a>
-    
-      <a class="ui label" href="/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8" title="线程安全">线程安全</a>
-    
-      <a class="ui label" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" title="计算机网络">计算机网络</a>
-    
-      <a class="ui label" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" title="设计模式">设计模式</a>
-    
-      <a class="ui label" href="/tags/%E9%83%A8%E7%BD%B2" title="部署">部署</a>
-    
-  </section>
-  
-
-  
-  <section class="ui attached segment dream-categories">
-    <div class="ui accordion">
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/docker" class="item">docker</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/docker/" class="item">Docker</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/git" class="item">git</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/git%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4/" class="item">git本地和远程命令</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/html" class="item">html</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E6%B5%85%E6%9E%90-url/" class="item">浅析 URL</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="item">HTML常用标签</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/hugo" class="item">hugo</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E5%9F%9F%E5%90%8D%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E9%85%8D%E7%BD%AE/" class="item">域名与博客绑定配置</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/java" class="item">java</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/spring%E6%B5%81%E7%A8%8B/" class="item">Spring流程</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/jvm/" class="item">JVM</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" class="item">持续化集成 自动化测试</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/" class="item">Java程序的发布和部署</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="item">正则表达式</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/aop/" class="item">AOP</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/redis/" class="item">Redis</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/spring%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/" class="item">Spring生态系统</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/" class="item">Spring Web应用</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/spring/" class="item">Spring</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/mybatis/" class="item">Mybatis</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E6%B3%A8%E8%A7%A3/" class="item">注解</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/java%E6%B3%9B%E5%9E%8B/" class="item">Java泛型</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/class-and-reflect/" class="item">Class and Reflect</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/string%E5%8E%9F%E7%90%86/" class="item">String原理</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/java8_stream/" class="item">Java8_Stream</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" class="item">Java8函数式编程</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/" class="item">解决死锁</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8or%E5%90%8C%E6%AD%A5/" class="item">线程安全or同步</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/thread/" class="item">Thread</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/sql/" class="item">SQL</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" class="item">异常体系</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/file%E4%B8%8Eio/" class="item">File与io</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/javaweb/" class="item">JavaWeb</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/" class="item">Collection体系知识点</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/" class="item">Maven包管理</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93" class="item">数据库</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/mysql/" class="item">MySQL</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/elasticsearch/" class="item">Elasticsearch</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" class="item">算法与数据结构</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="item">算法与数据结构</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" class="item">计算机网络</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" class="item">OSI模型与TCPIP模型简介</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" class="item">设计模式</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="item">设计模式</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/%E9%97%AE%E9%A2%98" class="item">问题</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/maven%E9%97%AE%E9%A2%98/" class="item">Maven问题</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" class="item">数据库字符编码问题</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="http://shuangpinai.top/posts/%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81/" class="item">解决死锁</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-    </div>
-  </section>
-  
-
-  <section class="ui bottom attached center aligned segment">
-      
-      <p>© 2020 - 2022 shuangpinai</p>
-      
-      <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
-  </section>
-</article>
-
-  </div>
+NIO处理：1. 缓冲buffer 或 cache  2. 并发</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info"><div class="post-info-tag"><span><a href="/tags/file/">file</a>
+                </span><span><a href="/tags/io%E4%BD%93%E7%B3%BB/">io体系</a>
+                </span></div><div class="post-info-line"><div class="post-info-mod">
+                <span>更新于 2020-01-22</span>
+            </div><div class="post-info-mod"></div>
+        </div></div><div class="post-nav"><a href="/posts/osi%E6%A8%A1%E5%9E%8B%E4%B8%8Etcpip%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" class="prev" rel="prev" title="OSI模型与TCPIP模型简介"><i class="fas fa-angle-left fa-fw"></i>Previous Post</a>
+            <a href="/posts/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/" class="next" rel="next" title="异常体系">Next Post<i class="fas fa-angle-right fa-fw"></i></a></div></div>
+</div></article></div>
+            </main>
+            <footer class="footer"><div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/khusika/FeelIt" target="_blank" rel="noopener noreffer" title="FeelIt 1.0.1"><i class="fas fa-hand-holding-heart fa-fw"></i> FeelIt</a>
+        </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/"></a></span></div>
 </div>
-
-        </section>
-        <section class="back">
-          
-<nav class="ui secondary inverted menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'http:\/\/shuangpinai.top\/'"></i>
-  </div>
-  <div class="item">
-    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          <div class="ui centered relaxed grid dream-grid dream-back">
-  
-    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      <article>
-        <div class="ui top attached segment">
-          <h3 class="ui header">SuPuCheng</h3>
+</footer>
         </div>
-        <div class="ui attached segment markdown-body">
-          <p>Hi, my name is Su Pu Cheng.</p>
-<p>This is my blog.</p>
-        </div>
-      </article>
-    </section>
-  
 
-  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-    <article>
-      <div class="ui top attached segment">
-        <h3 class="ui header">社交链接</h3>
-      </div>
-      <div class="ui attached segment">
-        <nav class="ui secondary menu dream-menu">
-          
-            <div class="item">
-              <a href="mailto:1124516293@qq.com">
-                <i class="large mail icon" title="email"></i>
-              </a>
-            </div>
-          
-
-          
-            <div class="item">
-              <a href="https://github.com/spclock" target="_blank">
-                <i class="large github icon" title="github"></i>
-              </a>
-            </div>
-          
-
-          
-
-          
-
-          
-        </nav>
-      </div>
-    </article>
-  </section>
-
-  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-    
-  </section>
-
-  
-  
-</div>
-
-        </section>
-      </div>
-    </div>
-
-    <script src="/js/jquery.min.js"></script>
-<script src="/js/semantic.min.js"></script>
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/masonry.pkgd.min.js"></script>
-<script src="/js/nav.js"></script>
-<script src="/js/header.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/theme.js"></script>
-<script src="/js/html2canvas.min.js"></script>
-
-
-
-  </body>
-</html>
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-chevron-up fa-fw"></i>
+            </a></div><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body></html>

@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Collection on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/collection/</link>
-    <description>Recent content in Collection on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Fri, 17 Jan 2020 08:18:00 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/collection/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Collection体系知识点</title>
-      <link>http://shuangpinai.top/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
-      <pubDate>Fri, 17 Jan 2020 08:18:00 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
-      <description>&lt;p&gt;Collection体系原理与实践&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Collection - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/collection/</link>
+        <description>Collection - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 17 Jan 2020 08:18:00 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/collection/" rel="self" type="application/rss+xml" /><item>
+    <title>Collection体系知识点</title>
+    <link>http://shuangpinai.top/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+    <pubDate>Fri, 17 Jan 2020 08:18:00 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/collection%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+    <description><![CDATA[<p>Collection体系原理与实践</p>]]></description>
+</item>
+</channel>
 </rss>

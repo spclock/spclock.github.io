@@ -1,21 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>注解 on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/%E6%B3%A8%E8%A7%A3/</link>
-    <description>Recent content in 注解 on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Sun, 16 Feb 2020 20:21:43 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E6%B3%A8%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>注解</title>
-      <link>http://shuangpinai.top/posts/%E6%B3%A8%E8%A7%A3/</link>
-      <pubDate>Sun, 16 Feb 2020 20:21:43 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/%E6%B3%A8%E8%A7%A3/</guid>
-      <description>&lt;p&gt;?注解，有哪些注解，?创建注解,?获得注解，注解怎么被处理?
-怎么能找到处理注解代码？&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>注解 - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/%E6%B3%A8%E8%A7%A3/</link>
+        <description>注解 - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 16 Feb 2020 20:21:43 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E6%B3%A8%E8%A7%A3/" rel="self" type="application/rss+xml" /><item>
+    <title>注解</title>
+    <link>http://shuangpinai.top/posts/%E6%B3%A8%E8%A7%A3/</link>
+    <pubDate>Sun, 16 Feb 2020 20:21:43 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E6%B3%A8%E8%A7%A3/</guid>
+    <description><![CDATA[<p>?注解，有哪些注解，?创建注解,?获得注解，注解怎么被处理?
+怎么能找到处理注解代码？</p>]]></description>
+</item>
+</channel>
 </rss>

@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>包管理 on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/%E5%8C%85%E7%AE%A1%E7%90%86/</link>
-    <description>Recent content in 包管理 on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Wed, 15 Jan 2020 09:01:48 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E5%8C%85%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Maven包管理</title>
-      <link>http://shuangpinai.top/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</link>
-      <pubDate>Wed, 15 Jan 2020 09:01:48 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
-      <description>&lt;h1 id=&#34;maven笔记&#34;&gt;maven笔记&lt;/h1&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>包管理 - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+        <description>包管理 - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 15 Jan 2020 09:01:48 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E5%8C%85%E7%AE%A1%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>Maven包管理</title>
+    <link>http://shuangpinai.top/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+    <pubDate>Wed, 15 Jan 2020 09:01:48 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
+    <description><![CDATA[<h1 id="maven笔记">maven笔记</h1>]]></description>
+</item>
+</channel>
 </rss>

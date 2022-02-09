@@ -1,29 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>数据库 on shuangpinai</title>
-    <link>http://shuangpinai.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
-    <description>Recent content in 数据库 on shuangpinai</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Wed, 19 Feb 2020 09:26:31 +0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mybatis</title>
-      <link>http://shuangpinai.top/posts/mybatis/</link>
-      <pubDate>Wed, 19 Feb 2020 09:26:31 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/mybatis/</guid>
-      <description>&lt;p&gt;ORM：Object Relational Mapping&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>SQL</title>
-      <link>http://shuangpinai.top/posts/sql/</link>
-      <pubDate>Thu, 23 Jan 2020 09:13:59 +0800</pubDate>
-      
-      <guid>http://shuangpinai.top/posts/sql/</guid>
-      <description>&lt;p&gt;有关数据库和sql的语法知识&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数据库 - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+        <description>数据库 - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 19 Feb 2020 09:26:31 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="self" type="application/rss+xml" /><item>
+    <title>Mybatis</title>
+    <link>http://shuangpinai.top/posts/mybatis/</link>
+    <pubDate>Wed, 19 Feb 2020 09:26:31 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/mybatis/</guid>
+    <description><![CDATA[<p>ORM：Object Relational Mapping</p>]]></description>
+</item>
+<item>
+    <title>SQL</title>
+    <link>http://shuangpinai.top/posts/sql/</link>
+    <pubDate>Thu, 23 Jan 2020 09:13:59 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/sql/</guid>
+    <description><![CDATA[<p>有关数据库和sql的语法知识</p>]]></description>
+</item>
+</channel>
 </rss>
