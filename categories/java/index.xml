@@ -3,7 +3,13 @@
         <title>java - 分类 - 双皮奶</title>
         <link>http://shuangpinai.top/categories/java/</link>
         <description>java - 分类 - 双皮奶</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 23 Jul 2020 21:16:13 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/categories/java/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 09 Feb 2022 23:02:04 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/categories/java/" rel="self" type="application/rss+xml" /><item>
+    <title>HashMap</title>
+    <link>http://shuangpinai.top/posts/hashmap/</link>
+    <pubDate>Wed, 09 Feb 2022 23:02:04 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/hashmap/</guid>
+    <description><![CDATA[<p>对hashmap的认识有多少点进来看看吧</p>]]></description>
+</item>
+<item>
     <title>Spring流程</title>
     <link>http://shuangpinai.top/posts/spring%E6%B5%81%E7%A8%8B/</link>
     <pubDate>Thu, 23 Jul 2020 21:16:13 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/spring%E6%B5%81%E7%A8%8B/</guid>
@@ -20,6 +26,12 @@
     <link>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
     <pubDate>Thu, 16 Apr 2020 21:30:01 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
     <description><![CDATA[<p>解放你的双手，省去重复劳动</p>]]></description>
+</item>
+<item>
+    <title>Java程序的发布和部署</title>
+    <link>http://shuangpinai.top/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/</link>
+    <pubDate>Sun, 15 Mar 2020 21:06:03 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/</guid>
+    <description><![CDATA[<p>如何java发布和部署？</p>]]></description>
 </item>
 <item>
     <title>正则表达式</title>
@@ -50,18 +62,6 @@
     <link>http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/</link>
     <pubDate>Mon, 02 Mar 2020 07:57:49 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/spring-web%E5%BA%94%E7%94%A8/</guid>
     <description><![CDATA[<p>Cut out summary from your post content here.</p>]]></description>
-</item>
-<item>
-    <title>Spring</title>
-    <link>http://shuangpinai.top/posts/spring/</link>
-    <pubDate>Fri, 21 Feb 2020 19:20:57 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/spring/</guid>
-    <description><![CDATA[<p>spring? , ?要用spring , Spring怎么用? , 怎么实现？</p>]]></description>
-</item>
-<item>
-    <title>Mybatis</title>
-    <link>http://shuangpinai.top/posts/mybatis/</link>
-    <pubDate>Wed, 19 Feb 2020 09:26:31 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/mybatis/</guid>
-    <description><![CDATA[<p>ORM：Object Relational Mapping</p>]]></description>
 </item>
 </channel>
 </rss>

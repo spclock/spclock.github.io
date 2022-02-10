@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Spring Data Jpa - 双皮奶</title><meta name="description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="Spring Data Jpa" />
+<meta property="og:description" content="spring data jpa 中的hibernate也有他的优点，那jpa和mybaits谁更胜一筹？" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shuangpinai.top/posts/spring-data-jpa/" /><meta property="og:image" content="http://shuangpinai.top/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-10T21:22:09+08:00" />
+<meta property="article:modified_time" content="2022-02-10T21:22:09+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://shuangpinai.top/logo.png"/>
+
+<meta name="twitter:title" content="Spring Data Jpa"/>
+<meta name="twitter:description" content="spring data jpa 中的hibernate也有他的优点，那jpa和mybaits谁更胜一筹？"/>
+<meta name="application-name" content="FeelIt">
+<meta name="apple-mobile-web-app-title" content="FeelIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://shuangpinai.top/posts/spring-data-jpa/" /><link rel="prev" href="http://shuangpinai.top/posts/hashmap/" /><link rel="next" href="http://shuangpinai.top/posts/quartz/" /><link rel="stylesheet" href="/css/page.min.css"><link rel="stylesheet" href="/css/home.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Spring Data Jpa",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/shuangpinai.top\/posts\/spring-data-jpa\/"
+        },"genre": "posts","keywords": "jpa, hibernate, ORM","wordcount":  462 ,
+        "url": "http:\/\/shuangpinai.top\/posts\/spring-data-jpa\/","datePublished": "2022-02-10T21:22:09+08:00","dateModified": "2022-02-10T21:22:09+08:00","publisher": {
+            "@type": "Organization",
+            "name": "Spc"},"author": {
+                "@type": "Person",
+                "name": "Spc"
+            },"description": ""
+    }
+    </script></head><body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="双皮奶">双皮奶</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="双皮奶">双皮奶</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><div class="menu-item"><a href="javascript:void(0);" class="theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div></div>
+    </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single" data-toc="disable"><div class="single-card" ><h2 class="single-title animated flipInX">Spring Data Jpa</h2><div class="post-meta">
+                <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Spc</a></span>&nbsp;<span class="post-category">出版于  <a href="/categories/orm/"><i class="far fa-folder fa-fw"></i>ORM</a></span></div>
+                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-10">2022-02-10</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 462 字</span>&nbsp;
+                    <span><i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟</span>&nbsp;</div>
+            </div>
+            
+            <hr><div class="details toc" id="toc-static"  data-kept="">
+                    <div class="details-summary toc-title">
+                        <span>目录</span>
+                        <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+                    <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#jpa问题">jpa问题</a>
+      <ul>
+        <li><a href="#update-delete">update delete</a></li>
+      </ul>
+    </li>
+    <li><a href="#复杂查询">复杂查询</a>
+      <ul>
+        <li><a href="#条件查询">条件查询</a></li>
+        <li><a href="#排序分">排序分</a></li>
+        <li><a href="#页查询">页查询</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </div><div class="content" id="content"><p>spring data jpa 中的hibernate也有他的优点，那jpa和mybaits谁更胜一筹？</p>
+<h1 id="spring-data-jpa">Spring data jpa</h1>
+<p><strong>spring data jpa的官网：</strong><a href="https://docs.spring.io/spring-data/jpa/docs/2.4.7/reference/html/#jpa.repositories" target="_blank" rel="noopener noreffer">spring data Jpa</a></p>
+<h2 id="简介">简介</h2>
+<p>spring默认使用是hibernate orm框架，全自动orm能帮你不用写任何一条sql语句，在服务端和数据库之前增加一层新的。从而使人可以更加关注代码逻辑。</p>
+<p><strong>优点</strong>是直接关注对象，创建表和查询语句都能jpa帮你自动生成</p>
+<p><strong>缺点</strong>也是很明显，复杂的sql，更新要传递整个实体对象</p>
+<p>怎么用？</p>
+<p>高级的用法（扩展包Fenix <a href="https://github.com/blinkfox/fenix" target="_blank" rel="noopener noreffer">https://github.com/blinkfox/fenix</a>）？</p>
+<p>比较常见的错误？</p>
+<p>读写锁</p>
+<p>@Lock(LockModeType.PESSIMISTIC_WRITE) 读写锁sql方法上</p>
+<p>只能在select上用？？</p>
+<p>如果是@NameQuery，则可以</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">NamedQuery</span><span class="p">(</span><span class="nx">name</span><span class="o">=</span><span class="s2">&#34;lockArticle&#34;</span><span class="p">,</span><span class="nx">query</span><span class="o">=</span><span class="s2">&#34;select a from Article a where a.id = :id&#34;</span><span class="p">,</span><span class="nx">lockMode</span> <span class="o">=</span> <span class="nx">PESSIMISTIC_READ</span><span class="p">)</span>
+<span class="kr">public</span> <span class="kr">class</span> <span class="nx">Article</span>
+</code></pre></div><p>如果用entityManager的方式，则可以设置LocakMode：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">Query</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">entityManager</span><span class="p">.</span><span class="nx">createQuery</span><span class="p">(</span><span class="s2">&#34;from Article where articleId = :id&#34;</span><span class="p">);</span>
+  <span class="nx">query</span><span class="p">.</span><span class="nx">setParameter</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+  <span class="nx">query</span><span class="p">.</span><span class="nx">setLockMode</span><span class="p">(</span><span class="nx">LockModeType</span><span class="p">.</span><span class="nx">PESSIMISTIC_WRITE</span><span class="p">);</span>
+  <span class="nx">query</span><span class="p">.</span><span class="nx">getResultList</span><span class="p">();</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">entityManager</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">Department</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">LockModeType</span><span class="o">.</span><span class="na">PESSIMISTIC_READ</span><span class="o">);</span>
+</code></pre></div><p>@Transient</p>
+<pre tabindex="0"><code>Specifies that the property or field is not persistent. It is used
+* to annotate a property or field of an entity class, mapped
+* superclass, or embeddable class.
+</code></pre><p>@Modifying</p>
+<p>@Repository</p>
+<p>HQL</p>
+<p>原生sql  <code>@Query(nativeQuery = true,value=&quot;sql 语句&quot;</code></p>
+<p>您可以使用构造函数表达式JPQL查询，您的查询如下所示：</p>
+<pre tabindex="0"><code>select new StatsDTO(count(u),u.typeId,u.modifiedAt) from UserCampaignObjective u where campId = ? group by objectiveTypeId,modifiedAt
+</code></pre><p>用原生的话  属性名要改对应的</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">StatsBo</span> <span class="o">{</span>
+    <span class="n">Integer</span> <span class="nf">getUserCount</span><span class="o">();</span>
+    <span class="n">Byte</span> <span class="nf">getTypeId</span><span class="o">();</span>
+    <span class="n">Instant</span> <span class="nf">getModifiedAt</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="c1">//CrudRepository 不是StatsBo 返回值要StatsBo可以通过这种方式
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserRepository</span> <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">StatsBean</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="nd">@Query</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&#34;select count(type_id) userCount, type_id as typeId, modified_at as modifiedAt from ...&#34;</span><span class="o">,</span> <span class="n">nativeQuery</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">StatsDTO</span><span class="o">&gt;</span> <span class="nf">getStatsDTO</span><span class="o">(</span><span class="n">Long</span> <span class="n">camp_id</span><span class="o">);</span>
+<span class="o">}</span>
+
+</code></pre></div><p>jpa问题</p>
+<p>sql 用别名 分页出现问题</p>
+<p>因为是分页查询，当然需要知道数据的总数，所以hibernate会自动的执行sql帮你查询所有的数量，但是看下图就能发现，他把我的表名的别名当做字段来<strong>select count</strong> 了。</p>
+<p>1.unknown column &lsquo;xxx&rsquo; in &lsquo;field list&rsquo; 这明显说明有sql把你这个xxx当做字段了，而我这个是表名的别名，这样就能定位到sql错误</p>
+<p>解决办法：写countQuery</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Query</span><span class="o">(</span><span class="n">nativeQuery</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span>
+        <span class="n">countQuery</span> <span class="o">=</span><span class="s">&#34;select count(*) from (&#34;</span><span class="o">+</span><span class="n">conferenceRoomBoQuery</span><span class="o">+</span><span class="s">&#34;) m&#34;</span><span class="o">,</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">conferenceRoomBoQuery</span><span class="o">)</span>
+
+</code></pre></div><h2 id="jpa问题">jpa问题</h2>
+<h3 id="update-delete">update delete</h3>
+<p>需要spring事务注解 不然会报  @Modifying(clearAutomatically = true)</p>
+<blockquote>
+<p>javax.persistence.TransactionRequiredException: Executing an update/delete query</p>
+</blockquote>
+<p>返回类型是 void int</p>
+<blockquote>
+<p>Modifying queries can only use void or int/Integer as return type!</p>
+</blockquote>
+<p>jpa 分页 新建对象，一个参数会报错  RegisterTimeBo(m)，一个以上就不会 RegisterTimeBo(m,u)</p>
+<blockquote>
+<p>Unexpected token count     in with Pageable</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">//不会报错
+</span><span class="c1"></span><span class="nd">@Query</span><span class="o">(</span><span class="s">&#34;select new com.gonsin.venus.bo.meeting.RegisterTimeBo(m,u) &#34;</span> <span class="o">+</span>
+        <span class="s">&#34;from RegisterTimeBean m &#34;</span> <span class="o">+</span>
+        <span class="s">&#34;left join UserInfoBean u &#34;</span> <span class="o">+</span>
+        <span class="s">&#34;on m.userInfoKey=u.keyOnly &#34;</span> <span class="o">+</span>
+        <span class="s">&#34; where m.meetingKey=:meetingKey&#34;</span><span class="o">)</span>
+<span class="n">Page</span><span class="o">&lt;</span><span class="n">RegisterTimeBo</span><span class="o">&gt;</span> <span class="nf">findByMeetingKey</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">&#34;meetingKey&#34;</span><span class="o">)</span> <span class="n">String</span> <span class="n">meetingKey</span><span class="o">,</span> <span class="n">Pageable</span> <span class="n">pageable</span><span class="o">);</span>
+
+<span class="c1">//会报错
+</span><span class="c1"></span> <span class="nd">@Query</span><span class="o">(</span><span class="s">&#34;select new com.gonsin.venus.bo.meeting.RegisterTimeBo(m) &#34;</span> <span class="o">+</span>
+            <span class="s">&#34;from RegisterTimeBean m &#34;</span> <span class="o">+</span>
+            <span class="s">&#34; where m.meetingKey=:meetingKey&#34;</span><span class="o">)</span>
+    <span class="n">Page</span><span class="o">&lt;</span><span class="n">RegisterTimeBo</span><span class="o">&gt;</span> <span class="nf">findByMeetingKey</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">&#34;meetingKey&#34;</span><span class="o">)</span> <span class="n">String</span> <span class="n">meetingKey</span><span class="o">,</span> <span class="n">Pageable</span> <span class="n">pageable</span><span class="o">);</span>
+</code></pre></div><p>jpa问题：</p>
+<p>unable to obtain isolated JDBC   sqlite 线程池最大连接设置为1（不管这个问题）</p>
+<p>保存不到saveAndFlush 保存出问题会一直卡住才会这样</p>
+<p>为什么保存会一直卡住  是因为id主键没有设置正确</p>
+<pre tabindex="0"><code>    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //下面是  使用错误导致  GenericGenerator应该怎么用
+//    @GeneratedValue
+//    @GenericGenerator(name = &quot;idgenerator&quot;, strategy = &quot;identity&quot; )
+</code></pre><p>更新和删除再别的事务上</p>
+<p><strong>[Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) ]</strong></p>
+<p>主因 : 事务对程序的影响</p>
+<p>原因一: 查询出来的对象和update的对象不是同一个  当前version版本与数据库中version版本不一致。</p>
+<p><strong>解决: 用查询出的对象进行set 值, 再用同一个对象update</strong>   version为同一个就行了</p>
+<p>原因二: 查询出来的对象在缓存中一段时间 , 之后再进行的update</p>
+<p><strong>解决: 把这个对象从缓存中剔除(如需要对象属性可先get保存到变量中) , 在update之之前再查询出来进行update</strong></p>
+<p>原因三: 同一对象查询了多次 , 数据还在缓存中没有清除.</p>
+<p><strong>解决: 清除缓存中的对象    @Modifying(clearAutomatically = true)</strong></p>
+<h2 id="复杂查询">复杂查询</h2>
+<h3 id="条件查询">条件查询</h3>
+<p>1.接口继承<code>JpaSpecificationExecutor&lt;T&gt;</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Repository</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserRepository</span> <span class="kd">extends</span> <span class="n">JpaRepository</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span><span class="n">User</span><span class="o">&gt;,</span> <span class="n">JpaSpecificationExecutor</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="o">{</span>
+    
+<span class="o">}</span>
+</code></pre></div><p>2.方法调用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserService</span> <span class="o">{</span>
+    
+    <span class="nd">@Resource</span>
+    <span class="kd">private</span> <span class="n">UserRepository</span> <span class="n">userRepository</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="n">SearchParam</span> <span class="n">searchParam</span><span class="o">){</span>
+                <span class="n">Specification</span><span class="o">&lt;</span><span class="n">DeviceBean</span><span class="o">&gt;</span> <span class="n">spec</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Specification</span><span class="o">&lt;</span><span class="n">DeviceBean</span><span class="o">&gt;()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="n">Predicate</span> <span class="nf">toPredicate</span><span class="o">(</span><span class="n">Root</span><span class="o">&lt;</span><span class="n">DeviceBean</span><span class="o">&gt;</span> <span class="n">root</span><span class="o">,</span> <span class="n">CriteriaQuery</span><span class="o">&lt;?&gt;</span> <span class="n">query</span><span class="o">,</span> <span class="n">CriteriaBuilder</span> <span class="n">criteriaBuilder</span><span class="o">)</span> <span class="o">{</span>
+                
+                <span class="c1">// root java实体类中的对象而不是 root.get是java实体类属性名而不是数据库中的字段名
+</span><span class="c1"></span>                <span class="n">Predicate</span> <span class="n">delete</span> <span class="o">=</span> <span class="n">criteriaBuilder</span><span class="o">.</span><span class="na">equal</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&#34;delete&#34;</span><span class="o">),</span><span class="kc">false</span><span class="o">);</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">StringUtils</span><span class="o">.</span><span class="na">isNotBlank</span><span class="o">(</span><span class="n">searchParam</span><span class="o">.</span><span class="na">getUsername</span><span class="o">()))</span> <span class="o">{</span>
+                    <span class="n">Path</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">custId</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&#34;deviceName&#34;</span><span class="o">);</span>
+                    <span class="c1">//当查询条件用到gt, ge, lt, le, like（分别表示&gt;, &gt;=, &lt;, &lt;=,模糊查询）时，需要表明查询对象属性的类别
+</span><span class="c1"></span>                    <span class="n">Predicate</span> <span class="n">like</span> <span class="o">=</span> <span class="n">criteriaBuilder</span><span class="o">.</span><span class="na">like</span><span class="o">(</span><span class="n">custId</span><span class="o">.</span><span class="na">as</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">),</span> <span class="s">&#34;%&#34;</span> <span class="o">+</span> <span class="n">searchParam</span><span class="o">.</span><span class="na">getUsername</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34;%&#34;</span><span class="o">);</span>
+
+                    <span class="k">return</span> <span class="n">criteriaBuilder</span><span class="o">.</span><span class="na">and</span><span class="o">(</span><span class="n">delete</span><span class="o">,</span> <span class="n">like</span><span class="o">);</span>
+                <span class="o">}</span>
+
+                <span class="k">return</span> <span class="n">delete</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">};</span>
+        
+       <span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">userRepository</span><span class="o">.</span><span class="na">findAll</span><span class="o">(</span><span class="n">spec</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h3 id="排序分">排序分</h3>
+<p><strong>Sort.Direction.DESC表示降序 Sort.Direction.ASC表示升序</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">Sort</span> <span class="n">sort</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Sort</span><span class="o">(</span><span class="n">Sort</span><span class="o">.</span><span class="na">Direction</span><span class="o">.</span><span class="na">DESC</span><span class="o">,</span> <span class="s">&#34;id&#34;</span><span class="o">);</span> <span class="c1">//sort作为findAll()方法中的参数，查询得到得到的结果是经过排序的 
+</span><span class="c1"></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Message</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">MessageRepository</span><span class="o">.</span><span class="na">findAll</span><span class="o">(</span><span class="n">sort</span><span class="o">);</span>
+</code></pre></div><h3 id="页查询">页查询</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">//Page 类
+</span><span class="c1">//获取总页数
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">getTotalPages</span><span class="o">();</span>
+<span class="c1">//获取总记录数	
+</span><span class="c1"></span><span class="kt">long</span> <span class="nf">getTotalElements</span><span class="o">();</span>
+<span class="c1">//获取列表数据
+</span><span class="c1"></span><span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getContent</span><span class="o">();</span>
+
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">//设置分页参数
+</span><span class="c1"></span><span class="n">Pageable</span> <span class="n">pageable</span> <span class="o">=</span> <span class="n">PageRequest</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">0</span><span class="err">，</span><span class="n">5</span><span class="o">);</span>
+<span class="c1">//分页查询
+</span><span class="c1"></span><span class="n">Page</span><span class="o">&lt;</span><span class="n">Message</span><span class="o">&gt;</span> <span class="n">page</span> <span class="o">=</span> <span class="n">MessageRepository</span><span class="o">.</span><span class="na">findAll</span><span class="o">(</span><span class="n">pageable</span><span class="o">);</span>
+
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info"><div class="post-info-tag"><span><a href="/tags/jpa/">jpa</a>
+                </span><span><a href="/tags/hibernate/">hibernate</a>
+                </span><span><a href="/tags/orm/">ORM</a>
+                </span></div><div class="post-info-line"><div class="post-info-mod">
+                <span>更新于 2022-02-10</span>
+            </div><div class="post-info-mod"></div>
+        </div></div><div class="post-nav"><a href="/posts/hashmap/" class="prev" rel="prev" title="HashMap"><i class="fas fa-angle-left fa-fw"></i>Previous Post</a>
+            <a href="/posts/quartz/" class="next" rel="next" title="Quartz">Next Post<i class="fas fa-angle-right fa-fw"></i></a></div></div>
+</div></article></div>
+            </main>
+            <footer class="footer"><div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/khusika/FeelIt" target="_blank" rel="noopener noreffer" title="FeelIt 1.0.1"><i class="fas fa-hand-holding-heart fa-fw"></i> FeelIt</a>
+        </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/"></a></span></div>
+</div>
+</footer>
+        </div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-chevron-up fa-fw"></i>
+            </a></div><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body></html>

@@ -1,0 +1,13 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>hibernate - 标签 - 双皮奶</title>
+        <link>http://shuangpinai.top/tags/hibernate/</link>
+        <description>hibernate - 标签 - 双皮奶</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 10 Feb 2022 21:22:09 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/hibernate/" rel="self" type="application/rss+xml" /><item>
+    <title>Spring Data Jpa</title>
+    <link>http://shuangpinai.top/posts/spring-data-jpa/</link>
+    <pubDate>Thu, 10 Feb 2022 21:22:09 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/spring-data-jpa/</guid>
+    <description><![CDATA[<p>spring data jpa 中的hibernate也有他的优点，那jpa和mybaits谁更胜一筹？</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Quartz - 双皮奶</title><meta name="description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="Quartz" />
+<meta property="og:description" content="对hashmap的认识有多少点进来看看吧" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shuangpinai.top/posts/quartz/" /><meta property="og:image" content="http://shuangpinai.top/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-10T22:56:23+08:00" />
+<meta property="article:modified_time" content="2022-02-10T22:56:23+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://shuangpinai.top/logo.png"/>
+
+<meta name="twitter:title" content="Quartz"/>
+<meta name="twitter:description" content="对hashmap的认识有多少点进来看看吧"/>
+<meta name="application-name" content="FeelIt">
+<meta name="apple-mobile-web-app-title" content="FeelIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://shuangpinai.top/posts/quartz/" /><link rel="prev" href="http://shuangpinai.top/posts/spring-data-jpa/" /><link rel="stylesheet" href="/css/page.min.css"><link rel="stylesheet" href="/css/home.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Quartz",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/shuangpinai.top\/posts\/quartz\/"
+        },"genre": "posts","keywords": "quratz","wordcount":  626 ,
+        "url": "http:\/\/shuangpinai.top\/posts\/quartz\/","datePublished": "2022-02-10T22:56:23+08:00","dateModified": "2022-02-10T22:56:23+08:00","publisher": {
+            "@type": "Organization",
+            "name": "Spc"},"author": {
+                "@type": "Person",
+                "name": "Spc"
+            },"description": ""
+    }
+    </script></head><body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="双皮奶">双皮奶</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="双皮奶">双皮奶</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><div class="menu-item"><a href="javascript:void(0);" class="theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div></div>
+    </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single" data-toc="disable"><div class="single-card" ><h2 class="single-title animated flipInX">Quartz</h2><div class="post-meta">
+                <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Spc</a></span>&nbsp;<span class="post-category">出版于  <a href="/categories/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"><i class="far fa-folder fa-fw"></i>定时任务</a></span></div>
+                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-10">2022-02-10</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 626 字</span>&nbsp;
+                    <span><i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟</span>&nbsp;</div>
+            </div>
+            
+            <hr><div class="details toc" id="toc-static"  data-kept="">
+                    <div class="details-summary toc-title">
+                        <span>目录</span>
+                        <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+                    <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#quartz-api">Quartz API</a></li>
+    <li><a href="#域取值">域取值</a></li>
+    <li><a href="#特殊字符">特殊字符</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#问题原因">问题原因</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </div><div class="content" id="content"><p>对hashmap的认识有多少点进来看看吧</p>
+<h1 id="quartz">quartz</h1>
+<h2 id="quartz-api">Quartz API</h2>
+<p>Quartz API的关键接口是：</p>
+<ul>
+<li>Scheduler - 与调度程序交互的主要API。</li>
+<li>Job - 你想要调度器执行的任务组件需要实现的接口</li>
+<li>JobDetail - 用于定义作业的实例。</li>
+<li>Trigger（即触发器） - 定义执行给定作业的计划的组件。</li>
+<li>JobBuilder - 用于定义/构建 JobDetail 实例，用于定义作业的实例。</li>
+<li>TriggerBuilder - 用于定义/构建触发器实例。</li>
+<li>Scheduler 的生命期，从 SchedulerFactory 创建它时开始，到 Scheduler 调用shutdown() 方法时结束；Scheduler 被创建后，可以增加、删除和列举 Job 和 Trigger，以及执行其它与调度相关的操作（如暂停 Trigger）。但是，Scheduler 只有在调用 start() 方法后，才会真正地触发 trigger（即执行 job）</li>
+</ul>
+<p>导入包</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">    <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>2.4.1<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;relativePath/&gt;</span> <span class="c">&lt;!-- lookup parent from repository --&gt;</span>
+    <span class="nt">&lt;/parent&gt;</span>
+
+
+<span class="c">&lt;!--定时任务依赖--&gt;</span>
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-quartz<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+	<span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div><p>设计模式：
+builder
+factory
+组件模式</p>
+<p>主要模块：</p>
+<p>jobDetail    trigger  schedule</p>
+<p><strong>trigger</strong>:quartz中的触发器用来告诉调度程序作业什么时候触发，trigger用来触发执行job的</p>
+<p>通用属性：</p>
+<p>jobkey</p>
+<p>startTime   startAt</p>
+<p>endTime   endAt</p>
+<p>simpleTrigger：在一个指定时间段内执行一次作业任务，或者在指定的时间间隔内多次执行作业任务</p>
+<p>需要注意：</p>
+<ul>
+<li>重复次数可以为0、正整数和REPEAT_INDEFINITELY（-1）</li>
+<li>重复执行时间间隔必须为0或长整型</li>
+<li><strong>一定指定了endTime参数，那么它会覆盖重复次数参数的效果</strong></li>
+</ul>
+<p><strong>job&amp;jobDetail</strong></p>
+<p>生命周期：任务调度器执行job 创建 用完就销毁</p>
+<p>jobDetail ：job实例提供很多设置属性，以及JobDataMap成员变量</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuartzDemo</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SchedulerException</span> <span class="o">{</span>
+
+        <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">stringStringHashMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+        <span class="n">stringStringHashMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&#34;spc&#34;</span><span class="o">,</span> <span class="s">&#34;hello quartz&#34;</span><span class="o">);</span>
+        <span class="n">JobDetail</span> <span class="n">jobDetail</span> <span class="o">=</span> <span class="n">JobBuilder</span><span class="o">.</span><span class="na">newJob</span><span class="o">(</span><span class="n">HelloJob</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">withIdentity</span><span class="o">(</span><span class="s">&#34;jobKey&#34;</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">usingJobData</span><span class="o">(</span><span class="k">new</span> <span class="n">JobDataMap</span><span class="o">(</span><span class="n">stringStringHashMap</span><span class="o">))</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">jobDetail</span><span class="o">.</span><span class="na">getDescription</span><span class="o">());</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">jobDetail</span><span class="o">.</span><span class="na">getKey</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">jobDetail</span><span class="o">.</span><span class="na">getKey</span><span class="o">().</span><span class="na">getGroup</span><span class="o">());</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">jobDetail</span><span class="o">.</span><span class="na">getJobClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+
+        <span class="n">SimpleTrigger</span> <span class="n">trigger</span> <span class="o">=</span> <span class="n">TriggerBuilder</span><span class="o">.</span><span class="na">newTrigger</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">withIdentity</span><span class="o">(</span><span class="s">&#34;triggerKey&#34;</span><span class="o">,</span> <span class="s">&#34;trigger&#34;</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">startNow</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">withSchedule</span><span class="o">(</span>
+                        <span class="n">SimpleScheduleBuilder</span>
+                                <span class="o">.</span><span class="na">simpleSchedule</span><span class="o">()</span>
+                                <span class="o">.</span><span class="na">withIntervalInMilliseconds</span><span class="o">(</span><span class="n">0</span><span class="o">)</span>
+                                <span class="o">.</span><span class="na">withIntervalInSeconds</span><span class="o">(</span><span class="n">5</span><span class="o">)</span>
+                                <span class="o">.</span><span class="na">repeatForever</span><span class="o">()</span>
+                <span class="o">).</span><span class="na">build</span><span class="o">();</span>
+
+
+        <span class="n">StdSchedulerFactory</span> <span class="n">sfact</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StdSchedulerFactory</span><span class="o">();</span>
+        <span class="n">Scheduler</span> <span class="n">scheduler</span> <span class="o">=</span> <span class="n">sfact</span><span class="o">.</span><span class="na">getScheduler</span><span class="o">();</span>
+        <span class="n">scheduler</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+        <span class="n">scheduler</span><span class="o">.</span><span class="na">scheduleJob</span><span class="o">(</span><span class="n">jobDetail</span><span class="o">,</span> <span class="n">trigger</span><span class="o">);</span>
+    <span class="o">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloJob</span> <span class="kd">implements</span> <span class="n">Job</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">SPC</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSPC</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">SPC</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSPC</span><span class="o">(</span><span class="n">String</span> <span class="n">SPC</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">SPC</span> <span class="o">=</span> <span class="n">SPC</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">(</span><span class="n">JobExecutionContext</span> <span class="n">jobExecutionContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">JobExecutionException</span> <span class="o">{</span>
+
+        <span class="n">Date</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+        <span class="n">SimpleDateFormat</span> <span class="n">simpleDateFormat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">&#34;yyyy-HH-dd HH:mm:ss&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">simpleDateFormat</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">data</span><span class="o">));</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;hello world&#34;</span><span class="o">);</span>
+
+<span class="c1">//        JobDataMap mergedJobDataMap = jobExecutionContext.getMergedJobDataMap();
+</span><span class="c1"></span>        <span class="c1">//你可以用jobExecutionContext.getMergedJobDataMap()来获取jobDetail的值
+</span><span class="c1"></span>        <span class="c1">//也可以在继承job的子类上定义同名的属性get set方法（不分大小写）就能自动获取到属性值
+</span><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;spc value: &#34;</span><span class="o">+</span> <span class="n">SPC</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>创建</p>
+<p>jobBuilder-&gt; 创建 JobDetail</p>
+<p>TriggerBuilder-&gt;Trigger</p>
+<p>当触发器被触发的时候会 重新job</p>
+<p>scheduler</p>
+<p>job  （job，trigger）绑定在一起的</p>
+<ul>
+<li>添加 scheduleJob</li>
+<li>更新 rescheduleJob</li>
+<li>删除 deleteJob</li>
+<li>暂停 pauseJob</li>
+<li>恢复 resumeJob</li>
+<li>马上执行 triggerJob</li>
+<li>&hellip;..</li>
+</ul>
+<p>自身</p>
+<ul>
+<li>开启 start</li>
+<li>关闭 shutdown</li>
+<li>&hellip;..</li>
+</ul>
+<p>例子:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">createScheduleJob</span><span class="o">(</span><span class="n">Scheduler</span> <span class="n">scheduler</span><span class="o">,</span> <span class="n">QuartzBean</span> <span class="n">quartzBean</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="c1">//获取到定时任务的执行类  必须是类的绝对路径名称
+</span><span class="c1"></span>            <span class="c1">//定时任务类需要是job类的具体实现 QuartzJobBean是job的抽象类。
+</span><span class="c1"></span>            <span class="n">Class</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Job</span><span class="o">&gt;</span> <span class="n">jobClass</span> <span class="o">=</span> <span class="o">(</span><span class="n">Class</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Job</span><span class="o">&gt;)</span> <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="n">quartzBean</span><span class="o">.</span><span class="na">getJobClass</span><span class="o">());</span>
+            <span class="c1">// 构建定时任务信息
+</span><span class="c1"></span>            <span class="n">JobDetail</span> <span class="n">jobDetail</span> <span class="o">=</span> <span class="n">JobBuilder</span><span class="o">.</span><span class="na">newJob</span><span class="o">(</span><span class="n">jobClass</span><span class="o">).</span><span class="na">withIdentity</span><span class="o">(</span><span class="n">quartzBean</span><span class="o">.</span><span class="na">getJobName</span><span class="o">()).</span><span class="na">build</span><span class="o">();</span>
+            <span class="c1">// 设置定时任务执行方式
+</span><span class="c1"></span>            <span class="n">CronScheduleBuilder</span> <span class="n">scheduleBuilder</span> <span class="o">=</span> <span class="n">CronScheduleBuilder</span><span class="o">.</span><span class="na">cronSchedule</span><span class="o">(</span><span class="n">quartzBean</span><span class="o">.</span><span class="na">getCronExpression</span><span class="o">());</span>
+            <span class="c1">// 构建触发器trigger 日历的概念
+</span><span class="c1"></span>            <span class="n">CronTrigger</span> <span class="n">trigger</span> <span class="o">=</span> <span class="n">newTrigger</span><span class="o">().</span><span class="na">withIdentity</span><span class="o">(</span><span class="n">quartzBean</span><span class="o">.</span><span class="na">getJobName</span><span class="o">()).</span><span class="na">withSchedule</span><span class="o">(</span><span class="n">scheduleBuilder</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+            <span class="n">scheduler</span><span class="o">.</span><span class="na">scheduleJob</span><span class="o">(</span><span class="n">jobDetail</span><span class="o">,</span> <span class="n">trigger</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ClassNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;定时任务类路径出错：请输入类的绝对路径&#34;</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">SchedulerException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;创建定时任务出错：&#34;</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div><p>job抽象类QuartzJobBean</p>
+<p>QuartzJobBean类中execute方法会调用executeInternal方法</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyTask1</span> <span class="kd">extends</span> <span class="n">QuartzJobBean</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">executeInternal</span><span class="o">(</span><span class="n">JobExecutionContext</span> <span class="n">jobExecutionContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">JobExecutionException</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h2 id="域取值">域取值</h2>
+<p>下表为Cron表达式中六个域能够取的值以及支持的特殊字符。（或者7个 第七个是年份）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">域</th>
+<th style="text-align:left">是否必需</th>
+<th style="text-align:left">取值范围</th>
+<th style="text-align:left">特殊字符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">秒</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">[0, 59]</td>
+<td style="text-align:left">* , - /</td>
+</tr>
+<tr>
+<td style="text-align:left">分钟</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">[0, 59]</td>
+<td style="text-align:left">* , - /</td>
+</tr>
+<tr>
+<td style="text-align:left">小时</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">[0, 23]</td>
+<td style="text-align:left">* , - /</td>
+</tr>
+<tr>
+<td style="text-align:left">日期</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">[1, 31]</td>
+<td style="text-align:left">* , - / ? L W</td>
+</tr>
+<tr>
+<td style="text-align:left">月份</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">[1, 12]或[JAN, DEC]</td>
+<td style="text-align:left">* , - /</td>
+</tr>
+<tr>
+<td style="text-align:left">星期</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">[1, 7]或[MON, SUN]。若您使用[1, 7]表达方式，<code>1</code>代表星期一，<code>7</code>代表星期日。</td>
+<td style="text-align:left">* , - / ? L #</td>
+</tr>
+</tbody>
+</table>
+<p>还有一个可不填的 年份</p>
+<h2 id="特殊字符">特殊字符</h2>
+<p>Cron表达式中的每个域都支持一定数量的特殊字符，每个特殊字符有其特殊含义。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">特殊字符</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>*</code></td>
+<td style="text-align:left">所有可能的值。</td>
+<td style="text-align:left">在月域中，<code>*</code>表示每个月；在星期域中，<code>*</code>表示星期的每一天。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>,</code></td>
+<td style="text-align:left">列出枚举值。</td>
+<td style="text-align:left">在分钟域中，<code>5,20</code>表示分别在5分钟和20分钟触发一次。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-</code></td>
+<td style="text-align:left">范围。</td>
+<td style="text-align:left">在分钟域中，<code>5-20</code>表示从5分钟到20分钟之间每隔一分钟触发一次。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/</code></td>
+<td style="text-align:left">指定数值的增量。</td>
+<td style="text-align:left">在分钟域中，<code>0/15</code>表示从第0分钟开始，每15分钟。在分钟域中<code>3/20</code>表示从第3分钟开始，每20分钟。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>?</code></td>
+<td style="text-align:left">不指定值，仅日期和星期域支持该字符。</td>
+<td style="text-align:left">当日期或星期域其中之一被指定了值以后，为了避免冲突，需要将另一个域的值设为<code>?</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L</code></td>
+<td style="text-align:left">单词Last的首字母，表示最后一天，仅日期和星期域支持该字符。<strong>说明</strong> 指定 <code>L</code>字符时，避免指定列表或者范围，否则，会导致逻辑问题。</td>
+<td style="text-align:left">在日期域中，<code>L</code>表示某个月的最后一天。在星期域中，<code>L</code>表示一个星期的最后一天，也就是星期日（<code>SUN</code>）。如果在<code>L</code>前有具体的内容，例如，在星期域中的<code>6L</code>表示这个月的最后一个星期六。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>W</code></td>
+<td style="text-align:left">除周末以外的有效工作日，在离指定日期的最近的有效工作日触发事件。<code>W</code>字符寻找最近有效工作日时不会跨过当前月份，连用字符<code>LW</code>时表示为指定月份的最后一个工作日。</td>
+<td style="text-align:left">在日期域中<code>5W</code>，如果5日是星期六，则将在最近的工作日星期五，即4日触发。如果5日是星期天，则将在最近的工作日星期一，即6日触发；如果5日在星期一到星期五中的一天，则就在5日触发。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>#</code></td>
+<td style="text-align:left">确定每个月第几个星期几，仅星期域支持该字符。</td>
+<td style="text-align:left">在星期域中，<code>4#2</code>表示某月的第二个星期四。</td>
+</tr>
+</tbody>
+</table>
+<p>JobExecutionContext 的参数在那里传</p>
+<h1 id="quartz定时任务job中无法注入spring-bean的解决方案">Quartz定时任务Job中无法注入spring bean的解决方案</h1>
+<p>使用spring 结合quartz进行定时任务开发时，如果直接在job内的execute方法内使用service 或者mapper对象，执行时，出现空指针异常。</p>
+<h3 id="问题原因">问题原因</h3>
+<p>job对象在spring容器加载时候，能够注入bean，但是调度时，job对象会重新创建，此时就是导致已经注入的对象丢失，因此报空指针异常。</p>
+<pre tabindex="0"><code>@Configuration
+public class TaskSchedulerConfig implements ApplicationListener&lt;ContextRefreshedEvent&gt; {
+
+    @Override
+    public void onApplicationEvent(ContextRefreshedEvent event) {
+        System.out.println(&quot;任务已经启动...&quot; + event.getSource());
+    }
+
+
+    @Component(&quot;quartzJobFactory&quot;)
+    private class QuartzJobFactory extends AdaptableJobFactory {
+        //这个对象Spring会帮我们自动注入进来,也属于Spring技术范畴.
+        @Autowired
+        private AutowireCapableBeanFactory capableBeanFactory;
+
+        protected Object createJobInstance(TriggerFiredBundle bundle) throws Exception {
+            //调用父类的方法
+            Object jobInstance = super.createJobInstance(bundle);
+            //进行注入,这属于Spring的技术,不清楚的可以查看Spring的API.
+            capableBeanFactory.autowireBean(jobInstance);
+            return jobInstance;
+        }
+    }
+
+    @Bean(name = &quot;scheduler&quot;)
+    public Scheduler scheduler(QuartzJobFactory quartzJobFactory) throws Exception {
+
+        SchedulerFactoryBean factoryBean = new SchedulerFactoryBean();
+        factoryBean.setJobFactory(quartzJobFactory);
+        factoryBean.afterPropertiesSet();
+        Scheduler scheduler = factoryBean.getScheduler();
+        scheduler.start();
+        return scheduler;
+    }
+
+
+
+
+    @Bean
+    public QuartzInitializerListener executorListener() {
+        return new QuartzInitializerListener();
+    }
+</code></pre><h1 id="quartz-job-异常处理">quartz job 异常处理</h1>
+<p>2种处理方式：</p>
+<p><strong>1.捕获并解决异常，立即重新执行作业</strong></p>
+<p><strong>2.捕获异常，取消所有触发器</strong></p>
+<p>为了共享在同一个 JobDetail 中的 JobDataMap，我们需要在上面这个 job 实现类上加入 <code>@PersistJobDataAfterExecution</code> 和 <code>@DisallowConcurrentExecution</code> 注解，详见 <a href="https://link.segmentfault.com/?url=https%3A%2F%2Fmy.oschina.net%2Fu%2F3436580%2Fblog%2F882907" target="_blank" rel="noopener noreffer">Quartz 2 定时任务（二）：多线程并发执行与数据共享</a>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@PersistJobDataAfterExecution</span>
+<span class="nd">@DisallowConcurrentExecution</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BadJob1</span> <span class="kd">implements</span> <span class="n">Job</span> <span class="o">{</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">(</span><span class="n">JobExecutionContext</span> <span class="n">context</span><span class="o">)</span>
+			<span class="kd">throws</span> <span class="n">JobExecutionException</span> <span class="o">{</span>
+		<span class="n">SimpleDateFormat</span> <span class="n">dateFormat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span>
+				<span class="s">&#34;yyyy-MM-dd HH:mm:ss&#34;</span><span class="o">);</span>
+
+		<span class="n">JobKey</span> <span class="n">jobKey</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getJobDetail</span><span class="o">().</span><span class="na">getKey</span><span class="o">();</span>
+		<span class="n">JobDataMap</span> <span class="n">dataMap</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getJobDetail</span><span class="o">().</span><span class="na">getJobDataMap</span><span class="o">();</span>
+
+		<span class="kt">int</span> <span class="n">flag</span> <span class="o">=</span> <span class="n">dataMap</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="s">&#34;flag&#34;</span><span class="o">);</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;---&#34;</span> <span class="o">+</span> <span class="n">jobKey</span> <span class="o">+</span> <span class="s">&#34;，执行时间：&#34;</span>
+				<span class="o">+</span> <span class="n">dateFormat</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="k">new</span> <span class="n">Date</span><span class="o">())</span> <span class="o">+</span> <span class="s">&#34;, flag： &#34;</span> <span class="o">+</span> <span class="n">flag</span><span class="o">);</span>
+
+		<span class="c1">// 由于零错误除以此作业将生成的异常的例外（仅在第一次运行）
+</span><span class="c1"></span>		<span class="k">try</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">4815</span> <span class="o">/</span> <span class="n">flag</span><span class="o">;</span>
+
+		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;--- Job1 出错!&#34;</span><span class="o">);</span>
+
+			<span class="c1">// 修复分母，所以下次这个作业运行它不会再失败
+</span><span class="c1"></span>			<span class="n">JobExecutionException</span> <span class="n">e2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JobExecutionException</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+			<span class="n">dataMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&#34;flag&#34;</span><span class="o">,</span> <span class="s">&#34;1&#34;</span><span class="o">);</span>
+
+			<span class="c1">//方法一 这个工作会立即重新启动（不能与方法二同时使用）
+</span><span class="c1"></span>			<span class="n">e2</span><span class="o">.</span><span class="na">setRefireImmediately</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            
+            <span class="c1">//方法二 true 表示 Quartz 会自动取消所有与这个 job 有关的 trigger，从而避免再次运行 job
+</span><span class="c1"></span>   		    <span class="n">e2</span><span class="o">.</span><span class="na">setUnscheduleAllTriggers</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+
+			<span class="k">throw</span> <span class="n">e2</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;---&#34;</span> <span class="o">+</span> <span class="n">jobKey</span> <span class="o">+</span> <span class="s">&#34;，完成时间：&#34;</span>
+				<span class="o">+</span> <span class="n">dateFormat</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="k">new</span> <span class="n">Date</span><span class="o">()));</span>
+    <span class="o">}</span>
+
+
+<span class="o">}</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info"><div class="post-info-tag"><span><a href="/tags/quratz/">quratz</a>
+                </span></div><div class="post-info-line"><div class="post-info-mod">
+                <span>更新于 2022-02-10</span>
+            </div><div class="post-info-mod"></div>
+        </div></div><div class="post-nav"><a href="/posts/spring-data-jpa/" class="prev" rel="prev" title="Spring Data Jpa"><i class="fas fa-angle-left fa-fw"></i>Previous Post</a></div></div>
+</div></article></div>
+            </main>
+            <footer class="footer"><div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/khusika/FeelIt" target="_blank" rel="noopener noreffer" title="FeelIt 1.0.1"><i class="fas fa-hand-holding-heart fa-fw"></i> FeelIt</a>
+        </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/"></a></span></div>
+</div>
+</footer>
+        </div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-chevron-up fa-fw"></i>
+            </a></div><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body></html>
