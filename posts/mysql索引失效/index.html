@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Mysql索引失效 - 双皮奶</title><meta name="description" content=""><meta property="og:title" content="Mysql索引失效" />
+        <title>Mysql索引失效 - 双皮奶</title><meta name="description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="Mysql索引失效" />
 <meta property="og:description" content="mysql索引失效" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://shuangpinai.top/posts/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://shuangpinai.top/posts/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" /><meta property="og:image" content="http://shuangpinai.top/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-02-09T22:59:03+08:00" />
 <meta property="article:modified_time" content="2022-02-09T22:59:03+08:00" />
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://shuangpinai.top/logo.png"/>
+
 <meta name="twitter:title" content="Mysql索引失效"/>
 <meta name="twitter:description" content="mysql索引失效"/>
-<meta name="application-name" content="双皮奶">
-<meta name="apple-mobile-web-app-title" content="双皮奶"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="FeelIt">
+<meta name="apple-mobile-web-app-title" content="FeelIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://shuangpinai.top/posts/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" /><link rel="prev" href="http://shuangpinai.top/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" /><link rel="next" href="http://shuangpinai.top/posts/hashmap/" /><link rel="stylesheet" href="/css/page.min.css"><link rel="stylesheet" href="/css/home.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://shuangpinai.top/posts/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" /><link rel="prev" href="http://shuangpinai.top/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" /><link rel="next" href="http://shuangpinai.top/posts/hashmap/" /><link rel="stylesheet" href="/css/page.min.css"><link rel="stylesheet" href="/css/home.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "headline": "Mysql索引失效",
-        "inLanguage": "zh-cn",
+        "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/shuangpinai.top\/posts\/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88\/"
-        },"genre": "posts","keywords": "mysql索引","wordcount":  61 ,
+        },"genre": "posts","keywords": "mysql索引","wordcount":  64 ,
         "url": "http:\/\/shuangpinai.top\/posts\/mysql%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88\/","datePublished": "2022-02-09T22:59:03+08:00","dateModified": "2022-02-09T22:59:03+08:00","publisher": {
             "@type": "Organization",
             "name": "Spc"},"author": {
@@ -34,7 +36,7 @@
                 "name": "Spc"
             },"description": ""
     }
-    </script></head><body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    </script></head><body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -101,7 +103,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single" data-toc="disable"><div class="single-card" ><h2 class="single-title animated flipInX">Mysql索引失效</h2><div class="post-meta">
                 <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Spc</a></span>&nbsp;<span class="post-category">出版于  <a href="/categories/%E9%9D%A2%E8%AF%95/"><i class="far fa-folder fa-fw"></i>面试</a></span></div>
-                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-09">2022-02-09</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 61 字</span>&nbsp;
+                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-09">2022-02-09</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 64 字</span>&nbsp;
                     <span><i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟</span>&nbsp;</div>
             </div>
             
@@ -110,9 +112,16 @@
                         <span>目录</span>
                         <span><i class="details-icon fas fa-angle-right"></i></span>
                     </div>
-                    <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                    <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#索引失效10种场景">索引失效10种场景</a></li>
+    <li><a href="#in和exists的执行流程">in和exists的执行流程</a></li>
+  </ul>
+</nav></div>
                 </div><div class="content" id="content"><p>mysql索引失效</p>
 <h1 id="mysql索引失效">MySql索引失效</h1>
+<h2 id="索引失效10种场景">索引失效10种场景</h2>
+<p><strong>具体文章：</strong><a href="https://mp.weixin.qq.com/s/YZjE60kaBnxc6XlQ9GcolA" target="_blank" rel="noopener noreffer">聊聊索引失效的10种场景，太坑了</a></p>
 <ul>
 <li>select *</li>
 <li>like %</li>
@@ -135,6 +144,7 @@
 <blockquote>
 <p>not exists    t1 表哪种情况都不会走索引，而 t2 表是有索引的情况下就会走索引。为什么会出现这种情况？</p>
 </blockquote>
+<h2 id="in和exists的执行流程">in和exists的执行流程</h2>
 <p>对于 in 查询来说，会先执行子查询，如上边的 t2 表，然后把查询得到的结果和外表 t1 做笛卡尔积，再通过条件进行筛选（这里的条件就是指 name 是否相等），把每个符合条件的数据都加入到结果集中。</p>
 <p>对于 exists 来说，是先查询遍历外表 t1 ，然后每次遍历时，再检查在内表是否符合匹配条件，即检查是否存在 name 相等的数据。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info"><div class="post-info-tag"><span><a href="/tags/mysql%E7%B4%A2%E5%BC%95/">mysql索引</a>
