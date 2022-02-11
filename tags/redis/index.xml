@@ -3,10 +3,16 @@
         <title>redis - 标签 - 双皮奶</title>
         <link>http://shuangpinai.top/tags/redis/</link>
         <description>redis - 标签 - 双皮奶</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 08 Mar 2020 11:19:57 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/redis/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 11 Feb 2022 23:14:27 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/redis/" rel="self" type="application/rss+xml" /><item>
+    <title>Redis中级篇</title>
+    <link>http://shuangpinai.top/posts/redis%E4%B8%AD%E7%BA%A7%E7%AF%87/</link>
+    <pubDate>Fri, 11 Feb 2022 23:14:27 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/redis%E4%B8%AD%E7%BA%A7%E7%AF%87/</guid>
+    <description><![CDATA[<p>redis持久化，淘汰策略</p>]]></description>
+</item>
+<item>
     <title>Redis</title>
-    <link>http://shuangpinai.top/posts/redis/</link>
-    <pubDate>Sun, 08 Mar 2020 11:19:57 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/redis/</guid>
+    <link>http://shuangpinai.top/posts/redis%E5%9F%BA%E7%A1%80%E7%AF%87/</link>
+    <pubDate>Sun, 08 Mar 2020 11:19:57 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/redis%E5%9F%BA%E7%A1%80%E7%AF%87/</guid>
     <description><![CDATA[<p>why Redis?</p>]]></description>
 </item>
 </channel>

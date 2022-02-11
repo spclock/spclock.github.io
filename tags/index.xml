@@ -3,7 +3,13 @@
         <title>Tags - 标签 - 双皮奶</title>
         <link>http://shuangpinai.top/tags/</link>
         <description>Tags - 标签 - 双皮奶</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 10 Feb 2022 22:56:23 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 11 Feb 2022 23:14:27 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>redis</title>
+    <link>http://shuangpinai.top/tags/redis/</link>
+    <pubDate>Fri, 11 Feb 2022 23:14:27 &#43;0800</pubDate><guid>http://shuangpinai.top/tags/redis/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>quratz</title>
     <link>http://shuangpinai.top/tags/quratz/</link>
     <pubDate>Thu, 10 Feb 2022 22:56:23 &#43;0800</pubDate><guid>http://shuangpinai.top/tags/quratz/</guid>
@@ -55,12 +61,6 @@
     <title>索引</title>
     <link>http://shuangpinai.top/tags/%E7%B4%A2%E5%BC%95/</link>
     <pubDate>Wed, 09 Feb 2022 22:59:03 &#43;0800</pubDate><guid>http://shuangpinai.top/tags/%E7%B4%A2%E5%BC%95/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>设计模式</title>
-    <link>http://shuangpinai.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
-    <pubDate>Tue, 08 Feb 2022 13:03:17 &#43;0800</pubDate><guid>http://shuangpinai.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

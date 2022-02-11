@@ -3,9 +3,15 @@
         <title>双皮奶</title>
         <link>http://shuangpinai.top/</link>
         <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 10 Feb 2022 22:56:23 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 11 Feb 2022 23:14:27 &#43;0800</lastBuildDate>
             <atom:link href="http://shuangpinai.top/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Redis中级篇</title>
+    <link>http://shuangpinai.top/posts/redis%E4%B8%AD%E7%BA%A7%E7%AF%87/</link>
+    <pubDate>Fri, 11 Feb 2022 23:14:27 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/redis%E4%B8%AD%E7%BA%A7%E7%AF%87/</guid>
+    <description><![CDATA[<p>redis持久化，淘汰策略</p>]]></description>
+</item>
+<item>
     <title>Quartz</title>
     <link>http://shuangpinai.top/posts/quartz/</link>
     <pubDate>Thu, 10 Feb 2022 22:56:23 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/quartz/</guid>
@@ -52,12 +58,6 @@
     <link>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
     <pubDate>Thu, 16 Apr 2020 21:30:01 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
     <description><![CDATA[<p>解放你的双手，省去重复劳动</p>]]></description>
-</item>
-<item>
-    <title>Java程序的发布和部署</title>
-    <link>http://shuangpinai.top/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/</link>
-    <pubDate>Sun, 15 Mar 2020 21:06:03 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%91%E5%B8%83%E5%92%8C%E9%83%A8%E7%BD%B2/</guid>
-    <description><![CDATA[<p>如何java发布和部署？</p>]]></description>
 </item>
 <item>
     <title>正则表达式</title>
