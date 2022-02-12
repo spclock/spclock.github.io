@@ -3,7 +3,13 @@
         <title>java - 分类 - 双皮奶</title>
         <link>http://shuangpinai.top/categories/java/</link>
         <description>java - 分类 - 双皮奶</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 09 Feb 2022 23:02:04 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/categories/java/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 12 Feb 2022 23:36:29 &#43;0800</lastBuildDate><atom:link href="http://shuangpinai.top/categories/java/" rel="self" type="application/rss+xml" /><item>
+    <title>SpringMvc</title>
+    <link>http://shuangpinai.top/posts/springmvc/</link>
+    <pubDate>Sat, 12 Feb 2022 23:36:29 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/springmvc/</guid>
+    <description><![CDATA[<p>你用这种方式跟面试官讲springMVC，让面试官高看你一眼</p>]]></description>
+</item>
+<item>
     <title>HashMap</title>
     <link>http://shuangpinai.top/posts/hashmap/</link>
     <pubDate>Wed, 09 Feb 2022 23:02:04 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/hashmap/</guid>
@@ -56,12 +62,6 @@
     <link>http://shuangpinai.top/posts/spring/</link>
     <pubDate>Fri, 21 Feb 2020 19:20:57 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/spring/</guid>
     <description><![CDATA[<p>spring? , ?要用spring , Spring怎么用? , 怎么实现？</p>]]></description>
-</item>
-<item>
-    <title>Mybatis</title>
-    <link>http://shuangpinai.top/posts/mybatis/</link>
-    <pubDate>Wed, 19 Feb 2020 09:26:31 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/mybatis/</guid>
-    <description><![CDATA[<p>ORM：Object Relational Mapping</p>]]></description>
 </item>
 </channel>
 </rss>
