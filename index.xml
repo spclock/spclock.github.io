@@ -3,9 +3,15 @@
         <title>双皮奶</title>
         <link>http://shuangpinai.top/</link>
         <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 12 Feb 2022 23:36:29 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 14 Feb 2022 09:25:37 &#43;0800</lastBuildDate>
             <atom:link href="http://shuangpinai.top/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>线程池</title>
+    <link>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E6%B1%A0/</link>
+    <pubDate>Mon, 14 Feb 2022 09:25:37 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E6%B1%A0/</guid>
+    <description><![CDATA[<p>线程的管理是计算机资源管理的重要一环</p>]]></description>
+</item>
+<item>
     <title>SpringMvc</title>
     <link>http://shuangpinai.top/posts/springmvc/</link>
     <pubDate>Sat, 12 Feb 2022 23:36:29 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/springmvc/</guid>
@@ -58,12 +64,6 @@
     <link>http://shuangpinai.top/posts/jvm/</link>
     <pubDate>Wed, 15 Jul 2020 14:06:09 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/jvm/</guid>
     <description><![CDATA[<p>深入了解JVM</p>]]></description>
-</item>
-<item>
-    <title>持续化集成 自动化测试</title>
-    <link>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
-    <pubDate>Thu, 16 Apr 2020 21:30:01 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E6%8C%81%E7%BB%AD%E5%8C%96%E9%9B%86%E6%88%90-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
-    <description><![CDATA[<p>解放你的双手，省去重复劳动</p>]]></description>
 </item>
 </channel>
 </rss>
