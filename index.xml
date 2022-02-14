@@ -9,7 +9,7 @@
     <title>线程池</title>
     <link>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E6%B1%A0/</link>
     <pubDate>Mon, 14 Feb 2022 09:25:37 &#43;0800</pubDate><guid>http://shuangpinai.top/posts/%E7%BA%BF%E7%A8%8B%E6%B1%A0/</guid>
-    <description><![CDATA[<p>线程的管理是计算机资源管理的重要一环</p>]]></description>
+    <description><![CDATA[<p>线程的管理是计算机资源管理的重要一环。减少每次获取资源的消耗，提高对资源的利用率。</p>]]></description>
 </item>
 <item>
     <title>SpringMvc</title>
