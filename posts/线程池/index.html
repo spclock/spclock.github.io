@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/shuangpinai.top\/posts\/%E7%BA%BF%E7%A8%8B%E6%B1%A0\/"
-        },"genre": "posts","keywords": "线程池","wordcount":  44 ,
+        },"genre": "posts","keywords": "线程池","wordcount":  97 ,
         "url": "http:\/\/shuangpinai.top\/posts\/%E7%BA%BF%E7%A8%8B%E6%B1%A0\/","datePublished": "2022-02-14T09:25:37+08:00","dateModified": "2022-02-14T09:25:37+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -103,7 +103,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single" data-toc="disable"><div class="single-card" ><h2 class="single-title animated flipInX">线程池</h2><div class="post-meta">
                 <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">出版于  <a href="/categories/java/"><i class="far fa-folder fa-fw"></i>java</a></span></div>
-                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-14">2022-02-14</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 44 字</span>&nbsp;
+                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-14">2022-02-14</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 97 字</span>&nbsp;
                     <span><i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟</span>&nbsp;</div>
             </div>
             
@@ -146,12 +146,48 @@
 
 		<span class="c1">// 关闭线程池
 </span><span class="c1"></span>        <span class="n">executor</span><span class="o">.</span><span class="na">shutdown</span><span class="o">();</span>
-</code></pre></div><p>线程的生命周期？</p>
+</code></pre></div><p>有按个特别重要的参数：</p>
+<p><strong><code>corePoolSize</code></strong>:  线程池中的核心线程数</p>
+<p><strong><code>maximumPoolSize</code></strong>: 线程池中可扩展到的最大线程数</p>
+<p><strong><code>workQueue</code></strong>: 当新的任务来的时候先判断当前的线程数是否达到<code>corePoolSize</code>核心线程数，如果达到就将任务存放在队列中。</p>
+<p><strong><code>keepAliveTime</code></strong>: 当线程池中的线程数量大于 <code>corePoolSize</code> 的时候，如果这时没有新的任务提交，核心线程外的线程不会立即销毁，而是会等待，直到等待的时间超过了 <code>keepAliveTime</code>才会被回收销毁；</p>
+<p><strong><code>unit</code></strong> : <code>keepAliveTime</code> 参数的时间单位。</p>
+<p><strong><code>threadFactory</code></strong> : executor 创建新线程的时候会用到。</p>
+<p><strong><code>handler</code></strong> : 饱和策略。关于饱和策略下面单独介绍一下。</p>
+<ul>
+<li>
+<p><strong><code>ThreadPoolExecutor.AbortPolicy</code>：</strong> 抛出 <code>RejectedExecutionException</code>来拒绝新任务的处理。</p>
+</li>
+<li>
+<p><strong><code>ThreadPoolExecutor.CallerRunsPolicy</code>：</strong> 调用执行自己的线程运行任务，也就是直接在调用<code>execute</code>方法的线程中运行(<code>run</code>)被拒绝的任务，如果执行程序已关闭，则会丢弃该任务。因此这种策略会降低对于新任务提交速度，影响程序的整体性能。如果您的应用程序可以承受此延迟并且你要求任何一个任务请求都要被执行的话，你可以选择这个策略。</p>
+</li>
+<li>
+<p><strong><code>ThreadPoolExecutor.DiscardPolicy</code>：</strong> 不处理新任务，直接丢弃掉。</p>
+</li>
+<li>
+<p><strong><code>ThreadPoolExecutor.DiscardOldestPolicy</code>：</strong> 此策略将丢弃最早的未处理的任务请求。</p>
+</li>
+</ul>
+<p>线程的生命周期？</p>
 <h2 id="那怎么实现当线程执行完任务能被复用">那怎么实现当线程执行完任务能被复用</h2>
 <h2 id="线程池参数配置多少才合适">线程池参数配置多少才合适</h2>
 <p>你得要考虑几个问题</p>
 <p>这个线程池是拿来干什么任务的？</p>
-<p>任务类型是什么样的密集型？</p></div><div class="post-footer" id="post-footer">
+<p>任务类型是什么样的密集型？</p>
+<p>**为什么要设置，将cpu利用最大化  **</p>
+<p><code>CPU密集型</code>：</p>
+<p>​	完成该项任务是多以cpu来计算为主，这时候cpu一直干活利用率很高，按理设置<strong>线程数=cpu核数+1</strong>加一是防止线程意外中断少利用cpu</p>
+<p><code>I/O密集型</code>：</p>
+<ul>
+<li>
+<p>多以I/O为主的任务（网络io 文件io），cpu需要等待，这时候就要依据cpu利用率（I/O耗时  /  CPU耗时）</p>
+<p>例如： I/O耗时  ： CPU耗时 =   3 ：1         2核的cpu设置1+2*3+1=8</p>
+</li>
+<li>
+<p>全是I/O操作就2n+1 （n是cpu的核数）</p>
+</li>
+</ul>
+<p>PS：如果不明白看看《CPU这个世界太慢了》的文章</p></div><div class="post-footer" id="post-footer">
     <div class="post-info"><div class="post-info-tag"><span><a href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">线程池</a>
                 </span></div><div class="post-info-line"><div class="post-info-mod">
                 <span>更新于 2022-02-14</span>
